@@ -16,6 +16,9 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
 
+	<!--Font Awesome-->
+	<script src="https://kit.fontawesome.com/8bfaea11f7.js" crossorigin="anonymous"></script>
+
 	<!-- CSS Estrutural -->
 	<link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="../css/style.css" type="text/css" />
@@ -28,6 +31,9 @@
 	<!-- CSS customizado para o curso e dos recursos visuais -->
 	<link rel="stylesheet" href="../css/style-custom.css" type="text/css"/>
 	<link rel="stylesheet" href="../css/style-visual-resources.css">
+
+	<!-- JS para os Includes-->
+	<script src="../js/include.js"></script>
 	
 	<title>Vacinação contra a Covid-19</title>
 
@@ -254,6 +260,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Fim do Bloco 1 -->
 
 				<!-- Bloco 2 -->
 				<div class="container py-5">
@@ -289,6 +296,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Fim do Bloco 2 -->
 
 				<!-- Bloco 3 -->
 				<div class="container clearfix">
@@ -312,6 +320,7 @@
 					</section>
 					<!-- Fim do Parallax -->
 				</div>
+				<!-- Fim do Bloco 3 -->
 
 				<!-- Navegação -->
 				<div class="container mt-5">
@@ -325,74 +334,24 @@
 						</div>
 					</div>
 				</div>
+				<!-- Fim da Navegação -->
 			</div>
 			<!-- Fim do content-wrap -->
 		</section>
 		<!-- Fim do conteúdo -->
 
-		<!-- Rodapé
+		<!-- Rodapé - Barra de Logos
 		============================================= -->
 		<footer id="footer" class="dark">
 			<div class="container">
 
-				<section id="barra-logos">
-					<div class="container">
-					  <div class="row justify-content-center pt-3 mb-5">
-						<div class="col-12">
-						  <h6 class="text-center mb-2">Realização:</h6>
-						  <a href="https://campusvirtual.fiocruz.br/portal/" target="_blank"><img class="mx-auto d-block" src="../img/logo-cv-black.svg" alt="Logo do Campus Virtual da Fiocruz" style="max-height:60px;"></a>
-						</div>
-					  </div>
-					  <div class="row justify-content-center mb-3">
-						<div class="col-12">
-						  <h6 class="text-center">Apoio:</h6>
-						  <!-- 1ª fileira  -->
-						  <div class="row justify-content-center" style="position:relative; top:-1.3rem;">
-							<div class="col-12 col-lg-3">
-							  <a href="http://ensp.fiocruz.br/" target="_blank"><img class="mx-auto d-block" src="../img/logo-INI.png" alt="Logo do Instituto Nacional de Infectologia Evandro Chagas"></a>
-							</div>
-			  
-							<div class="col-12 col-lg-2">
-							  <a href="https://www.fiocruzbrasilia.fiocruz.br/" target="_blank"><img class="mx-auto d-block mt-3" src="../img/logo-fiocruz-brasilia.png" alt="Logo da Fiocruz - Brasília" width="100%"></a>
-							</div>
-			  
-							<div class="col-12 col-lg-3">
-							  <a href="https://www.icict.fiocruz.br/content/videosaude-distribuidora-da-fiocruz-1r" target="_blank"><img class="mx-auto d-block mt-4 pt-3" src="../img/logo-icict.png" alt="Logo do Instituto de Comunicação e Informação Científica e Tecnológica em Saúde da Fiocruz" width="100%"></a>
-							</div>
-			  
-							<div class="col-12 col-lg-2">
-							  <a href="https://proqualis.net/" target="_blank"><img class="mx-auto d-block mt-4" src="../img/logo-proqualis_10anos.png" alt="Logo do Proqualis" width="100%"></a>
-							</div>
-			  
-							<div class="col-12 col-lg-2">
-							  <a href="http://ensp.fiocruz.br/" target="_blank"><img class="mx-auto d-block" src="../img/logo-ensp.svg" alt="Logo da Escola Nacional de Saúde Pública Sérgio Arouca da Fiocruz" width="100%"></a>
-							</div>
-			  
-						  </div>
-			  
-						</div>
-					  </div>
-			  
-					  <div class="row justify-content-center pb-5">
-						<div class="col-lg-3">
-						  <a href="https://www.gov.br/pt-br" target="_blank"><img class="mx-auto d-block" src="../img/logo-governo-federal.svg" alt="Logo do Governo Federal"></a>
-						</div>
-			  
-						<div class="col-lg-2">
-						  <a href="https://www.saude.gov.br/sistema-unico-de-saude" target="_blank"><img class="mx-auto d-block" src="../img/logo-sus.svg" alt="Logo do SUS" style="max-height:60px;"></a>
-						</div>
-			  
-						<div class="col-lg-3">
-						  <a href="https://www.who.int/" target="_blank"><img class="mx-auto d-block" src="../img/logo-opas-oms.svg" alt="Logo da Organização Mundial de Saúde" style="max-width:100%;"></a>
-						</div>
-					  </div>
-					</div>
-				</section>
+				<!-- Include dos logos -->
+				<div w3-include-html="../barra-de-logos.html"></div>
 
 			</div>
 
 			
-		</footer><!-- Fim do Rodapé -->
+		</footer><!-- Fim do Rodapé - Barra de Logos -->
 
 	</div><!-- #Fim do Wrapper -->
 
