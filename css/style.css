@@ -3931,7 +3931,7 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
 	.sub-menu-container .menu-item:hover > .menu-link {
 		background-color: #F9F9F9;
 		padding-left: 18px;
-		color: #301b5e;
+		color: #1ABC9C;
 	}
 
 	.menu-link div > i.icon-angle-down {
@@ -8794,7 +8794,7 @@ td.actions {
 	padding: 8px 22px;
 	font-size: 0.875rem;
 	line-height: 24px;
-	background-color: #301b5e;
+	background-color: #1ABC9C;
 	color: #FFF;
 	font-weight: 700;
 	text-transform: uppercase;
