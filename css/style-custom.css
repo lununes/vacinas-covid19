@@ -1,0 +1,351 @@
+/* ----------------------------------------------------------------
+	CSS PARA O CURSO VACINAS COVID-19:
+
+	Este css sobrescreve o css original estrutural do tema.
+	Configurações novas de CSS devem também ser inseridas aqui.
+-----------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Variáveis
+--------------------------------------------------------------*/
+
+:root {
+
+    /* Cores */
+	--preto: #000; /*Preto*/
+	--cinza1: #565A69; /*Cinza 1*/
+	--cinza2: #969CB1; /*Cinza 2*/
+	--cinza3: #C1C8DE; /*Cinza 3*/
+	--cinza4: #D3DBF3; /*Cinza 4*/
+	--cinza5: #EBF0F5; /*Cinza 5*/
+
+    --marrom: #b2550f; /*Marrom*/
+    --marrom-pressed: #99471c; /*Marrom  Pressed*/
+
+    --laranja: #ff8831; /*Laranja*/
+    --laranja-over: #febf00; /*Mostarda*/
+    --laranja-pressed: #b2550f; /*Bronze*/
+
+    /* Cores com transparência*/
+    --laranja-alpha: rgba(255, 136, 49, 0.2); /*Laranja*/
+    --marrom-pressed-alpha: rgba(153, 71, 28, 0.8);
+
+    /* Fundos */
+    --bg-header: url(../img/bg-header.jpg); 
+    --bg-topo-mobile: url(../img/bg-topo-mobile2.png); 
+    --bg-topo: url(../img/bg-topo.png);
+	--bg-section: #F9F9F9;
+	--bg-section2: url(../img/bg2.png);
+	
+	/* Família tipográfica */
+	--titulos: 'Poppins', sans-serif;
+	--texto-corrido: 'Lato', sans-serif; 
+
+	/* Hierarquia dos títulos */
+
+	--h1-mobile: 1.87rem; /*30px*/
+	--h2-mobile: 1.75rem; /*28px*/
+	--h3-mobile: 1.5rem; /*24px*/
+	--h4-mobile: 1.25rem; /*20px*/
+	--h5-mobile: 1.12rem;  /*18px*/
+	--h6-mobile: 1rem;  /*16px*/
+
+	--h1-desktop: 3rem; /*48px*/
+	--h2-desktop: 2.25rem; /*36px*/
+	--h3-desktop: 1.87rem; /*30px*/
+	--h4-desktop: 1.5rem; /*24px*/
+	--h5-desktop: 1.25rem; /*20px*/
+	--h6-desktop: 1rem;  /*16px*/
+}
+
+/*--------------------------------------------------------------
+# Fim das Variáveis
+--------------------------------------------------------------*/
+
+/* Tipografia
+------------------------*/
+
+body {
+	line-height: 1.5;
+	color: var(--preto);
+	font-family: var(--texto-corrido);
+	font-size:16px;
+}
+
+a {
+	text-decoration: none !important;
+	color: #1ABC9C;
+}
+
+a:hover { color: var(--preto); }
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--preto);
+	font-weight: 600;
+	line-height: 1.25;
+	margin: 0 0 30px 0;
+	font-family: var(--titulos);
+}
+
+h1 {font-size: var(--h1-mobile);}
+
+h2 {font-size: var(--h2-mobile);}
+
+h3 {font-size: var(--h3-mobile);}
+
+h4 {font-size: var(--h4-mobile);}
+
+h5 {font-size: var(--h5-mobile);}
+
+h6 {font-size: var(--h6-mobile);}
+
+h5, h6 { 
+	font-weight: bold;
+	margin-bottom: 20px; 
+}
+
+/* Desktops*/
+@media (min-width: 992px) {
+	h1 {font-size: var(--h1-desktop);}
+
+	h2 {font-size:  var(--h2-desktop);}
+
+	h3 {font-size:  var(--h3-desktop);}
+
+	h4 {font-size:  var(--h4-desktop);}
+
+	h5 { font-size: var(--h5-desktop);}
+
+	h6 { font-size: var(--h6-desktop);}
+
+	h4 { font-weight: 600; }
+}
+
+/* Fim da Tipografia
+------------------------*/
+
+/* Topo
+------------------------*/
+
+#header-wrap {padding-bottom: 5px;}
+
+/*Tamanho do logo*/
+.header-size-custom #logo img {height: 50px;}
+
+/* Retirar a borda lateral do topo */
+.transparent-header.full-header.dark .primary-menu .menu-container {border-right: none;}
+
+/* Configura a Label dentro do submenu de módulos */
+.menu-curso .badge {
+	display:block;
+	line-height: 1.25;
+	padding:15px;
+	text-align: left;
+	white-space: normal;
+	margin-top:15px;
+}
+
+.menu-curso .sub-menu-container .menu-item > .menu-link {padding: 11px 35px 11px 5px;}
+
+/* Desktops*/
+@media (min-width: 992px) {
+	.header-size-custom .header-wrap-clone {
+		height: calc( 70px + 1px );
+	}
+
+	#header.header-size-custom + .include-header {
+		margin-top: calc( -70px - 2px );
+	}
+
+	.header-size-custom.sticky-header-shrink #header-wrap #logo img {
+		height: 60px;
+	}
+
+	.header-size-custom .menu-container > .menu-item > .menu-link {
+		padding-top: 24px; /* (70px - 22px)/2 */
+		padding-bottom: 24px; /* (70px - 22px)/2 */
+	}
+
+	.header-size-custom.sticky-header-shrink .menu-container > .menu-item > .menu-link {
+		padding-top: 24px; /* (70px - 22px)/2 */
+		padding-bottom: 24px; /* (70px - 22px)/2 */
+	}
+
+	.primary-menu {margin-right: 15px;}
+
+	.menu-curso .badge {margin-top:0;}
+
+	.menu-curso .sub-menu-container .menu-item > .menu-link {padding: 11px 10px 11px 5px;}
+
+	.menu-curso .sub-menu-container {width: 240px;}
+
+	.menu-curso .sub-menu-container .menu-link div > i.icon-angle-down {right:-10px;}
+
+}
+
+/* Fim do Topo 
+------------------------*/
+
+/* Título de Abertura
+------------------------*/
+
+.titulo {height:380px;}
+
+.titulo .slider-caption.slider-caption-center {
+	max-width: 950px;
+}
+
+.titulo .slider-caption h2 {
+	font-size: 36px;
+	letter-spacing: normal;
+	text-transform: none;
+	font-weight: 600;
+	line-height: 1.25;
+	margin: 0 0 30px 0;
+}
+
+.titulo .lead {
+	font-size: 1.25rem !important;
+	font-weight: 300 !important;
+}
+
+.titulo h3, .titulo h4 {font-weight: 400;}
+
+.titulo .slider-caption p {
+	margin-top:10px;
+	margin-bottom:20px;
+}
+
+/*Lista de Aulas (aparece somente no desktop) */
+
+/* Desktops*/
+@media (min-width: 992px) {
+	.aulas ul {
+		list-style:none;
+	}
+	
+	.aulas .button {
+		padding: 15px 15px 30px 15px;;
+		margin: 0 2px;
+		border-radius:5px 5px 0 0;
+	}
+	
+	.aulas .button:hover {
+		background-color: rgba(0,0,0,0.8);
+		transition:0.5s;
+		transform: translate(0, -15px);
+	}
+	
+	.aulas .button.active {
+		background:#fff;
+		color:var(--preto);
+		transform: translate(0, -15px);
+	}
+	
+	.aulas .button.active:hover {
+		color:var(--preto);
+		transform: translate(0, -15px);
+	}
+}
+
+/* Fim do Título de Abertura
+------------------------*/
+
+/* Chamada (Título Heading Block + Lead)
+------------------------*/
+
+.chamada {text-align:center;}
+
+.chamada .heading-block {margin-bottom: 30px;}
+
+.chamada .heading-block::after {
+    border-top: 2px solid var(--cinza1);
+    position: relative;
+    left: 50%;
+}
+
+/* Antetítulo */
+.chamada .before-heading {
+    font-size: 1.25rem;
+    font-family: 'PT Serif', serif;
+    color: var(--cinza1);
+}
+
+/* Cores e Tamanhos dos Títulos Heading Block*/
+
+.heading-block h1, 
+.heading-block h2, 
+.heading-block h3, 
+.heading-block h4, 
+.emphasis-title h1, 
+.emphasis-title h2 {color: var(--preto);}
+
+.heading-block h1 { font-size: var(--h1-mobile); }
+
+.heading-block h2 { font-size: var(--h2-mobile);}
+
+.heading-block h3 { font-size: var(--h3-mobile);}
+
+.heading-block h4 {
+	font-size: var(--h4-mobile);
+	font-weight: 700;
+}
+
+.heading-block h5 { font-size: var(--h5-mobile);}
+
+.heading-block h6 { font-size: var(--h6-mobile);}
+
+@media (min-width: 992px) {
+	.heading-block h1 { font-size: var(--h1-desktop); }
+
+	.heading-block h2 { font-size: var(--h2-desktop);}
+
+	.heading-block h3 { font-size: var(--h3-desktop);}
+
+	.heading-block h4 {font-size: var(--h4-desktop);}
+
+	.heading-block h5 { font-size: var(--h5-desktop);}
+
+	.heading-block h6 { font-size: var(--h6-desktop);}
+}
+
+/* Fim da Chamada (Título Heading Block + Lead)
+------------------------*/
+
+/* Sessões
+------------------------*/
+
+.bg-section {background: var(--bg-section) !important;}
+
+pre code {white-space: pre-line;}
+
+/* Lista Simples
+------------------------*/
+
+.obj-lista {margin-bottom: 30px;}
+  
+.obj-lista .list-group {margin: 10px 0;}
+  
+.obj-lista .list-group-item {
+	background:transparent;
+	border:transparent;
+	border-radius: 6px;
+	/*margin-bottom: 10px;
+	 box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
+	border: 1px solid #fafafa;
+	padding: 1.2rem 1.25rem; */
+	padding: 0.8rem 1.25rem;
+}
+
+.obj-lista .list-group-item i.icon-line-check-circle {font-size: 1.25rem;}
+  
+.obj-lista .list-group-item i.icon-bullet {
+	display: block;
+	width: 0.8rem;
+	height: 0.8rem;
+	background: transparent url("../img/ic-list-bullet.svg") no-repeat 0 0;
+	float: left;
+	margin-right: 10px;
+	margin-top:0.3rem;
+}
+
