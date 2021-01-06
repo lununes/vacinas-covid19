@@ -1,0 +1,73 @@
+/* Accordion
+------------------------*/
+.accordion > .accordion-itens {
+	border:none;
+}
+
+.accordion > .accordion-itens > .card-header {
+    border-radius: 0;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+
+.accordion .card-header {
+    padding: 0.8rem 1.25rem 0.8rem 0.5rem;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+
+.accordion .card-header::after {
+	/* font-family: 'FontAwesome'; */
+	/* content: "\f068"; */
+	font-family: "lined-icons";
+	content: "\e99f";
+	float: right;
+	color:var(--azul-escuro);
+}
+
+.accordion .card-header.collapsed::after {
+	content: "\e9bc";
+	color:var(--azul-escuro);
+}
+
+.accordion .card-header .card-title {
+	font-weight:600;
+}
+
+/* Lista Simples
+------------------------*/
+
+.obj-lista .list-group {margin: 10px 0;}
+  
+.obj-lista .list-group-item {
+	background:transparent;
+	border:transparent;
+	border-radius: 6px;
+	/*margin-bottom: 10px;
+	 box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
+	border: 1px solid #fafafa;
+	padding: 1.2rem 1.25rem; */
+	padding: 0.8rem 0;
+}
+
+.obj-lista .list-group-item i.icon-line-check-circle {font-size: 1.25rem;}
+  
+.obj-lista .list-group-item i.icon-bullet {
+	display: block;
+	width: 0.8rem;
+	height: 0.8rem;
+	background: transparent url("../img/ic-list-bullet.svg") no-repeat 0 0;
+	float: left;
+	margin-right: 10px;
+	margin-top:0.3rem;
+}
+
+/* Lista Ordenada
+------------------------*/
+
+.obj-lista ol.list-group {display:list-item;}
+
+.obj-lista ol.list-group .list-group-item {padding-left: 10px;}
+

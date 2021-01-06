@@ -15,10 +15,10 @@
 	--preto: #333; /*Preto*/
 	--azul-escuro: #301b5e; /*Azul Escuro*/
 	--azul-claro: #0193DA; /*Azul Claro*/
+	--cinza-claro: #EBF0F5; /*Cinza Claro*/
 	
 	--cinza3: #C1C8DE; /*Cinza 3*/
 	--cinza4: #D3DBF3; /*Cinza 4*/
-	--cinza5: #EBF0F5; /*Cinza 5*/
 
     --marrom: #b2550f; /*Marrom*/
     --marrom-pressed: #99471c; /*Marrom  Pressed*/
@@ -162,6 +162,9 @@ h5, h6 {
 }
 
 .menu-curso .sub-menu-container .menu-item:hover > .menu-link {color: var(--azul-escuro);}
+
+.dark .menu-curso .menu-item:hover > .menu-link, 
+.dark .menu-curso .menu-item.current > .menu-link {color: #02c8da;}
 
 .dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item:hover > .menu-link {
     background-color: rgba(0,0,0,0.1);
@@ -355,8 +358,11 @@ h5, h6 {
 
 /* Sessões
 ------------------------*/
+.section {width:auto;}
 
 .bg-section {background: var(--bg-section) !important;}
+
+.divider {margin: 2rem auto;}
 
 pre code {white-space: pre-line;}
 
@@ -395,35 +401,16 @@ pre code {white-space: pre-line;}
     text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
-
-
-/* Lista Simples
+/* Rodapé (Barra de Logos)
 ------------------------*/
 
-.obj-lista {margin-bottom: 30px;}
-  
-.obj-lista .list-group {margin: 10px 0;}
-  
-.obj-lista .list-group-item {
-	background:transparent;
-	border:transparent;
-	border-radius: 6px;
-	/*margin-bottom: 10px;
-	 box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
-	border: 1px solid #fafafa;
-	padding: 1.2rem 1.25rem; */
-	padding: 0.8rem 1.25rem;
+#footer {
+    position: relative;
+    background-color: var(--azul-claro);
+    /* border-top: 5px solid rgba(0,0,0,0.2); */
 }
 
-.obj-lista .list-group-item i.icon-line-check-circle {font-size: 1.25rem;}
-  
-.obj-lista .list-group-item i.icon-bullet {
-	display: block;
-	width: 0.8rem;
-	height: 0.8rem;
-	background: transparent url("../img/ic-list-bullet.svg") no-repeat 0 0;
-	float: left;
-	margin-right: 10px;
-	margin-top:0.3rem;
+#footer h6 {
+	color:#fff;
+	font-weight: 500;
 }
-

@@ -30,11 +30,9 @@
 	
 	<!-- CSS customizado para o curso e dos recursos visuais -->
 	<link rel="stylesheet" href="../css/style-custom.css" type="text/css"/>
-	<link rel="stylesheet" href="../css/style-visual-resources.css">
+	<!-- <link rel="stylesheet" href="../css/style-visual-resources.css"> -->
+	<link rel="stylesheet" href="../css/style-recursos-visuais.css">
 
-	<!-- JS para os Includes-->
-	<script src="../js/include.js"></script>
-	
 	<title>Vacinação contra a Covid-19</title>
 
 </head>
@@ -143,20 +141,19 @@
 								</li>
 								<!-- Bibliografia -->
 								<li class="menu-item">
-									<a class="menu-link" href="bibliografia.html"><div>Bibliografia</div></a>
+									<a class="menu-link" href='#' data-toggle="modal" data-target="#modal-bibliografia"><div>Bibliografia</div></a>
 								</li>
 
 								<!-- Créditos -->
 								<li class="menu-item">
-									<a class="menu-link" href="creditos.html"><div>Créditos</div></a>
+									<a class="menu-link" href='#' data-toggle="modal" data-target="#modal-creditos"><div>Créditos</div></a>
 								</li>
 
 								<!-- FAQ -->
 								<li class="menu-item mega-menu">
-									<a class="menu-link" href="FAQ.html"><div>FAQ</div></a>
+									<a class="menu-link" href="FAQ.html" target="_blank"><div>FAQ</div></a>
 								</li>
 							</ul>
-
 						</nav>
 						<!-- Fim do Menu de Navegação-->
 					</div>
@@ -262,66 +259,6 @@
 				</div>
 				<!-- Fim do Bloco 1 -->
 
-				<!-- Bloco 2 -->
-				<div class="container py-5">
-					<div class="row justify-content-center mt-4">
-						<div class="col-12 col-lg-10">
-
-							<div class="chamada">
-								<div class="heading-block">
-									<span class="before-heading">Introdução</span>
-									<h3>Conhecendo os recursos visuais</h3>
-								</div>
-								<p class="lead text-center">A idéia deste modelo é reunir os principais recursos visuais utilizados para as aulas.</p>
-							</div>
-
-							<p>Em geral os recurso são configurados todos em 1 arquivo CSS, chamado de style-visual-resources.css. Contudo, eventualmente poderemos precisar adaptar alguns recursos (ex: usar uma imagem específica). Nessas situações, o recomendado é criar um novo arquivo css e incluí-lo na linha logo abaixo do css dos recursos:</p>
-
-							<div class="row justify-content-center mt-4">
-								<div class="col-12">
-									<!--Trecho do Código-->
-									<div class="code-snippet">
-										<pre>
-											<code>
-											&lt;!-- CSS geral das aulas e recursos visuais --&gt;
-											&lt;link rel="stylesheet" href="css/style.css"&gt;
-											&lt;link rel="stylesheet" href="css/style-visual-resources.css"&gt;
-											&lt;<strong>link rel="stylesheet" href="css/SEU-CSS-DE-AJUSTES.css"</strong>&gt;
-											</code>
-											</pre>
-									</div>
-									<!--Fim do Trecho do Código-->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Fim do Bloco 2 -->
-
-				<!-- Bloco 3 -->
-				<div class="container clearfix">
-
-					<div class="chamada">
-						<div class="heading-block">
-							<span class="before-heading">Recurso 1</span>
-							<h3>Destaque Parallax</h3>
-						</div>
-						<p class="lead text-center">Destaque com imagem de fundo, com efeito parallax.</p>
-					</div>
-				</div>
-
-				<div class="container-fluid section my-0 py-3">
-					<!-- Parallax -->
-					<section id="page-title" class="page-title-parallax page-title-dark skrollable skrollable-between" style="background-image: url('../img/services/home-testi-bg.jpg'); background-size: cover; padding: 120px 0px; background-position: 0px -121.61px;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
-						<div class="container clearfix text-center">
-							<h3 class="text-white">Insira o texto</h3>
-							<span>Um pequeno texto, se quiser.</span>
-						</div>
-					</section>
-					<!-- Fim do Parallax -->
-				</div>
-				<!-- Fim do Bloco 3 -->
-
 				<!-- Navegação -->
 				<div class="container mt-5">
 					<div class="row justify-content-center">
@@ -342,16 +279,22 @@
 
 		<!-- Rodapé - Barra de Logos
 		============================================= -->
-		<footer id="footer" class="dark">
+		<footer id="footer">
 			<div class="container">
-
 				<!-- Include dos logos -->
-				<div w3-include-html="barra-de-logos.html"></div>
-
+				<div w3-include-html="../barra-de-logos.html"></div>
 			</div>
-
-			
 		</footer><!-- Fim do Rodapé - Barra de Logos -->
+
+		<!--==========================
+      	Modais - Bibliografia, Créditos e Material Complementar
+    	============================-->
+
+		<!-- Include: Modal Bibliografia-->
+		<div w3-include-html="bibliografia.html"></div>
+
+		<!-- Include: Modal Créditos-->
+		<div w3-include-html="creditos.html"></div>
 
 	</div><!-- #Fim do Wrapper -->
 
@@ -362,7 +305,7 @@
 	<!-- JavaScripts
 	============================================= -->
 	<script src="../js/jquery.js"></script>
-	<!-- <script src="js/plugins.min.js"></script> -->
+	<!-- <script src="../js/plugins.min.js"></script> -->
 	<script src="../js/plugins.bootstrap.js"></script>
 	<script src="../js/plugins.easing.js"></script>
 
@@ -378,10 +321,18 @@
 	<script src="../js/plugins.swiper.js"></script>
 	<script src="../js/plugins.toggles.js"></script>
 	<script src="../js/plugins.youtube.js"></script>
-	
-	<!-- Scripts
-	============================================= -->
+
 	<script src="../js/functions.js"></script>
 
+	<!-- Scripts
+	============================================= -->
+
+	<!-- JS para os Includes-->
+	<script src="../js/include.js"></script>
+
+	<!-- Para fazer includes de HTML dentro do HTML -->
+	<script>
+		includeHTML();
+	</script>
 </body>
 </html>
