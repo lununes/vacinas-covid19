@@ -248,7 +248,7 @@ h5, h6 {
 .titulo .lead {
 	font-family: var(--subtitulos) !important;
 	font-style: italic !important;
-	font-size: 1.87rem !important;
+	font-size: 1.15rem !important;
 	font-weight: 400 !important;
 }
 
@@ -257,6 +257,13 @@ h5, h6 {
 .titulo .slider-caption p {
 	margin-top:10px;
 	margin-bottom:20px;
+}
+
+/* Desktops*/
+@media (min-width: 992px) {
+	.titulo .lead {
+		font-size: 1.87rem !important;
+	}
 }
 
 /*Lista de Aulas (aparece somente no desktop) */
