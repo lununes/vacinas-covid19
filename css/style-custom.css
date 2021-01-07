@@ -444,7 +444,6 @@ h5, h6 {
 .chamada .heading-block::after {
     border-top: 2px solid var(--azul-claro);
     margin:30px auto;
-}
 
 /* Antetítulo */
 .chamada .before-heading {
