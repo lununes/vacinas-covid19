@@ -88,6 +88,7 @@ body {
 	color: var(--preto);
 	font-family: var(--texto-corrido);
 	font-size:21px;
+	font-weight: 350 !important;
 }
 
 a {
@@ -138,6 +139,8 @@ h5, h6 {
 
 	h4 { font-weight: 600; }
 }
+
+.list-group-item { font-weight: 400; }
 
 /* Fim da Tipografia
 ------------------------*/
@@ -359,7 +362,7 @@ h5, h6 {
 
 .lead {
 	font-size: 1.5rem !important;
-	
+	font-weight: 400 !important;
 }
 
 .titulo .lead {
