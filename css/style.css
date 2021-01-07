@@ -3850,7 +3850,7 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
 		background-color: #FFF;
 		box-shadow: 0px 13px 42px 11px rgba(0, 0, 0, 0.05);
 		border: 1px solid #EEE;
-		border-top: 2px solid #301b5e;
+		border-top: 2px solid #1abc9c;
 		z-index: 399;
 		top: 100%;
 		left: 0;
