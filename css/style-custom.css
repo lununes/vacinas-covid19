@@ -453,7 +453,7 @@ h5, h6 {
 }
 /* Antetítulo */
 .chamada .before-heading {
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     font-family: var(--subtitulos);
     color: var(--azul-escuro);
 }
