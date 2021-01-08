@@ -84,11 +84,11 @@
 ------------------------*/
 
 body {
-	line-height: 1.5;
+	line-height: 1.75;
 	color: var(--preto);
 	font-family: var(--texto-corrido);
-	font-size:21px;
-	font-weight: 350 !important;
+	font-size:18px;
+	font-weight: 400 !important;
 }
 
 a {
@@ -123,8 +123,18 @@ h5, h6 {
 	margin-bottom: 20px; 
 }
 
+.lead {
+	font-size: 1.25rem !important;
+	font-weight: 400 !important;
+	color:#888;
+	letter-spacing: -.03125rem;
+	margin-top: 1.25rem;
+}
+
 /* Desktops*/
 @media (min-width: 992px) {
+	body {font-size:20px;}
+
 	h1 {font-size: var(--h1-desktop);}
 
 	h2 {font-size:  var(--h2-desktop);}
@@ -133,12 +143,15 @@ h5, h6 {
 
 	h4 {font-size:  var(--h4-desktop);}
 
-	h5 { font-size: var(--h5-desktop);}
+	h5 {font-size: var(--h5-desktop);}
 
-	h6 { font-size: var(--h6-desktop);}
+	h6 {font-size: var(--h6-desktop);}
 
-	h4 { font-weight: 600; }
+	h4 {font-weight: 600;}
 }
+
+
+#content p {line-height: 1.75;}
 
 .list-group-item { font-weight: 400; }
 
@@ -202,7 +215,7 @@ h5, h6 {
 	background-color: var(--preto-alpha) !important;
 	color:#fff !important;
     padding: 3px 60px 0 0px !important;
-    font-size: 90%;
+    font-size: 0.8rem;
     transform: translateY(-50%);
 	height: 30px;
 }
@@ -360,11 +373,6 @@ h5, h6 {
 
 .titulo .slider-caption.slider-caption-center {margin-top:7.4rem;}
 
-.lead {
-	font-size: 1.5rem !important;
-	font-weight: 400 !important;
-}
-
 .titulo .lead {
 	font-family: var(--subtitulos) !important;
 	font-style: italic !important;
@@ -451,7 +459,7 @@ h5, h6 {
 
 .chamada .heading-block::after {
     border-top: 2px solid var(--azul-claro);
-    margin:30px auto;
+    margin:20px auto;
 
 }
 /* Antetítulo */
@@ -462,7 +470,6 @@ h5, h6 {
 }
 
 /* Cores e Tamanhos dos Títulos Heading Block*/
-
 .heading-block h1, 
 .heading-block h2, 
 .heading-block h3, 
