@@ -39,7 +39,8 @@
     --bg-header: url(../img/bg-header.jpg); 
     --bg-topo-mobile: url(../img/bg-topo-mobile2.png); 
     --bg-topo: url(../img/bg-topo.png);
-	--bg-section: #F9F9F9;
+	/* --bg-section: #F9F9F9; */
+	--bg-section: #F1F1F1; 
 	--bg-section2: url(../img/bg2.png);
 	
 	/* Família tipográfica */
@@ -124,7 +125,7 @@ h5, h6 {
 }
 
 .lead {
-	font-size: 1.25rem !important;
+	font-size: 1.5rem !important;
 	font-weight: 400 !important;
 	color:#888;
 	letter-spacing: -.03125rem;
@@ -447,19 +448,19 @@ h5, h6 {
 .content-wrap {padding: 40px 0;}
 
 @media (min-width: 992px) {
-	.content-wrap {padding: 80px 0;}
+	.content-wrap {padding: 40px 0;}
 }
 
 /* Chamada (Título Heading Block + Lead)
 ------------------------*/
 
-.chamada {text-align:center;}
+/* .chamada {text-align:center;} */
 
 .chamada .heading-block {margin-bottom: 30px;}
 
 .chamada .heading-block::after {
     border-top: 2px solid var(--azul-claro);
-    margin:20px auto;
+    /* margin:20px auto; */
 
 }
 /* Antetítulo */
