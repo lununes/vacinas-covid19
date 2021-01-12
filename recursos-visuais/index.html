@@ -186,26 +186,28 @@
 			<div class="content-wrap">
 
 				<!-- Introdução -->
-				<div class="container">
+				<div class="container mb-4">
 					<div class="row justify-content-center mt-4">
-						<div class="col-12 col-md-8 col-lg-8">
+						<div class="col-11 col-md-8 col-lg-8">
 
-							<div class="chamada">
-								<div class="heading-block">
-									<span class="before-heading">Introdução</span>
-									<h2>Conhecendo os recursos visuais</h2>
-									<p class="lead">A idéia deste modelo é reunir os principais recursos visuais utilizados para as aulas.</p>
-								</div>
+							<!-- Heading Block (Título h2 ou h3  + Lead (se houver)) -->
+							<div class="heading-block">
+								<span class="before-heading">Introdução</span>
+								<h2>Conhecendo os recursos visuais</h2>
+								<p class="lead">A idéia deste modelo é reunir os principais recursos visuais utilizados para as aulas.</p>
 							</div>
+							<!-- Fim do Heading Block -->
 						</div>
 					</div>
 				</div>
 
-				<div class="container-fluid section bg-section my-0">
+				<div class="container-fluid bg-section">
 					<div class="container">
 						<div class="row justify-content-center">
-							<div class="col-12 col-md-8 col-lg-8">
-								<p>Em geral os recurso são configurados todos em 1 arquivo CSS, chamado de style-visual-resources.css. Contudo, eventualmente poderemos precisar adaptar alguns recursos (ex: usar uma imagem específica). Nessas situações, o recomendado é criar um novo arquivo css e incluí-lo na linha logo abaixo do css dos recursos:</p>
+							<div class="col-11 col-md-8 col-lg-8">
+								<p>Os recurso são configurados todos em um arquivo CSS, chamado de <em>style-recursos-visuais.css</em>. Eventualmente poderá ser necessário fazer algumas adaptações (ex: cor, tamanho, usar uma imagem específica etc).</p>
+
+								<p>Se este for o caso, toda e qualquer alteração deve ser realizada no arquivo <strong>style-custom.css</strong>, localizado sempre ao final da lista de arquivos css:</p>
 
 								<div class="row justify-content-center mt-4">
 									<div class="col-12">
@@ -213,10 +215,10 @@
 										<div class="code-snippet">
 											<pre>
 												<code>
-												&lt;!-- CSS geral das aulas e recursos visuais --&gt;
-												&lt;link rel="stylesheet" href="css/style.css"&gt;
-												&lt;link rel="stylesheet" href="css/style-visual-resources.css"&gt;
-												&lt;<strong>link rel="stylesheet" href="css/SEU-CSS-DE-AJUSTES.css"</strong>&gt;
+												&lt;!-- CSS da estrutura geral do curso e dos recursos visuais --&gt;
+												&lt;link rel="stylesheet" href="css/style.css"&gt; <span class="azul-claro"><em>-> Css da estutura geral do curso</em></span>
+												&lt;link rel="stylesheet" href="css/style-recursos-visuais.css"&gt; <span class="azul-claro"><em>-> Css dos recursos visuais</em></span>
+												&lt;<strong>link rel="stylesheet" href="css/style-custom.css"</strong>&gt; <span class="azul-claro"><em>-> Seu Css modificado</em></span>
 												</code>
 												</pre>
 										</div>
@@ -228,130 +230,274 @@
 					</div>
 				</div>
 				<!-- Fim da Introdução -->
-				
-				<!-- Bloco 1 - Hierarquia de Títulos -->
-				<div class="container py-4 clearfix">
-					<div class="row justify-content-center mt-4">
-						<div class="col-12 col-mg-8 col-lg-8">
 
-							<div class="chamada">
-								<div class="heading-block">
-									<span class="before-heading">Recurso 1</span>
-									<h3>Títulos</h3>
-									<p class="lead">Apresentam uma hierarquia a fim de organizar e priorizar as informações.</p>
-								</div>
+				<!-- Bloco 0 - Entendendo a estrutura do html -->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-11 col-mg-8 col-lg-8">
+
+							<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+							<div class="heading-block">
+								<h3>Estrutura do HTML</h3>
+								<p class="lead">Como o código do conteúdo está organizado</p>
 							</div>
+							<!-- Fim dao Heading Block-->
 
-							<p>Os títulos abaixo devem ser utilizados para a área de conteúdo dentro da div com classe <strong>.heading-block</strong> e outra como pai de classe <strong>.chamada</strong>:</p>
+							<p>Todo o conteúdo deverá ser inserido dentro da section com id <strong>#content</strong> e envolvido por uma div com classe <strong>.content-wrap</strong>:</p>
 							
-							<div class="row justify-content-center mt-4">
+							<!--Trecho do Código-->
+							<div class="row justify-content-center">
 								<div class="col-12">
-									<!--Trecho do Código-->
+									<!--Code Snippet-->
 									<div class="code-snippet">
 										<pre>
 											<code>
-											&lt;div class="chamada"&gt;
-												&lt;div class="heading-block"&gt;
-													&lt;h2&gt;Olá, sou um H2&lt;/h2&gt;
-													&lt;/div&gt;
-											&lt;/div&gt;
+												&lt;!-- Conteúdo
+													============================================= --&gt;
+													&lt;section id="content"&gt;
+														&lt;div class="content-wrap"&gt;
+															<p class="my-0"><strong>Aqui entra meu conteúdo</strong></p>
+														&lt;/div&gt;
+													&lt;/section&gt;
 											</code>
 										</pre>
 									</div>
-									<!--Fim do Trecho do Código-->
+									<!--Fim do Code Snippet-->
 								</div>
 							</div>
+							<!--Fim do Trecho do Código-->
 
-							<p><strong>Obs: Em geral, deixamos o h1 para o nome do curso, na imagem de abertura e utilizamos os títulos para o conteúdo a partir do h2.</strong></p>
+							<p>Testando parágrafo aqui</p>
 						</div>
 					</div>
+				</div>
+				<!-- Fim do Bloco 0 - Entendendo a estrutura do html -->
+				
+				<!-- Bloco 1 - Hierarquia de Títulos -->
+				<div class="container-fluid bg-cinza-claro">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-11 col-mg-8 col-lg-8">
 
-					<div class="row justify-content-center mt-5">
-						<div class="col-12 col-md-8 col-lg-8">
-
-							<div class="chamada">
+								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
 								<div class="heading-block">
-									<h1>Olá, sou um H1 - Nome do curso</h1>
+									<span class="before-heading">Recurso 1</span>
+									<h3>Títulos</h3>
+									<p class="lead">Apresentam a hierarquia do conteúdo a fim de organizar e priorizar as informações.</p>
 								</div>
-							</div>
+								<!-- Fim dao Heading Block-->
 
-							<div class="chamada">
+								<p>Nosso conteúdo começará a partir do título h2. Isso porque o título h1 é dedicado ao nome do curso, localizado na imagem de abertura da página.</p>
+
+								<p>Os títulos h2 e h3 são utilizados devem ser utilizados para a área de conteúdo dentro da div com classe <strong>.heading-block</strong>. Essa div engloba um antetítulo (opcional), o título (obrigatório), um lead (opcional) e um separador ao final:</p>
+
+								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
 								<div class="heading-block">
 									<h2>Olá, sou um H2 - Título da aula</h2>
+									<p class="lead">Posso ter um subtítulo aqui</p>
 								</div>
-							</div>
+								<!-- Fim do Heading Block-->
+								<br/>
 
-							<div class="chamada">
+								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
 								<div class="heading-block">
 									<h3>Olá, sou um H3 - Título do tópico</h3>
+									<p class="lead">Posso ter um subtítulo aqui</p>
 								</div>
-							</div>
-							
-							<div class="chamada">
-								<div class="heading-block">
-									<h4>Olá, sou um H4 - Título do subtópico</h4>
-								</div>
-							</div>
+								<!-- Fim do Heading Block-->
 
-							<div class="chamada">
-								<div class="heading-block">
-									<h5>Olá, sou um H5</h5>
+								
+								<!--Trecho do Código-->
+								<div class="row justify-content-center">
+									<div class="col-12">
+										<!--Code Snippet-->
+										<div class="code-snippet">
+											<pre>
+												<code>
+												&lt;!-- Heading Block (Título h2 ou h3 + Lead (se houver)) --&gt;
+													&lt;div class="heading-block"&gt;
+														&lt;h2&gt;Olá, sou um H2&lt;/h2&gt;
+														&lt;p class="lead text-left"&gt;Este módulo pretende apresentar a especificidades da organização e dos procedimentos da sala de vacinação para COVID-19; apresentar os procedimentos de armazenamento da vacina X para COVID-19; e orientar para implantação de uma sala de vacina para COVID-19.&lt;/p&gt;
+													&lt;/div&gt;
+												&lt;!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) --&gt;
+												</code>
+											</pre>
+										</div>
+										<!--Fim do Code Snippet-->
+									</div>
 								</div>
+								<!--Fim do Trecho do Código-->
 							</div>
+						</div>
 
-							<div class="chamada">
-								<div class="heading-block">
-									<h6>Olá, sou um H6</h6>
+						<div class="row justify-content-center">
+							<div class="col-11 col-md-8 col-lg-8">
+
+								<p>Já os títulos h4, h5 e h6 não devem ser usados com lead e nem com separador:</p>
+
+								<!-- Título -->
+								<h4>Olá, sou um H4 - Título do subtópico</h4>
+								<!-- Fim do título -->
+
+								<!-- Título -->
+								<h5>Olá, sou um H5 - Título de um elemento</h5>
+								<!-- Fim do título -->
+								
+								<!-- Título -->
+								<h6>Olá, sou um H6 - Título de um sub elemento</h6>
+								<!-- Fim do Título -->
+
+								<!--Trecho do Código-->
+								<div class="row justify-content-center">
+									<div class="col-12">
+										<!--Code Snippet-->
+										<div class="code-snippet">
+											<pre>
+												<code>
+													&lt;!-- Título --&gt;
+													&lt;h4&gt;Olá, sou um h4&lt;/h4&gt;
+													&lt;!-- Fim do Título --&gt;
+												</code>
+											</pre>
+										</div>
+										<!--Fim do Code Snippet-->
+									</div>
 								</div>
+								<!--Fim do Trecho do Código-->
+							</div>
+						</div>
+
+						<div class="row justify-content-center">
+							<div class="col-11 col-md-8 col-lg-8">
+
+								<p>Vamos a um exemplo de aplicação dos títulos em um conteúdo:</p>
+
+								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+								<div class="heading-block">
+									<h2 class="text-left">Este é um título da aula (h2)</h2>
+									<p class="lead text-left">Este módulo pretende apresentar a especificidades da organização e dos procedimentos da sala de vacinação para COVID-19; apresentar os procedimentos de armazenamento da vacina X para COVID-19; e orientar para implantação de uma sala de vacina para COVID-19.</p>
+								</div>
+								<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+								<br/>
+
+								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+								<div class="heading-block">
+									<h3 class="text-left">Este é um título de tópico (h3)</h3>
+								</div>
+								<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+
+								<p>Em geral os recurso são configurados todos em 1 arquivo CSS, chamado de style-visual-resources.css. Contudo, eventualmente poderemos precisar adaptar alguns recursos (ex: usar uma imagem específica). Nessas situações, o recomendado é criar um novo arquivo css e incluí-lo na linha logo abaixo do css dos recursos:</p>
+
+								<h4>Este é um título de um subtópico (h4)</h4>
+
+								<p>As estratégias de comunicação e educação sobre a prevenção e manejo da COVID-19 são fundamentais para evitar a transmissão do vírus nas comunidades indígenas, mas devem ser construídas considerando suas especificidades linguísticas e socioculturais. Todo material informativo sobre a doença deve, de preferência, ser produzido na língua nativa para facilitar a compreensão, utilizando os meios de comunicação de maior difusão e de mais fácil acesso em cada comunidade, como por exemplo, radiofonia, internet, “boca de ferro”, rádio comunitária, etc.</p>
+
+								<h5>Este é um Título de um elemento (h5)</h5>
+
+								<p>Relembramos que é atribuição das Equipes Multidisciplinares de Saúde Indígena o desenvolvimento de atividades educativas e de prevenção, sendo que os Agentes Indígenas de Saúde são os melhores interlocutores nessa “tradução” e diálogo entre os conhecimentos científicos e os locais. Ressaltamos que as ações de educação e comunicação em saúde devem ter como princípio a ampla participação indígena em todo o processo, no planejamento, execução e avaliação. </p>
+
+								<h6>Este é um Título de um sub elemento (h6)</h6>
+
+								<p>Apesar da COVID-19 ser uma doença nova, os povos indígenas têm muitos conhecimentos sobre o cuidado com o corpo, da saúde e para evitar doenças, e os profissionais de saúde, ao promover ações educativas, devem considerar isso. Por exemplo, a prática de reclusão, que significa um isolamento de um indivíduo do convívio na aldeia, é um costume em alguns povos, e pode ser acionado como experiência similar para o isolamento social. </p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- Fim do Bloco 1 - Hierarquia de Títulos -->
                 
-                <!-- Bloco 1 - Abas-->
-				<div class="container-fluid section pt-4 clearfix">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-12 col-md-8 col-lg-8">
-								<div class="chamada">
-									<div class="heading-block">
-										<span class="before-heading">Recurso 1</span>
-										<h3>Abas</h3>
+                <!-- Bloco 2 - Abas-->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-11 col-md-8 col-lg-8">
+
+							<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+							<div class="heading-block">
+								<span class="before-heading">Recurso 1</span>
+								<h3>Abas</h3>
+							</div>
+							<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+
+							 <!--Tabs-->
+							 <div class="abas">
+							 	<ul id="abas1" class="nav nav-tabs boot-tabs">
+								<li class="nav-item"><a class="nav-link active" href="#aba1" data-toggle="tab">Direitos Autorais</a></li>
+								<!-- A partir do 2º ítem, podemos escolher quem aparece -->
+								<li class="nav-item d-none d-md-block"><a class="nav-link" href="#aba2" data-toggle="tab">Direitos do autor</a></li>
+								<li class="nav-item d-none d-md-block"><a class="nav-link" href="#aba3" data-toggle="tab">Copyright</a></li>
+								<li class="nav-item d-none d-md-block"><a class="nav-link" href="#aba4" data-toggle="tab">Copyleft</a></li>
+
+								<!-- Ítens em Dropdown - aparecem no mobile -->
+								<li class="nav-item dropdown d-block d-md-none">
+									<a class="nav-link dropdown-toggle" href="#" id="tabdrop1" data-toggle="dropdown">Ver mais</a>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="tapdrop1">
+										<a class="dropdown-item" href="#aba2" tabindex="-1" data-toggle="tab">Direitos do autor</a>
+										<a class="dropdown-item" href="#aba3" tabindex="-1" data-toggle="tab">Copyright</a>
+										<a class="dropdown-item" href="#aba4" tabindex="-1" data-toggle="tab">Copyleft</a>
+									</ul>
+								</li>
+								</ul>
+								<div id="tabcontent1" class="tab-content">
+								<!-- Aba 1 -->
+								<div class="tab-pane fade show active" id="aba1">
+									<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+
+									<!-- Texto e Imagem à direita -->
+									<div class="row justify-content-center">
+										<div class="col-12 col-lg-6 order-2 order-lg-1">
+										<p>Os Direitos Autorais formam um dos ramos da propriedade intelectual. Em razão desses direitos, o titular sobre uma obra autoral protegida pode usá-la como desejar e impedir terceiros de utilizá-la sem sua autorização.</p>
+					
+										<p>Assim, os direitos concedidos pelas legislações nacionais ao titular dos direitos de autor sobre uma obra protegida são, em geral, “direitos exclusivos”, pois a ele é permitido autorizar terceiros a fazer uso da obra, ressalvados os direitos e interesses reconhecidos legalmente a esses terceiros ou em virtude do interesse público, que impõe limitações a todos os direitos (MANUAL DIREITOS DO AUTOR, 2020)</p>
+										</div>
+					
+										<div class="col-12 col-lg-6 order-1 order-lg-2">
+										<img class="img-fluid rounded mx-auto d-block w-75 mb-3" src="../img/img.jpg" alt="" title="Fonte: Nome do autor / Nome do Banco de Imagens">
+										<p class="legenda text-center">Legenda da imagem</p>
+										<p class="fonte text-center">Fonte: A partir de Freepik</p>
+										</div>
 									</div>
+									<!-- Fim de texto e imagem à direita -->
 								</div>
-								
-								<div class="row">
-									<div class="col-12 col-md-8 col-lg-8 px-0 px-lg-3">
-										<p>Inserir o código das Abas aqui</p>
-									</div>
+
+								<!-- Aba 2 -->
+								<div class="tab-pane fade" id="aba2">
+								<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+								</div>
+
+								<!-- Aba 3 -->
+								<div class="tab-pane fade" id="aba3">
+								<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+								</div>
+
+								<!-- Aba 4 -->
+								<div class="tab-pane fade" id="aba4">
+								<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+								</div>
 								</div>
 							</div>
+							<!-- Fim de Tabs -->
 						</div>
 					</div>
 				</div>
-				<!-- Fim do Bloco 1 -->
 
-				<!-- Bloco 2 - Accordion -->
-				<div class="container py-4 clearfix">
+				<!-- Fim do Bloco 2 -->
+
+				<!-- Bloco 3 - Accordion -->
+				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-12 col-md-8 col-lg-8">
-							<div class="chamada">
-								<div class="heading-block">
-									<span class="before-heading">Recurso 2</span>
-									<h3>Accordion</h3>
-									<p class="lead">Accordions são utilizados para separar grandes blocos de texto. Ao clicar o conteúdo é revelado ao usuário.</p>
-								</div>
+						<div class="col-11 col-md-8 col-lg-8">
 
-								<p>Pode ser de 2 tipos: com texto e com imagem. No caso das imagens, basta modificá-las</p>
-
-								<p><strong>Obs: No accordion com texto, atente-se para o nome dado ao id do accordion!</strong></p>
+							<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+							<div class="heading-block">
+								<span class="before-heading">Recurso 2</span>
+								<h3>Accordion</h3>
+								<p class="lead">Accordions são utilizados para separar grandes blocos de texto. Ao clicar o conteúdo é revelado ao usuário.</p>
 							</div>
-						</div>
-					</div>
-				
-					<div class="row justify-content-center">
-						<div class="col-10 col-md-8 col-lg-8 px-0 px-lg-3">
+							<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+
+							<p>Pode ser de 2 tipos: com texto e com imagem. No caso das imagens, basta modificá-las</p>
+
+							<p><strong>Obs: No accordion com texto, atente-se para o nome dado ao id do accordion!</strong></p>
+
 							<!-- Accordion -->
 							<div id="accordion" class="accordion">
 								<div class="accordion-itens mb-0">
@@ -375,7 +521,7 @@
 									<div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-item3">
 										<a class="card-title">Ítem 3</a>
 									</div>
-									<div id="accordion-item3" class="collapse" data-parent="#accordion" >
+									<div id="accordion-item3" class="card-body collapse" data-parent="#accordion" >
 										<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.</p>
 									</div>
 
@@ -383,7 +529,7 @@
 									<div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-item4">
 										<a class="card-title">Ítem 4</a>
 									</div>
-									<div id="accordion-item4" class="collapse" data-parent="#accordion" >
+									<div id="accordion-item4" class="card-body collapse" data-parent="#accordion" >
 										<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.</p>
 									</div>
 								</div>
@@ -392,58 +538,165 @@
 						</div>
 					</div>
 				</div>
-                <!-- Fim do Bloco 2 -->
-                
-                <!-- Bloco 3 - Lista -->
-				<div class="container-fluid section pt-4 clearfix">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-12 col-md-8 col-lg-8">
-								<div class="chamada">
-									<div class="heading-block">
-										<span class="before-heading">Recurso 3</span>
-										<h3>Lista</h3>
-										<p class="lead">Na versão vertical, utilizada para exibir diferentes conteúdos em diferentes períodos de tempo</p>
-									</div>
-									
-									<p>Pode ser uma lista simples (não-ordenada) ou lista ordenada.</p>
+				<!-- Fim do Bloco 3 -->
+				
+				<!-- Bloco 4 - Accordion com Imagens-->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-11 col-md-8 col-lg-8">
+
+							<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+							<div class="heading-block">
+								<span class="before-heading">Recurso 4</span>
+								<h3>Accordion com imagens</h3>
+								<p class="lead">Uma outra visualização dos accordions, agora com imagens, as quais podem ser alteradas:</p>
+							</div>
+							<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+
+							<p>Neste exemplo, para cada coluna criou-se um accordion:</p>
+
+							<!--Accordion com imagens-->
+							<div class="row justify-content-center">
+								<div class="col-11 col-md-8 col-lg-8">
+								  <p class="orientacao align-self-center text-center mt-5"><i class="far fa-hand-point-down"></i> Clique nas imagens para visualizar as informações.</p>
 								</div>
 							</div>
+
+							<div class="row justify-content-center">
+								<div class="col-11 col-md-4 ">
+
+								  <!--Accordion 1-->
+								  <ul class="accordion accordion-foto mb-5">
+									<!--Item 1-->
+									<li>
+									  <a data-toggle="collapse" class="collapsed" href="#accordion-foto1">
+										<!--Imagens se movimentam no Hover-->
+										<div class="pic-container mx-auto">
+										  <img src="../img/img-thumb-accordion-A.svg" class="pic pic-frente shadow rounded" />
+										  <img src="../img/img-thumb-accordion-B.svg" class="pic pic-tras shadow rounded" />
+										  <img src="../img/img-thumb-accordion-C.svg" class="pic pic-tras shadow rounded" />
+				  
+										  <h5 class="text-center">Ítem 1 <i class="fas fa-chevron-down"></i></h5>
+										</div>
+										<!-- Fim das imagens-->
+										  
+									  </a>
+				  
+									  <div id="accordion-foto1" class="accordion-foto-conteudo collapse mt-3 mt-lg-5">
+										<p class="m-0 mx-auto">O crescimento <a href='' target='_blank'>acentuado</a> do volume da literatura científica foi acompanhado
+										  pela “comercialização” do sistema de comunicação da ciência, e pela perda do seu controle por
+										  parte do mundo académico e científico.</p>
+									  </div>
+									</li>
+								  </ul>
+								  <!--Fim do Accordion-->
+								</div>
+								<!--fim da coluna-->
+				  
+								<div class="col-11 col-md-4 ">
+
+								  <!--Accordion 2-->
+								  <ul class="accordion accordion-foto mb-5">
+									<!--Item 2-->
+									<li>
+									  <a data-toggle="collapse" class="collapsed" href="#accordion-foto2">
+										<!--Imagens se movimentam no Hover-->
+										<div class="pic-container mx-auto">
+										  <img src="../img/img-thumb-accordion-B.svg" class="pic pic-frente shadow rounded" />
+										  <img src="../img/img-thumb-accordion-C.svg" class="pic pic-tras shadow rounded" />
+										  <img src="../img/img-thumb-accordion-A.svg" class="pic pic-tras shadow rounded" />
+				  
+										  <h5 class="text-center ">Ítem 2 <i class="fas fa-chevron-down"></i></h5>
+										</div>
+										<!-- Fim das imagens-->
+									  </a>
+				  
+									  <div id="accordion-foto2" class="accordion-foto-conteudo collapse mt-3 mt-lg-5">
+										<p class="m-0 mx-auto">A função essencial das revistas científicas - a divulgação de resultados de
+										  investigação para promover a disseminação do conhecimento e o avanço da ciência – foi
+										  obscurecida pelos objetivos comerciais das <a href='#' data-toggle="modal"
+											data-target="#modal-glossario6" style="cursor: help;">editoras</a>.</p>
+									  </div>
+									</li>
+								  </ul>
+								  <!--Fim do Accordion-->
+								</div>
+								<!--fim da coluna-->
+				  
+								<div class="col-11 col-md-4 ">
+
+								  <!--Accordion 3-->
+								  <ul class="accordion accordion-foto">
+									<!--Item 3-->
+									<li>
+									  <a data-toggle="collapse" class="collapsed" href="#accordion-foto3">
+										 <!--Imagens se movimentam no Hover-->
+										 <div class="pic-container mx-auto">
+										  <img src="../img/img-thumb-accordion-C.svg" class="pic pic-frente shadow rounded" />
+										  <img src="../img/img-thumb-accordion-A.svg" class="pic pic-tras shadow rounded" />
+										  <img src="../img/img-thumb-accordion-B.svg" class="pic pic-tras shadow rounded" />
+				  
+										  <h5 class="text-center">Ítem 3 <i class="fas fa-chevron-down"></i></h5>
+										</div>
+										<!-- Fim das imagens-->
+									  </a>
+				  
+									  <div id="accordion-foto3" class="accordion-foto-conteudo collapse mt-3 mt-lg-5">
+										<p class="m-0 mx-auto">No meio acadêmico e entre os profissionais de informação, gerou a designada
+										  <a href='#' data-toggle="modal" data-target="#modal-glossario7" style="cursor: help;">“crise dos
+											periódicos”</a> e das graves consequências que as limitações ao acesso à literatura produziam
+										  ao próprio sistema científico.</p>
+									  </div>
+									</li>
+								  </ul>
+								  <!--Fim do Accordion-->
+								</div>
+								<!--fim da coluna-->
+							</div>
+							<!--fim da row-->
+							  <!--Fim do Accordion com imagens-->
 						</div>
 					</div>
-					
+				</div>
+                <!-- Fim do Bloco 4 -->
+                
+                <!-- Bloco 4 - Lista -->
+				<div class="container-fluid  bg-cinza-claro">
 					<div class="container">
 						<div class="row justify-content-center">
-							<div class="col-12 col-md-8 col-lg-8 px-0 px-lg-3">
+							<div class="col-11 col-md-8 col-lg-8">
 
-								<h4 class="pt-4 mb-0">Lista Simples</h4>
-								<div class="divider divider-sm divider-left"><i class="icon-circle"></i></div>
+								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+								<div class="heading-block">
+									<span class="before-heading">Recurso 3</span>
+									<h3>Lista</h3>
+									<p class="lead">Na versão vertical, utilizada para exibir diferentes conteúdos em diferentes períodos de tempo</p>
+								</div>
+								<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+
+								<p>Pode ser uma lista simples (não-ordenada) ou lista ordenada.</p>
+
+								<h4>Lista Simples</h4>
 
 								<!-- Lista Simples -->
-								<div class="row mt-3">
-									<div class="obj-lista col-10 text-left">
-									<ul class="list-group">
-										<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Compreender o que são as vacinas e qual a sua importância em termos da saúde dos indivíduos e das populações.</li>
-										<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Conhecer conceitos básicos relativos às vacinas e vacinação, como eficácia, segurança, efetividade e cobertura vacinal. </li>
-										<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Conhecer o Programa Nacional de Imunizações do Brasil, sua trajetória e relevância.</li>
-										<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Analisar os principais desafios colocados às políticas nacionais de imunização no cenário atual. </li>
-									</ul>
+								<div class="row justify-content-center">
+									<div class="obj-lista col-11 col-md-10">
+										<ul class="list-group">
+											<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Compreender o que são as vacinas e qual a sua importância em termos da saúde dos indivíduos e das populações.</li>
+											<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Conhecer conceitos básicos relativos às vacinas e vacinação, como eficácia, segurança, efetividade e cobertura vacinal. </li>
+											<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Conhecer o Programa Nacional de Imunizações do Brasil, sua trajetória e relevância.</li>
+											<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Analisar os principais desafios colocados às políticas nacionais de imunização no cenário atual. </li>
+										</ul>
 									</div>
 			
 								</div>
 								<!-- Fim de Lista Simples -->
-							</div>
-						</div>
 
-						<div class="row justify-content-center">
-							<div class="col-10 col-md-8 col-lg-8 px-0 px-lg-3">
-	
-								<h4 class="pt-4 mb-0">Lista Ordenada</h4>
-								<div class="divider divider-sm divider-left"><i class="icon-circle"></i></div>
+								<h4>Lista Ordenada</h4>
 
 								<!-- Lista Ordenada -->
-								<div class="row mt-3">
-									<div class="obj-lista col-10 text-left">
+								<div class="row justify-content-center">
+									<div class="obj-lista col-10 col-md-10">
 									  <ol class="list-group">
 										<li class="list-group-item fadeIn animated" data-animate="fadeIn">Compreender o que são as vacinas e qual a sua importância em termos da saúde dos indivíduos e das populações.</li>
 										<li class="list-group-item fadeIn animated" data-animate="fadeIn">Conhecer conceitos básicos relativos às vacinas e vacinação, como eficácia, segurança, efetividade e cobertura vacinal. </li>
@@ -451,27 +704,27 @@
 										<li class="list-group-item fadeIn animated" data-animate="fadeIn">Analisar os principais desafios colocados às políticas nacionais de imunização no cenário atual. </li>
 									  </ol>
 									</div>
-			
 								</div>
 								<!-- Fim de Lista Ordenada -->
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- Fim do Bloco 3 -->
+				<!-- Fim do Bloco 4 -->
 
-				<!-- Bloco 4 - Destaque Parallax -->
-				<div class="container-fluid py-4 clearfix px-0">
+				<!-- Bloco 5 - Destaque Parallax -->
+				<div class="container-fluid px-0">
                     <div class="container">
 						<div class="row justify-content-center">
-							<div class="col-12 col-md-8 col-lg-8">
-								<div class="chamada">
-									<div class="heading-block">
-										<span class="before-heading">Recurso 4</span>
-										<h3>Destaque Parallax</h3>
-										<p class="lead">Destaque com imagem de fundo, com efeito parallax.</p>
-									</div>
+							<div class="col-11 col-md-8 col-lg-8">
+
+								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+								<div class="heading-block">
+									<span class="before-heading">Recurso 4</span>
+									<h3>Destaque Parallax</h3>
+									<p class="lead">Destaque com imagem de fundo, com efeito parallax.</p>
 								</div>
+								<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
 							</div>
 						</div>
                     </div>
@@ -491,11 +744,11 @@
 				<div class="container mt-5">
 					<div class="row justify-content-center">
 						<div class="col-12 col-md-6">
-							<a href="#" class="button button-rounded button-reveal button-large button-border text-left"><i class="icon-line-arrow-left"></i><span>Voltar para Aula 1</span></a>
+							<p><a href="#" class="button button-rounded button-reveal button-large button-border text-left"><i class="icon-line-arrow-left"></i><span>Voltar para Aula 1</span></a></p>
 						</div>
 
 						<div class="col-12 col-md-6 text-right">
-							<a href="#" class="button button-rounded button-reveal button-large button-border text-right"><i class="icon-line-arrow-right"></i><span>Ir para Aula 1</span></a>
+							<p><a href="#" class="button button-rounded button-reveal button-large button-border text-right"><i class="icon-line-arrow-right"></i><span>Ir para Aula 1</span></a></p>
 						</div>
 					</div>
 				</div>
@@ -510,7 +763,7 @@
 		<footer id="footer">
 			<div class="container">
 				<!-- Include dos logos -->
-				<div w3-include-html="barra-de-logos.html"></div>
+				<div w3-include-html="../curso1/barra-de-logos.html"></div>
 			</div>
         </footer><!-- Fim do Rodapé - Barra de Logos -->
 
@@ -555,8 +808,14 @@
 	<!-- Scripts
 	============================================= -->
 
+	<!-- JS para recursos visuais específicos -->
+	<script src="../js/tabela-scroll.js"></script> <!--No mobile, scrolla a tabela -->
+	<script src="../js/main-timeline.js"></script> <!-- imeline vertical -->
+	<script src="../js/timeline-horizontal2.js"></script> <!-- Timeline horizontal -->
+
 	<!-- JS para os Includes-->
 	<script src="../js/include.js"></script>
+
 
 	<!-- Para fazer includes de HTML dentro do HTML -->
 	<script>

@@ -36,6 +36,156 @@
 	font-weight:600;
 }
 
+.accordion .carousel-control-next, 
+.accordion .carousel-control-prev {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  opacity: .5;
+}
+
+.accordion .saiba-mais a,
+.accordion .atencao a,
+.accordion .para-refletir a {
+  display: inline;
+  font-size: inherit;
+  padding: 0;
+}
+
+.accordion .saiba-mais ul li,
+.accordion .atencao ul li,
+.accordion .para-refletir ul li {
+  border-bottom: none;
+}
+
+.accordion .flip-card p {margin:0 0 20px;}
+
+.accordion .flip-card .card-footer i {
+  position: relative;
+  font-size: inherit;
+  top:0;
+}
+
+.accordion .flip-card ul li {border-bottom: none;}
+
+.accordion .box-quote i, 
+.accordion .box-quote .svg-inline--fa, 
+.accordion .serie4 p i {
+  position:relative;
+  top:0;
+}
+
+/* -------------------------------- 
+
+Accordion com Imagens
+
+-------------------------------- */
+
+.accordion-foto {list-style: none;}
+
+.accordion-foto li {border-bottom: none;}
+
+.accordion-foto a {
+  padding:0;
+}
+
+.accordion-foto a:hover, 
+.accordion-foto a:focus, 
+.accordion-foto a:visited  {text-decoration: none;}
+
+.accordion-foto a h5 {margin-top:1.5rem;}
+.accordion-foto a:hover h5 {color:var(--azul-claro);}
+
+/*Marco o primeiro*/
+.accordion-foto .pic {
+  position:relative;
+  top:0;
+  left:0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border:5px solid #fff;
+}
+
+/*Os demais ficam 'soltos' no layout, com position absolute*/
+.accordion-foto .pic.pic-tras {
+  position: absolute;
+  margin:0 20px;
+}
+
+/*Digo qual vai ser a elevação de cada uma das imagens*/
+.accordion-foto .pic:first-child {
+  z-index: 3;
+}
+
+.accordion-foto .pic:nth-child(2) {
+  z-index: 2;
+}
+
+.accordion-foto .pic:nth-child(3) {
+  z-index: 1;
+}
+
+/*Faço a rotação das imagens no hover*/
+.accordion-foto .pic-container:hover .pic:first-child{
+  -webkit-transition: all 0.10s ease;
+  transition: all 0.10s ease;
+}
+
+.accordion-foto .pic-container:hover .pic:nth-child(2) {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.accordion-foto .pic-container:hover .pic:nth-child(3) {
+  -webkit-transform: rotate(18deg);
+  transform: rotate(18deg);
+  -webkit-transition: all 0.20s ease;
+  transition: all 0.20s ease;
+}
+
+/*Configuro a seta para baixo (fa-chevron-down)*/
+.accordion-foto.accordion i, 
+  .accordion-foto.accordion .svg-inline--fa {
+    position: relative;
+    top:0;
+    left:10px;
+    font-size:1rem;
+    animation: pulse2 1.5s infinite;
+    transition: 0.25s;
+  }
+  
+  .accordion-foto.accordion .fa-chevron-down::before {content: "\f078" !important;}
+
+  @keyframes pulse2 {
+    0%   {transform: translateY(0); }
+      50%  {transform: translateY(-0.5rem);}
+      100% {transform: translateY(0); }
+}
+
+/*Configuro o conteúdo que será exibido neste accordion*/
+.accordion-foto .accordion-foto-conteudo  {
+  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+  box-shadow: 3px 1px 10px -2px #aaa;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+
 /* Lista Simples
 ------------------------*/
 
@@ -67,7 +217,57 @@
 /* Lista Ordenada
 ------------------------*/
 
-.obj-lista ol.list-group {display:list-item;}
+.obj-lista ol.list-group {
+	list-style:none;
+	counter-reset: contador-ol;
+}
 
-.obj-lista ol.list-group .list-group-item {padding-left: 10px;}
+.obj-lista ol.list-group .list-group-item {
+	display: list-item;
+	padding-left: 10px;
+	counter-increment: contador-ul;
+}
 
+
+.obj-lista ol.list-group .list-group-item:before {
+	background-color:var(--azul-claro);
+	content: counter(contador-ul);
+	margin-right:0.8rem;
+	border-radius: 50%;
+	color:#fff;
+	width:2rem;
+	height:2rem;
+	padding-bottom:0.45rem;
+	padding-top:0;
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+/* -------------------------------- 
+
+Tabs
+
+-------------------------------- */
+
+.abas .nav-tabs {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.abas .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #fff;
+    background-color: var(--azul-claro);
+    border-color: #e9ecef #e9ecef #fff;
+}
+
+.abas .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.abas .dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--azul-claro);
+}
+
+.abas .tab-content {border-bottom:1px solid #e9ecef;}

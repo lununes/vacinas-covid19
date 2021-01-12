@@ -15,10 +15,8 @@
 	--preto: #333; /*Preto*/
 	--azul-escuro: #301b5e; /*Azul Escuro*/
 	--azul-claro: #0193DA; /*Azul Claro*/
-	--cinza-claro: #EBF0F5; /*Cinza Claro*/
-	
-	--cinza3: #C1C8DE; /*Cinza 3*/
-	--cinza4: #D3DBF3; /*Cinza 4*/
+	--cinza-claro: #F9F9F9; /*Cinza Claro*/
+	--cinza-medio: #888; /*Cinza Médio*/
 
     --marrom: #b2550f; /*Marrom*/
     --marrom-pressed: #99471c; /*Marrom  Pressed*/
@@ -50,19 +48,19 @@
 
 	/* Hierarquia dos títulos */
 
-	--h1-mobile: 1.87rem; /*30px*/
-	--h2-mobile: 1.75rem; /*28px*/
-	--h3-mobile: 1.5rem; /*24px*/
-	--h4-mobile: 1.25rem; /*20px*/
-	--h5-mobile: 1.12rem;  /*18px*/
-	--h6-mobile: 1rem;  /*16px*/
+	--h1-mobile: 1.88rem; /*34px*/
+	--h2-mobile: 1.66rem; /*30x*/
+	--h3-mobile: 1.55rem; /*28px*/
+	--h4-mobile: 1.33rem; /*24px*/
+	--h5-mobile: 1.11rem;  /*20px*/
+	--h6-mobile: 1rem;  /*18px*/
 
-	--h1-desktop: 3rem; /*48px*/
-	--h2-desktop: 2.25rem; /*36px*/
-	--h3-desktop: 1.87rem; /*30px*/
-	--h4-desktop: 1.5rem; /*24px*/
-	--h5-desktop: 1.25rem; /*20px*/
-	--h6-desktop: 1rem;  /*16px*/
+	--h1-desktop: 3rem; /*60px*/
+	--h2-desktop: 2.25rem; /*45px*/
+	--h3-desktop: 1.75rem; /*35px*/
+	--h4-desktop: 1.5rem; /*30px*/
+	--h5-desktop: 1.25rem; /*25px*/
+	--h6-desktop: 1rem;  /*20px*/
 }
 
 /*--------------------------------------------------------------
@@ -73,12 +71,17 @@
 ------------------------*/
 
 /*Para texto e ícones*/
-.azul-escuro {color: var(--azul-escuro);}
-.azul-claro {color: var(--azul-claro);}
+.azul-escuro {color: var(--azul-escuro) !important;}
+.azul-claro {color: var(--azul-claro) !important;}
+.cinza-claro {color: var(--cinza-claro) !important;}
+.cinza-medio {color: var(--cinza-medio) !important;}
 
 /*Para fundos*/
-.bg-azul-escuro {background-color: var(--azul-escuro);}
-.bg-azul-claro {background-color: var(--azul-claro);}
+.bg-azul-escuro {background-color: var(--azul-escuro) !important;}
+.bg-azul-claro {background-color: var(--azul-claro) !important;}
+.bg-cinza-claro {background-color: var(--cinza-claro) !important;}
+.bg-cinza-medio {background-color: var(--cinza-claro) !important;}
+.bg-section {background: var(--bg-section) !important;}
 
 
 /* Tipografia
@@ -100,7 +103,7 @@ a {
 a:hover { color: var(--azul-claro); }
 
 h1, h2, h3, h4, h5, h6 {
-	color: var(--preto);
+	color: var(--azul-escuro);
 	font-weight: 600;
 	line-height: 1.25;
 	margin: 0 0 30px 0;
@@ -119,21 +122,24 @@ h5 {font-size: var(--h5-mobile);}
 
 h6 {font-size: var(--h6-mobile);}
 
-h5, h6 { 
-	font-weight: bold;
+
+h4, h5, h6 {
+	font-weight: 700;
+	margin-top:60px;
 	margin-bottom: 20px; 
 }
 
 .lead {
 	font-size: 1.5rem !important;
 	font-weight: 400 !important;
-	color:#888;
+	color:var(--cinza-medio);
 	letter-spacing: -.03125rem;
-	margin-top: 1.25rem;
+	margin: 0.5rem 0;
 }
 
 /* Desktops*/
 @media (min-width: 992px) {
+
 	body {font-size:20px;}
 
 	h1 {font-size: var(--h1-desktop);}
@@ -147,8 +153,6 @@ h5, h6 {
 	h5 {font-size: var(--h5-desktop);}
 
 	h6 {font-size: var(--h6-desktop);}
-
-	h4 {font-weight: 600;}
 }
 
 
@@ -399,10 +403,10 @@ h5, h6 {
 		margin-top: -102px;
 	}
 
-	.titulo .slider-caption.slider-caption-center {margin-top:9.4rem;}
+	/* .titulo .slider-caption.slider-caption-center {margin-top:9.4rem;} */
 
 	.titulo .lead {
-		font-size: 1.87rem !important;
+		font-size: var(--h3-desktop) !important;
 	}
 
 	/*Lista de Aulas (aparece somente no desktop) */
@@ -423,14 +427,14 @@ h5, h6 {
 		background-color: var(--azul-claro-alpha);
 		transition:0.5s;
 		transform: translate(0, -15px);
-		height:70px;
+		height:74px;
 	}
 	
 	.aulas .button.active {
 		background:#fff;
 		color:var(--preto);
 		transform: translate(0, -15px);
-		height:70px;
+		height:74px;
 	}
 	
 	.aulas .button.active:hover {
@@ -445,27 +449,37 @@ h5, h6 {
 /* Conteúdo
 ------------------------*/
 
-.content-wrap {padding: 40px 0;}
+.content-wrap {padding:20px 0;}
 
-@media (min-width: 992px) {
-	.content-wrap {padding: 40px 0;}
+#content .container {
+	padding-top:3rem;
+	padding-bottom:3rem;
+}
+/* Fonte e Legenda das imagens */
+.legenda, .fonte {
+	font-size:0.9rem;
 }
 
-/* Chamada (Título Heading Block + Lead)
+.legenda {
+	font-weight:600;
+	margin-bottom:0;
+}
+
+/*.content-wrap {padding: 2rem 0;} */
+
+/* Heading Block (Títulos h2 e h3 + Lead)
 ------------------------*/
 
-/* .chamada {text-align:center;} */
+.heading-block {margin-bottom: 25px;}
 
-.chamada .heading-block {margin-bottom: 30px;}
-
-.chamada .heading-block::after {
+.heading-block::after {
     border-top: 2px solid var(--azul-claro);
-    /* margin:20px auto; */
-
+    margin:20px 0;
 }
+
 /* Antetítulo */
-.chamada .before-heading {
-    font-size: 1.45rem;
+.heading-block .before-heading {
+    font-size: var(--h4-desktop);
     font-family: var(--subtitulos);
     color: var(--azul-escuro);
 }
@@ -474,61 +488,45 @@ h5, h6 {
 .heading-block h1, 
 .heading-block h2, 
 .heading-block h3, 
-.heading-block h4,
-.heading-block h5,
-.heading-block h6, 
 .emphasis-title h1, 
 .emphasis-title h2 {
 	color: var(--azul-escuro);
 	text-transform: none;
 }
 
-.heading-block h1 { font-size: var(--h1-mobile); }
-
 .heading-block h2 { font-size: var(--h2-mobile);}
 
 .heading-block h3 { font-size: var(--h3-mobile);}
 
-.heading-block h4 {
-	font-size: var(--h4-mobile);
-	font-weight: 700;
-}
-
-.heading-block h5 { font-size: var(--h5-mobile);}
-
-.heading-block h6 { font-size: var(--h6-mobile);}
 
 @media (min-width: 992px) {
-	.heading-block h1 { font-size: var(--h1-desktop); }
 
 	.heading-block h2 { font-size: var(--h2-desktop);}
 
 	.heading-block h3 { font-size: var(--h3-desktop);}
 
-	.heading-block h4 {font-size: var(--h4-desktop);}
-
-	.heading-block h5 { font-size: var(--h5-desktop);}
-
-	.heading-block h6 { font-size: var(--h6-desktop);}
 }
 
-/* Fim da Chamada (Título Heading Block + Lead)
+/* Fim do Heading Block (Títulos h2 e h3 + Lead)
 ------------------------*/
+
+
 
 /* Sessões
 ------------------------*/
 .section {
 	width:auto;
-	padding:30px 0
+	padding:0;
+	background:transparent;
 }
-
-.bg-section {background: var(--bg-section) !important;}
-
 .divider {margin: 2rem auto;}
 
 pre {
+	background-color:var(--bg-section);
 	border: 1px dotted var(--preto);
 	padding: 0 20px;
+	margin: 1rem 0 2rem;
+	font-size: 0.85rem;
 }
 
 pre code {white-space: pre-line;}
