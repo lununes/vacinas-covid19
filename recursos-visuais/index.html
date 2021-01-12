@@ -205,9 +205,11 @@
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-11 col-md-8 col-lg-8">
-								<p>Os recurso são configurados todos em um arquivo CSS, chamado de <em>style-recursos-visuais.css</em>. Eventualmente poderá ser necessário fazer algumas adaptações (ex: cor, tamanho, usar uma imagem específica etc).</p>
+								<p>Os recurso são configurados em um arquivo CSS chamado <em>style-recursos-visuais.css</em>. Já as configurações da identidade visual do curso estão no arquivo <em>style-custom.css</em>.</p>
 
-								<p>Se este for o caso, toda e qualquer alteração deve ser realizada no arquivo <strong>style-custom.css</strong>, localizado sempre ao final da lista de arquivos css:</p>
+								<p>Eventualmente poderá ser necessário fazer algumas adaptações (ex: cor, tamanho, usar uma imagem específica etc).</p>
+
+								<p>Se este for o caso, <strong>toda e qualquer alteração deve ser realizada num arquivo novo</strong>, localizado sempre ao final da lista de arquivos css. O motivo é para que apenas o conteúdo deste arquivo sobrescreva o dos anteriores, preservando-os.</p>
 
 								<div class="row justify-content-center mt-4">
 									<div class="col-12">
@@ -215,10 +217,10 @@
 										<div class="code-snippet">
 											<pre>
 												<code>
-												&lt;!-- CSS da estrutura geral do curso e dos recursos visuais --&gt;
-												&lt;link rel="stylesheet" href="css/style.css"&gt; <span class="azul-claro"><em>-> Css da estutura geral do curso</em></span>
-												&lt;link rel="stylesheet" href="css/style-recursos-visuais.css"&gt; <span class="azul-claro"><em>-> Css dos recursos visuais</em></span>
-												&lt;<strong>link rel="stylesheet" href="css/style-custom.css"</strong>&gt; <span class="azul-claro"><em>-> Seu Css modificado</em></span>
+												&lt;!-- CSS customizado para o curso e dos recursos visuais --&gt;
+												&lt;link rel="stylesheet" href="css/style-recursos-visuais.css"&gt; <span class="azul-claro"><em>-> Css dos recursos visuais (estrutura)</em></span>
+												&lt;<strong>link rel="stylesheet" href="css/style-custom.css"</strong>&gt; <span class="azul-claro"><em>-> Css da identidade visual do curso</em></span>
+												&lt;<strong>link rel="stylesheet" href="css/<strong>seu-arquivo.css</strong>"</strong>&gt; <span class="azul-claro"><em>-> Seu Css modificado</em></span>
 												</code>
 												</pre>
 										</div>
@@ -234,7 +236,7 @@
 				<!-- Bloco 0 - Entendendo a estrutura do html -->
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-11 col-mg-8 col-lg-8">
+						<div class="col-11 col-md-8 col-lg-8">
 
 							<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
 							<div class="heading-block">
@@ -243,7 +245,7 @@
 							</div>
 							<!-- Fim dao Heading Block-->
 
-							<p>Todo o conteúdo deverá ser inserido dentro da section com id <strong>#content</strong> e envolvido por uma div com classe <strong>.content-wrap</strong>:</p>
+							<p>1) Todo o conteúdo deverá ser trabalhado dentro da section com id <strong>#content</strong> e envolvido por uma div com classe <strong>.content-wrap</strong>:</p>
 							
 							<!--Trecho do Código-->
 							<div class="row justify-content-center">
@@ -256,7 +258,7 @@
 													============================================= --&gt;
 													&lt;section id="content"&gt;
 														&lt;div class="content-wrap"&gt;
-															<p class="my-0"><strong>Aqui entra meu conteúdo</strong></p>
+															<p class="my-0"><strong>...</strong></p>
 														&lt;/div&gt;
 													&lt;/section&gt;
 											</code>
@@ -267,7 +269,67 @@
 							</div>
 							<!--Fim do Trecho do Código-->
 
-							<p>Testando parágrafo aqui</p>
+							<p>2) Em seguida, utilizamos divs com classes <strong>.container</strong> ou <strong>.container-fluid</strong> para inserir o conteúdo, que pode estar em uma largura fixa pré-estabelecida (utilizando a classe .container) ou 100% da tela (classe .container-fluid).</p>
+
+							<!--Trecho do Código-->
+							<div class="row justify-content-center">
+								<div class="col-12">
+									<!--Code Snippet-->
+									<div class="code-snippet">
+										<pre>
+											<code>
+												&lt;!-- Conteúdo
+													============================================= --&gt;
+													&lt;section id="content"&gt;
+														&lt;div class="content-wrap"&gt;
+															&lt;div class="container"&gt;
+																<p class="my-0"><strong>Aqui entra meu conteúdo</strong></p>
+															&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/section&gt;
+											</code>
+										</pre>
+									</div>
+									<!--Fim do Code Snippet-->
+								</div>
+							</div>
+							<!--Fim do Trecho do Código-->
+
+							<p>3) Para organizar e distribuir o conteúdo na página, trabalhamos com linhas e colunas. O framework utilizado para nos auxiliar é o <a href='https://getbootstrap.com/docs/4.5/layout/grid/' target='_blank'>Bootstrap</a>. Ele possui <strong>um grid de até 12 colunas (.col-quantidade-de-colunas), distribuídos em linhas (.row)</strong>. É possível determinar quantidades de colunas diferentes de acordo com a resolução de tela (smartphone, tablet, desktops), a partir de alguns pontos de quebra (breakpoints).</p>
+
+							<p><strong>Obs:</strong> Uma linha (row) sempre deverá ter colunas!</p>
+
+							<p>Neste projeto, utilizamos 11 colunas para smartphones e 8 colunas para tablets (md) e desktops (lg). Assim, nossa estrutura fica:</p>
+
+
+							<!--Trecho do Código-->
+							<div class="row justify-content-center">
+								<div class="col-12">
+									<!--Code Snippet-->
+									<div class="code-snippet">
+										<pre>
+											<code>
+												&lt;!-- Conteúdo
+													============================================= --&gt;
+													&lt;section id="content"&gt;
+														&lt;div class="content-wrap"&gt;
+															&lt;div class="container"&gt;
+																&lt;div class="row"&gt;
+																	&lt;div class="col-11 col-md-8 col-lg-8"&gt;
+																		<p class="my-0"><strong>Aqui entra meu conteúdo</strong></p>
+																	&lt;/div&gt;
+																&lt;/div&gt;
+															&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/section&gt;
+											</code>
+										</pre>
+									</div>
+									<!--Fim do Code Snippet-->
+								</div>
+							</div>
+							<!--Fim do Trecho do Código-->
+
 						</div>
 					</div>
 				</div>
@@ -277,11 +339,10 @@
 				<div class="container-fluid bg-cinza-claro">
 					<div class="container">
 						<div class="row justify-content-center">
-							<div class="col-11 col-mg-8 col-lg-8">
+							<div class="col-11 col-md-8 col-lg-8">
 
 								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
 								<div class="heading-block">
-									<span class="before-heading">Recurso 1</span>
 									<h3>Títulos</h3>
 									<p class="lead">Apresentam a hierarquia do conteúdo a fim de organizar e priorizar as informações.</p>
 								</div>
@@ -289,7 +350,8 @@
 
 								<p>Nosso conteúdo começará a partir do título h2. Isso porque o título h1 é dedicado ao nome do curso, localizado na imagem de abertura da página.</p>
 
-								<p>Os títulos h2 e h3 são utilizados devem ser utilizados para a área de conteúdo dentro da div com classe <strong>.heading-block</strong>. Essa div engloba um antetítulo (opcional), o título (obrigatório), um lead (opcional) e um separador ao final:</p>
+								<p>Os títulos h2 e h3 devem ser utilizados para a área de conteúdo dentro da div com classe <strong>.heading-block</strong>. Essa div engloba: um antetítulo (opcional), o título (obrigatório), um lead (opcional) e um separador ao final</p>
+								<br/>
 
 								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
 								<div class="heading-block">
@@ -306,7 +368,6 @@
 								</div>
 								<!-- Fim do Heading Block-->
 
-								
 								<!--Trecho do Código-->
 								<div class="row justify-content-center">
 									<div class="col-12">
@@ -367,10 +428,12 @@
 							</div>
 						</div>
 
-						<div class="row justify-content-center">
+						<div class="row justify-content-center mt-4">
 							<div class="col-11 col-md-8 col-lg-8">
 
 								<p>Vamos a um exemplo de aplicação dos títulos em um conteúdo:</p>
+
+								<br/>
 
 								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
 								<div class="heading-block">
@@ -478,8 +541,7 @@
 						</div>
 					</div>
 				</div>
-
-				<!-- Fim do Bloco 2 -->
+				<!-- Fim do Bloco 2 - Abas -->
 
 				<!-- Bloco 3 - Accordion -->
 				<div class="container">
@@ -538,7 +600,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- Fim do Bloco 3 -->
+				<!-- Fim do Bloco 3 - Accordion -->
 				
 				<!-- Bloco 4 - Accordion com Imagens-->
 				<div class="container">
@@ -558,7 +620,7 @@
 							<!--Accordion com imagens-->
 							<div class="row justify-content-center">
 								<div class="col-11 col-md-8 col-lg-8">
-								  <p class="orientacao align-self-center text-center mt-5"><i class="far fa-hand-point-down"></i> Clique nas imagens para visualizar as informações.</p>
+								  <p class="cinza-escuro align-self-center text-center"><i class="far fa-hand-point-down"></i> Clique nas imagens para visualizar as informações.</p>
 								</div>
 							</div>
 
@@ -658,9 +720,417 @@
 						</div>
 					</div>
 				</div>
-                <!-- Fim do Bloco 4 -->
+				<!-- Fim do Bloco 4 - Accordion com Imagens -->
+				
+				<!-- Bloco 5 - Cards de Comparação & Diferenciação-->
+				<div class="container-fluid bg-cinza-claro">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-11 col-md-8 col-lg-8">
+
+								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+								<div class="heading-block">
+									<span class="before-heading">Recurso 5</span>
+									<h3>Cards de Comparação & Diferenciação</h3>
+									<p class="lead">Utilizado para comparar ou diferenciar 2 elementos.</p>
+								</div>
+								<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+
+								<!--Comparação-->
+								<div class="row justify-content-center my-5 card-comparacao" >
+									<div class="col-11 col-md-5 shadow item item1">
+									  <h5 class="mt-0 text-center"><strong>Título do meu Card 1</strong></h5>
+									  <p>O Brasil apresenta uma situação de transmissão comunitária e o novo coronavírus já circula por quase todos os municípios do país. Se ainda não há transmissão local em determinada aldeia, a restrição da circulação de pessoas é ainda uma importante estratégia para evitar a entrada do vírus na comunidade. </p>
+
+									  <!-- Lista Simples -->
+										<div class="row justify-content-center">
+											<div class="obj-lista col-12">
+												<ul class="list-group">
+													<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Não é imediatamente disponível</li>
+													<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Nem sempre é acessível</li>
+													<li class="list-group-item fadeIn animated" data-animate="fadeIn"><i class="icon-line-disc azul-claro mr-2"></i> Não é de baixo custo</li>
+												</ul>
+											</div>
+					
+										</div>
+										<!-- Fim de Lista Simples -->
+									</div>
+					  
+					  
+									<div class="col-12 col-md-2 align-self-center">
+									  <p class="text-center"><i class="fas fa-times"></i></p>
+									  <!-- As linhas comentadas abaixo é caso queira usar algum dos outros tipos de comparação -->
+									  <!-- <p class="text-center" style="font-size:2.5rem; font-weight: 700;">OU</p> -->
+									  <!-- <p class="text-center" style="font-size:2.5rem; font-weight: 700;">&</p> -->
+									</div>
+					  
+									<div class="col-11 col-md-5 shadow item item2">
+									  <h5 class="mt-0 text-center verde"><strong>Título do meu Card 2</strong></h5>
+									  <p>Se concretiza por meio da disponibilização dos artigos, avaliados por pares, em repositórios abertos
+										(BJÖRK <em>et al.</em>,2O14).</p>
+
+										  <!-- Lista Simples -->
+										  <div class="row justify-content-center">
+											<div class="obj-lista col-12">
+												<ul class="list-group">
+													<li class="list-group-item"><i class="icon-line-disc azul-claro mr-2"></i> Facilita crítica aberta</li>
+													<li class="list-group-item"><i class="icon-line-disc azul-claro mr-2"></i> Permite correção em tempo real</li>
+													<li class="list-group-item"><i class="icon-line-disc azul-claro mr-2"></i> É transparente</li>
+												</ul>
+											</div>
+					
+										</div>
+										<!-- Fim de Lista Simples -->
+									</div>
+								</div>
+								<!--Fim de comparação-->
+					  
+								<!--Diferença-->
+								<div class="row justify-content-center mb-5 card-diferenciacao" >
+									<div class="col-10 col-md-5 shadow item item1 wow slideInUp" data-wow-duration="2s">
+										<h5 class="mt-0 text-center"><strong>Título do meu Card 1</strong></h5>
+										<p class="text-center mb-0" style="font-size:var(--h1-desktop); color:var(--laranja);"> <i class="icon-sun1"></i></p>
+										<p class="text-center">Dia</p>
+									</div>
+					  
+					  
+									<div class="col-12 col-md-2 align-self-center wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+									  <p class="text-center" style="font-size:7rem; font-weight: 700;">≠</p>
+									</div>
+					  
+									<div class="col-10 col-md-5 shadow item item2 wow slideInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+										<h5 class="mt-0 text-center"><strong>Título do meu Card 2</strong></h5>
+									  
+										<p class="text-center mb-0" style="font-size:var(--h1-desktop); color:var(--azul-claro);"> <i class="icon-moon2"></i></p>
+										<p class="text-center">Noite</p>
+									  
+									</div>
+								</div>
+								<!--Fim de Diferença-->
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Bloco 5 - Cards de Comparação & Diferenciação -->
+
+				<!-- Bloco 6 - Citações -->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-11 col-md-8 col-lg-8">
+
+							<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+							<div class="heading-block">
+								<span class="before-heading">Recurso 7</span>
+								<h3>Citações</h3>
+								<p class="lead">Utilize para destacar falas de outros autores</p>
+							</div>
+							<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Bloco 6 - Citações -->
+				
+				<!-- Bloco 7 - Destaques -->
+				<div class="container-fluid bg-cinza-claro px-0">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-11 col-md-8 col-lg-8">
+
+								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+								<div class="heading-block">
+									<span class="before-heading">Recurso 7</span>
+									<h3>Destaques</h3>
+									<p class="lead">Cards, Boxes e Fundos Full-width ajudam a destacar um conteúdo</p>
+								</div>
+								<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+
+								<h4>Card com Título + texto</h4>
+
+								<!--Card Simples com Título -->
+								<div class="row justify-content-center my-4">
+									<div class="col-11 col-md-10">
+									<div class="card-simples destaque-texto shadow option1">
+										<h3 class="text-center">Produção de artigos</h3>
+										<p class="text-center">Mas eis a pergunta que realmente interessa:<br/><br/>Esta quantidade de artigos é igualmente traduzida em qualidade, influencia, relevância?</p>
+									</div>
+									</div>
+									<!--fim da coluna-->
+								</div>
+								<!--fim do Card Simples com Título-->
+
+								<h4>Card somente texto</h4>
+
+								<!--Card Simples com Título -->
+								<div class="row justify-content-center my-4">
+									<div class="col-11 col-md-10">
+									<div class="card-simples destaque-texto shadow option1">
+										<p class="text-center">A divisão das atribuições de cada membro da equipe dependerá do contexto local, mas é de fundamental importância que todos os eixos e ações sejam realizados. Em muitas situações as EMSI podem atuar de maneira desmembrada.</p>
+									</div>
+									</div>
+									<!--fim da coluna-->
+								</div>
+								<!--Fim do Card Simples com Título-->
+
+								<h4>Card simples Lado a Lado e alinhado pelo centro:</h4>
+
+								<p><strong>Obs:</strong> Para deixá-los lado a lado e alinhado pelo centro, aplicamos as classes <em>justify-content-center</em>, <em>d-flex</em> e <em>flex-column</em> à div de classe .card-simples.</p>
+
+								<!-- Cards de Texto Lado a Lado -->
+								<div class="row justify-content-center my-5">
+									<div class="col-12 col-md-4 mb-5">
+										<div class="card-simples multi-border shadow h-100 justify-content-center d-flex flex-column">
+											<p class="m-0 text-center">A Carminha tem o coração na sola dos pés!</p>
+										</div>
+									</div>
+
+									<div class="col-12 col-md-4 mb-5">
+										<div class="card-simples multi-border shadow h-100 justify-content-center d-flex flex-column">
+											<p class="m-0 text-center">Você é luz, é rara estrela e luar!</p>
+										</div>
+									</div>
+
+									<div class="col-12 col-md-4 mb-5">
+										<div class="card-simples multi-border shadow h-100 justify-content-center d-flex flex-column">
+											<p class="m-0 text-center">Manhã de sol, meu iá iá meu iô iô</p>
+										</div>
+									</div>
+								</div>
+								<!--Fim do Cards de Texto Lado a Lado-->
+
+								<h4>Cards com texto e imagem:</h4>
+
+								<!-- Card com texto e imagem -->
+								<div class="row justify-content-center mb-5" id="card-texto-imagem1">
+									<!-- Cardbox 1 -->
+									<div class="col-11 col-lg-6 mt-5 mt-lg-0">
+										<div class="card-box h-100">
+											<div class="card multi-border shadow h-100">
+											<img src="../img/img-cardbox.jpg" title="Fonte: Readyelements / Pixabay" class="card-img-top img-responsive">
+											<div class="card-body">
+												<h5 class="mt-0">CD-ROMs</h5>
+												<p class="card-text">O usuário acessa aquilo que comprou e não pode gravar outros dados na mídia ou chip. Só é possível gravar em um CD-ROMs quando ele é um CD virgem, ou seja, nenhum dado foi gravado em cima dele. Um CD de música, por exemplo, não permite gravações em cima dele porque ele já possui dados gravados.</p>
+											</div>
+											</div>
+										</div>
+									</div>
+									<!-- Fim do Cardbox 1 -->
+						
+									<!-- Cardbox 2 -->
+									<div class="col-11 col-lg-6 mt-5 mt-lg-0">
+										<div class="card-box h-100">
+											<div class="card multi-border shadow h-100">
+												<img src="../img/img-cardbox.jpg" title="Fonte:jcomp / Freepik" class="card-img-top img-responsive">
+												<div class="card-body">
+													<h5 class="mt-0">DVD-ROMs</h5>
+													<p class="card-text">Além dos CD-ROMs, nós temos os DVD-ROMs, que são um tipo de mídia que utilizada para gravação de vídeos ou dados. Você costuma ver muitos DVDs de filmes. (Observação: Para um computador ler um DVD ele precisar ter um leitor de DVD)</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Fim do Cardbox 2 -->
+
+								</div>
+								<!-- Fim do Card com texto e imagem -->
+
+								<h4>Card com ícones:</h4>
+
+								<!-- Card Simples com ícones -->
+								<div class="row justify-content-center my-4">
+									<div class="col-11 col-md-12">
+										<div class="card-simples shadow">
+											<h5 class="text-center mt-0"><strong>Dimensões do Arca</strong></h5>
+											<div class="row">
+												<div class="col-12 col-md-4 my-4 text-center">
+													<img class="mx-auto d-block img-fluid aos-init aos-animate" data-aos="flip-left" src="../img/ic1.svg" alt="" width="100">
+													<p>É um indicador de Desempenho do Governo Federal</p>
+												</div>
+								
+												<div class="col-12 col-md-4 my-4 text-center">
+													<img class="mx-auto d-block img-fluid aos-init aos-animate" data-aos="flip-left" src="../img/ic2.svg" alt="" width="100">
+													<p>Requisito para a aprovação de financiamento nos editais PIBIC, PIBITI e Inova da Fiocruz;</p>
+												</div>
+								
+												<div class="col-12 col-md-4 my-4 text-center">
+													<img class="mx-auto d-block img-fluid aos-init aos-animate" data-aos="flip-left" src="../img/ic3.svg" alt="" width="100">
+													<p>Cada comunidade possui informações sobre o gestor, homepage, coleções e quantitativo;</p>
+												</div>
+								
+												<div class="col-12 col-md-4 my-4 text-center">
+													<img class="mx-auto d-block img-fluid aos-init aos-animate" data-aos="flip-left" src="../img/ic4.svg" alt="" width="100">
+													<p>Desenvolvido em Dspace - atualmente na versão 4.7;</p>
+												</div>
+								
+												<div class="col-12 col-md-4 my-4 text-center">
+													<img class="mx-auto d-block img-fluid aos-init aos-animate" data-aos="flip-left" src="../img/ic5.svg" alt="" width="100">
+													<p>26 comunidades (dezembro/2018);</p>
+												</div>
+								
+												<div class="col-12 col-md-4 my-4 text-center">
+													<img class="mx-auto d-block img-fluid aos-init aos-animate" data-aos="flip-left" src="../img/ic6.svg" alt="" width="100">
+													<p>25.677 objetos digitais (dezembro/2018).</p>
+												</div>
+							
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Card Simples com ícones -->
+
+								<h4>Box de Atenção:</h4>
+
+								<!-- Box de Atenção -->
+								<div class="row justify-content-center">
+									<div class="col-10 col-md-12">
+									  <div class="atencao card-simples multi-border bg-laranja text-white">
+										<h5 class="text-white"><i class="icone-fontawesome fas fa-exclamation" data-fa-transform="grow-25" aria-hidden="true"></i>Atenção</h5>
+										<div class="boxes-content">
+					  
+										  <p>Atualmente, nas ciências biomédicas, este processo de avaliação pode demorar de 01 a 06 meses, às
+											vezes um ano. Nas áreas mais competitivas (e nas revistas de mais prestígio), este processo leva
+											em média 01 a 02 meses. </p>
+					  
+										  <!-- Lista Simples -->
+											<div class="row justify-content-center">
+												<div class="obj-lista col-11 col-md-12">
+													<ul class="list-group">
+														<li class="list-group-item"><i class="icon-line-chevron-right text-white mr-2"></i> <a href='' target='_blank'>Exemplo de link para páginas</a></li>
+													</ul>
+												</div>
+						
+											</div>
+											<!-- Fim de Lista Simples -->
+					  
+										</div>
+									  </div>
+									</div>
+								</div>
+								<!-- Fim do Box de Atenção -->
+
+								<h4>Box de Glossário:</h4>
+
+								<!--Box Glossário-->
+								<div class="row justify-content-center">
+									<div class="col-10 col-md-12">
+									  <div class="glossario card-simples multi-border bg-lilas text-white">
+										<h5 class="text-white"><i class="iconmoon icon-ic-glossario"></i>Glossário</h5>
+										<div class="boxes-content">
+					  
+										  <p>Mauris quis nisi ex. Vivamus et <a href='' target='_blank'>sodales ipsum</a>, vulputate interdum nisl. Proin sit amet tellus sem. Etiam fringilla, diam et pellentesque sodales, mi est maximus ex, vitae malesuada augue tortor vitae nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac luctus eros, quis lobortis odio. Morbi in massa quis lorem porttitor tempus. </p>
+
+										</div>
+									  </div>
+									</div>
+								</div>
+								<!--Fim do Box Glossário-->
+
+								<h4>Box de Material Complementar:</h4>
+
+								<!--Box Material Complementar-->
+								<div class="row justify-content-center">
+									<div class="col-10 col-md-12">
+									  <div class="material-complementar card-simples multi-border bg-azul-claro text-white">
+										<h5 class="text-white"><i class="iconmoon icon-ic-material-complementar"></i>Material Complementar</h5>
+										<div class="boxes-content">
+					  
+										  <p>Mauris quis nisi ex. Vivamus et sodales ipsum, vulputate interdum nisl. Proin sit amet tellus sem. Etiam fringilla, diam et pellentesque sodales, mi est maximus ex, vitae malesuada augue tortor vitae nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac luctus eros, quis lobortis odio. Morbi in massa quis lorem porttitor tempus. </p>
+
+										  	<!-- Lista Simples -->
+											<div class="row justify-content-center">
+												<div class="obj-lista col-11 col-md-12">
+													<ul class="list-group">
+														<li class="list-group-item"><i class="icon-line-headphones text-white mr-2"></i><a href='' target='_blank'>Exemplo de link de áudio</a></li>
+														<li class="list-group-item"><i class="icon-line-file text-white mr-2"></i> <a href='' target='_blank'>Exemplo de link para arquivos</a></li>
+														<li class="list-group-item"><i class="icon-line-chevron-right text-white mr-2"></i> <a href='' target='_blank'>Exemplo de link para páginas</a></li>
+														<li class="list-group-item"><i class="icon-line-video text-white mr-2"></i> <a href='' target='_blank'>Exemplo de link de vídeo</a> </li>
+													</ul>
+												</div>
+						
+											</div>
+											<!-- Fim de Lista Simples -->
+										</div>
+									  </div>
+									</div>
+								</div>
+								<!--Fim do Box Material Complementar -->
+
+								<h4>Box de Para Refletir:</h4>
+
+								<!--Box Para Refletir-->
+								<div class="row justify-content-center">
+									<div class="col-10 col-md-12">
+									  <div class="para-refletir card-simples multi-border bg-rosa text-white">
+										<h5 class="text-white"><i class="iconmoon icon-ic-para-refletir"></i>Para refletir</h5>
+										<div class="boxes-content">
+					
+										  <p>Como nossa produção acadêmica dialoga com as demandas da comunidade?</p>
+					
+										  <p>De que maneira podemos disponibilizar o que já desenvolvemos nos variados cursos e formações?</p>
+					
+										  <p>Os pesquisadores <a href="http://books.scielo.org/id/22qtc/pdf/pretto-9788523208899-02.pdf"
+											  target="_blank">Simon e Vieira</a> ressaltam que é preciso considerar as novas formas de
+											produção social que emergem com o avanço da tecnologia digital e de que forma favorecem (ou
+											impulsionam) o estabelecimento de um novo modelo de prática acadêmica, mais colaborativo e que
+											valoriza o conhecimento como bem comum.</p>
+					
+										</div>
+									  </div>
+									</div>
+								</div>
+								<!--Fim do Box Para Refletir-->
+
+								<h4>Box de Saiba Mais:</h4>
+
+								<!--Box Saiba Mais-->
+								<div class="row justify-content-center">
+									<div class="col-10 col-md-12">
+									  <div class="saiba-mais card-simples multi-border bg-azul-escuro text-white">
+										<h5 class="text-white"><i class="fas fa-question-circle" data-fa-transform="grow-25"></i>Saiba mais</h5>
+										<div class="boxes-content">
+					  
+										  <p>Atualmente, nas ciências biomédicas, este processo de avaliação pode demorar de 01 a 06 meses, às
+											vezes um ano. Nas áreas mais competitivas (e nas revistas de mais prestígio), este processo leva
+											em média 01 a 02 meses. </p>
+					  
+										</div>
+									  </div>
+									</div>
+								  </div>
+								  <!--Fim do Box Saiba Mais-->
+
+							</div>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-11 col-md-8 col-lg-8">
+
+								<h4>Fundo com imagem de fundo com efeito Parallax:</h4>
+
+							</div>
+						</div>
+					</div>
+					
+					<!-- Parallax -->
+					<div class="container-fluid px-0">
+						<section id="page-title" class="page-title-parallax page-title-dark skrollable skrollable-between" style="background-image: url('../img/services/home-testi-bg.jpg'); background-size: cover; padding: 120px 0px; background-position: 0px -121.61px;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
+							<div class="container clearfix text-center">
+								<h3 class="text-white">Insira o texto</h3>
+								<span>Um pequeno texto, se quiser.</span>
+							</div>
+						</section>
+					</div>
+                    <!-- Fim do Parallax -->
+
+
+				</div>
+
+				<!-- Fim do Bloco 6 - Destaques e Citações -->
                 
-                <!-- Bloco 4 - Lista -->
+                <!-- Bloco 5 - Lista -->
 				<div class="container-fluid  bg-cinza-claro">
 					<div class="container">
 						<div class="row justify-content-center">
@@ -710,35 +1180,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- Fim do Bloco 4 -->
-
-				<!-- Bloco 5 - Destaque Parallax -->
-				<div class="container-fluid px-0">
-                    <div class="container">
-						<div class="row justify-content-center">
-							<div class="col-11 col-md-8 col-lg-8">
-
-								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
-								<div class="heading-block">
-									<span class="before-heading">Recurso 4</span>
-									<h3>Destaque Parallax</h3>
-									<p class="lead">Destaque com imagem de fundo, com efeito parallax.</p>
-								</div>
-								<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
-							</div>
-						</div>
-                    </div>
-
-                    <!-- Parallax -->
-                    <section id="page-title" class="page-title-parallax page-title-dark skrollable skrollable-between" style="background-image: url('../img/services/home-testi-bg.jpg'); background-size: cover; padding: 120px 0px; background-position: 0px -121.61px;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
-                        <div class="container clearfix text-center">
-                            <h3 class="text-white">Insira o texto</h3>
-                            <span>Um pequeno texto, se quiser.</span>
-                        </div>
-                    </section>
-                    <!-- Fim do Parallax -->
-				</div>
-				<!-- Fim do Bloco 4 -->
+				<!-- Fim do Bloco 5 - Lista -->
 
 				<!-- Navegação -->
 				<div class="container mt-5">

@@ -195,11 +195,7 @@ Accordion com Imagens
 	background:transparent;
 	border:transparent;
 	border-radius: 6px;
-	/*margin-bottom: 10px;
-	 box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
-	border: 1px solid #fafafa;
-	padding: 1.2rem 1.25rem; */
-	padding: 0.8rem 0;
+	padding: 0.4rem 0;
 }
 
 .obj-lista .list-group-item i.icon-line-check-circle {font-size: 1.25rem;}
@@ -243,6 +239,54 @@ Accordion com Imagens
 	display: inline-block;
 	box-sizing: border-box;
 }
+
+/* -------------------------------- 
+
+Cards de Comparação e Diferenciação
+
+-------------------------------- */
+
+
+.card-comparacao .item,
+.card-diferenciacao .item  {
+	padding: 30px 30px 20px;
+	background: #fff;
+	box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+	margin-bottom: 30px;
+	font-size: 1rem;
+  }
+  
+.card-comparacao .fa-times,
+.card-diferenciacao .fa-times {font-size: 6rem;}
+
+/* -------------------------------- 
+
+Destaques 
+
+-------------------------------- */
+
+.card,
+.card-simples {
+	background: #fff;
+	border: 1px solid var(--cinza-claro);
+	border-radius: 6px;
+}
+
+/*Cards de texto (com título, sem título e lado a lado)*/
+.card-simples {
+	margin-bottom: 30px;
+	padding: 30px;
+}
+
+.card-simples.destaque-texto {font-weight: 700;}
+
+.card-simples.destaque-texto h3,
+.card-simples.destaque-texto h4  {
+	font-family: var(--titulos);
+	font-weight: 700;
+}
+  
 
 /* -------------------------------- 
 

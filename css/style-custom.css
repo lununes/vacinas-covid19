@@ -11,17 +11,27 @@
 
 :root {
 
-    /* Cores */
-	--preto: #333; /*Preto*/
+    /* Cores principais */
 	--azul-escuro: #301b5e; /*Azul Escuro*/
 	--azul-claro: #0193DA; /*Azul Claro*/
+
+	/* Cores neutras */
+	--preto: #333; /*Preto*/
+	--cinza-escuro:#888; /*Cinza Escuro*/
+	--cinza-medio: #f1f1f1; /*Cinza Médio*/
 	--cinza-claro: #F9F9F9; /*Cinza Claro*/
-	--cinza-medio: #888; /*Cinza Médio*/
+
+	/* Cores de apoio */
+	--rosa: #f74a89; /*Rosa*/
+	--lilas:#874F9A; /*Lilás*/
+	--laranja: #E28130; /*Laranja*/
+	--vermelho: #E82535; /*Vermelho*/
+
+
 
     --marrom: #b2550f; /*Marrom*/
-    --marrom-pressed: #99471c; /*Marrom  Pressed*/
-
-    --laranja: #ff8831; /*Laranja*/
+	--marrom-pressed: #99471c; /*Marrom  Pressed*/
+	
     --laranja-over: #febf00; /*Mostarda*/
     --laranja-pressed: #b2550f; /*Bronze*/
 
@@ -53,14 +63,23 @@
 	--h3-mobile: 1.55rem; /*28px*/
 	--h4-mobile: 1.33rem; /*24px*/
 	--h5-mobile: 1.11rem;  /*20px*/
-	--h6-mobile: 1rem;  /*18px*/
+	--h6-mobile: 1rem;  /*1rem = 18px*/
 
-	--h1-desktop: 3rem; /*60px*/
-	--h2-desktop: 2.25rem; /*45px*/
-	--h3-desktop: 1.75rem; /*35px*/
-	--h4-desktop: 1.5rem; /*30px*/
-	--h5-desktop: 1.25rem; /*25px*/
-	--h6-desktop: 1rem;  /*20px*/
+	--h1-desktop: 2.4rem; /*48px*/
+	--h2-desktop: 2rem; /*40px*/
+	--h3-desktop: 1.7rem; /*34px*/
+	--h4-desktop: 1.4rem; /*28px*/
+	--h5-desktop: 1.2rem; /*24px*/
+	--h6-desktop: 1rem;  /*1rem = 20px*/
+
+	/* --h1-desktop: 3rem; /60px/
+	--h2-desktop: 2.25rem; /45px/
+	--h3-desktop: 1.75rem; /35px/
+	--h4-desktop: 1.5rem;/30px/
+	--h5-desktop: 1.25rem; /25p/
+	--h6-desktop: 1rem;  /20p/ */
+
+	--lead:1.2rem; /*24px*/
 }
 
 /*--------------------------------------------------------------
@@ -75,23 +94,37 @@
 .azul-claro {color: var(--azul-claro) !important;}
 .cinza-claro {color: var(--cinza-claro) !important;}
 .cinza-medio {color: var(--cinza-medio) !important;}
+.cinza-escuro {color: var(--cinza-escuro) !important;}
+.preto {color: var(--preto) !important;}
+.rosa {color: var(--rosa) !important;}
+.lilas {color: var(--lilas) !important;}
+.laranja {color: var(--laranja) !important;}
+.vermelho {color: var(--vermelho) !important;}
 
 /*Para fundos*/
 .bg-azul-escuro {background-color: var(--azul-escuro) !important;}
 .bg-azul-claro {background-color: var(--azul-claro) !important;}
 .bg-cinza-claro {background-color: var(--cinza-claro) !important;}
-.bg-cinza-medio {background-color: var(--cinza-claro) !important;}
+.bg-cinza-medio {background-color: var(--cinza-medio) !important;}
+.bg-cinza-escuro {background-color: var(--cinza-escuro) !important;}
+.bg-preto {background-color: var(--preto) !important;}
+.bg-rosa {background-color: var(--rosa) !important;}
+.bg-lilas {background-color: var(--lilas) !important;}
+.bg-laranja {background-color: var(--laranja) !important;}
+.bg-vermelho {background-color: var(--vermelho) !important;}
 .bg-section {background: var(--bg-section) !important;}
 
 
 /* Tipografia
 ------------------------*/
+html {
+	font-size:18px; /*1rem = 18px*/
+}
 
 body {
 	line-height: 1.75;
 	color: var(--preto);
 	font-family: var(--texto-corrido);
-	font-size:18px;
 	font-weight: 400 !important;
 }
 
@@ -130,9 +163,9 @@ h4, h5, h6 {
 }
 
 .lead {
-	font-size: 1.5rem !important;
+	font-size: var(--lead) !important;
 	font-weight: 400 !important;
-	color:var(--cinza-medio);
+	color:var(--cinza-escuro);
 	letter-spacing: -.03125rem;
 	margin: 0.5rem 0;
 }
@@ -140,7 +173,9 @@ h4, h5, h6 {
 /* Desktops*/
 @media (min-width: 992px) {
 
-	body {font-size:20px;}
+	html {
+		font-size:20px; /*1rem = 20px*/
+	}
 
 	h1 {font-size: var(--h1-desktop);}
 
@@ -292,6 +327,8 @@ h4, h5, h6 {
 	
 	/*Menu de Navegação*/
 
+	.menu-link {font-size:0.7rem;}
+
 	/*Ajuste na cor do link do menu, quando o header for transparente*/
 	#header.transparent-header:not(.sticky-header) .menu-link {color: #fff;}
 
@@ -378,7 +415,7 @@ h4, h5, h6 {
 	text-transform: none;
 }
 
-.titulo .slider-caption.slider-caption-center {margin-top:7.4rem;}
+.titulo .slider-caption.slider-caption-center {margin-top:5.6rem;}
 
 .titulo .lead {
 	font-family: var(--subtitulos) !important;
@@ -408,7 +445,7 @@ h4, h5, h6 {
 	/* .titulo .slider-caption.slider-caption-center {margin-top:9.4rem;} */
 
 	.titulo .lead {
-		font-size: var(--h3-desktop) !important;
+		font-size: var(--h4-desktop) !important;
 	}
 
 	/*Lista de Aulas (aparece somente no desktop) */
@@ -419,6 +456,7 @@ h4, h5, h6 {
 	
 	.aulas .button {
 		background-color: var(--azul-escuro);
+		font-size:0.7rem;
 		padding: 15px;
 		margin: 0 2px;
 		border-radius:5px 5px 0 0;
@@ -481,7 +519,7 @@ h4, h5, h6 {
 
 /* Antetítulo */
 .heading-block .before-heading {
-    font-size: var(--h4-desktop);
+    font-size: var(--h6-desktop);
     font-family: var(--subtitulos);
     color: var(--azul-escuro);
 }
