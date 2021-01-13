@@ -1,3 +1,33 @@
+/* -------------------------------- 
+
+Abas
+
+-------------------------------- */
+
+.abas .nav-tabs {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.abas .nav-link {text-decoration: none !important;}
+
+.abas .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #fff;
+    background-color: var(--azul-claro);
+    border-color: #e9ecef #e9ecef #fff;
+}
+
+.abas .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.abas .dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--azul-claro);
+}
+
+.abas .tab-content {border-bottom:1px solid #e9ecef;}
+
 /* Accordion
 ------------------------*/
 .accordion > .accordion-itens {
@@ -34,6 +64,8 @@
 
 .accordion .card-header .card-title {
 	font-weight:600;
+	color:var(--azul-escuro);
+	text-decoration: none !important;
 }
 
 .accordion .carousel-control-next, 
@@ -99,6 +131,7 @@ Accordion com Imagens
 
 .accordion-foto a {
   padding:0;
+  text-decoration:none !important;
 }
 
 .accordion-foto a:hover, 
@@ -266,6 +299,7 @@ Destaques
 
 -------------------------------- */
 
+/*Cards de texto (com título, sem título e lado a lado)*/
 .card,
 .card-simples {
 	background: #fff;
@@ -273,7 +307,6 @@ Destaques
 	border-radius: 6px;
 }
 
-/*Cards de texto (com título, sem título e lado a lado)*/
 .card-simples {
 	margin-bottom: 30px;
 	padding: 30px;
@@ -287,35 +320,179 @@ Destaques
 	font-weight: 700;
 }
 
+/*Olho de texto*/
+
+.olho-de-texto {
+	color:var(--azul-escuro);
+	font-size:1.25rem;
+	font-weight: 700;
+	padding:30px;
+	text-align:center;
+}
+
 /*Boxes (Atenção, Saiba Mais, Material Complementar etc)*/
 
 .card-simples.bg-azul-claro a {color:var(--cinza-claro);}
-  
 
-/* -------------------------------- 
+/*Fundos de destaques*/
 
-Tabs
-
--------------------------------- */
-
-.abas .nav-tabs {
-    border-bottom: 1px solid #e9ecef;
+.destaque h2, 
+.destaque h3,
+.destaque h4 {
+	font-family: var(--titulos);
+	font-weight: 700;
 }
 
-.abas .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-    color: #fff;
-    background-color: var(--azul-claro);
-    border-color: #e9ecef #e9ecef #fff;
+/* ----------------------------------------------------------------
+
+Flip Cards
+
+-----------------------------------------------------------------*/
+
+.flip-card {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
 }
 
-.abas .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-    border-color: #e9ecef #e9ecef #dee2e6;
+.flip-card-front,
+.flip-card-back {
+	background-size: cover;
+	background-position: center;
+	-webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+	-webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	width: 100%;
+	height: 280px;
+	border-radius: 6px;
+	color: #FFF;
+	font-size: 1.5rem;
 }
 
-.abas .dropdown-item.active, .dropdown-item:active {
-    color: #fff;
-    text-decoration: none;
-    background-color: var(--azul-claro);
+.flip-card-back { background-color: #666; }
+
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+	-webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+	-webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.abas .tab-content {border-bottom:1px solid #e9ecef;}
+.flip-card-front.no-after::after,
+.flip-card-back.no-after::after { content: none }
+
+.flip-card-front::after,
+.flip-card-back::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	content: "";
+	display: block;
+	opacity: 0.6;
+	background-color: #000;
+	/* -webkit-backface-visibility: hidden;
+	backface-visibility: hidden; */
+	border-radius: 6px;
+}
+
+.flip-card-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.flip-card-inner {
+	-webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+	transform: translateY(-50%) translateZ(60px) scale(0.94);
+	top: 50%;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 2rem;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 1px solid transparent;
+	-webkit-perspective: inherit;
+	perspective: inherit;
+	z-index: 2;
+}
+
+.flip-card-back {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-back,
+.flip-card:hover .flip-card-front,
+.top-to-bottom:hover .flip-card-back,
+.top-to-bottom:hover .flip-card-front  {
+	-webkit-transform: none;
+	transform: none;
+	-webkit-transform-style: inherit;
+	transform-style: inherit;
+}  
+
+/* .flip-card-front,
+.flip-card:hover .flip-card-back {
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+} 
+
+.flip-card:hover .flip-card-front {
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}*/
+
+.top-to-bottom .flip-card-back {
+	-webkit-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+/* .top-to-bottom .flip-card-front,
+.top-to-bottom:hover .flip-card-back {
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.top-to-bottom:hover .flip-card-front {
+	-webkit-transform: rotateX(-180deg);
+	transform: rotateX(-180deg);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+} */
+
+.flip-card-inner span {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 300;
+}
+
+.flip-card-inner p {
+	position: relative;
+	font-size: 1rem;
+	margin-bottom: 0;
+	color: rgba(255, 255, 255, 0.7);
+}

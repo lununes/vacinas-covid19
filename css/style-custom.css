@@ -129,12 +129,12 @@ body {
 }
 
 a {
-	text-decoration: none !important;
+	text-decoration:underline !important;
 	color: var(--azul-claro);
 }
 
 a:hover { 
-	text-decoration:underline !important;
+	text-decoration:none !important;
 	color: var(--azul-claro); 
 }
 
@@ -495,9 +495,16 @@ h4, h5, h6 {
 .content-wrap {padding:20px 0;}
 
 #content .container {
+	padding-top:3rem;
+	padding-bottom:3rem;
+}
+
+/*Altera somente o primeiro container, com o nome da aula*/
+#content .container.titulo-aula {
 	padding-top:1rem;
 	padding-bottom:1rem;
 }
+
 /* Fonte e Legenda das imagens */
 .fonte {
 	font-size:0.7rem;
