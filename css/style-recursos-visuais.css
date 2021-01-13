@@ -286,6 +286,10 @@ Destaques
 	font-family: var(--titulos);
 	font-weight: 700;
 }
+
+/*Boxes (Atenção, Saiba Mais, Material Complementar etc)*/
+
+.card-simples.bg-azul-claro a {color:var(--cinza-claro);}
   
 
 /* -------------------------------- 

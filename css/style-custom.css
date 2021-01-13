@@ -130,10 +130,13 @@ body {
 
 a {
 	text-decoration: none !important;
-	color: var(--azul-escuro);
+	color: var(--azul-claro);
 }
 
-a:hover { color: var(--azul-claro); }
+a:hover { 
+	text-decoration:underline !important;
+	color: var(--azul-claro); 
+}
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--azul-escuro);
@@ -490,15 +493,16 @@ h4, h5, h6 {
 .content-wrap {padding:20px 0;}
 
 #content .container {
-	padding-top:3rem;
-	padding-bottom:3rem;
+	padding-top:1rem;
+	padding-bottom:1rem;
 }
 /* Fonte e Legenda das imagens */
-.legenda, .fonte {
-	font-size:0.9rem;
+.fonte {
+	font-size:0.7rem;
 }
 
 .legenda {
+	font-size:0.8rem;
 	font-weight:600;
 	margin-bottom:0;
 }
