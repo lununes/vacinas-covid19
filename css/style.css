@@ -12704,7 +12704,7 @@ blockquote.float-right {
 	Flip Cards
 -----------------------------------------------------------------*/
 
-.flip-card {
+/* .flip-card {
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	-webkit-perspective: 1000px;
@@ -12840,7 +12840,7 @@ blockquote.float-right {
 	font-size: 1rem;
 	margin-bottom: 0;
 	color: rgba(255, 255, 255, 0.7);
-}
+} */
 
 /*.owl-carousel .owl-stage { padding: 20px 0; }*/
 
