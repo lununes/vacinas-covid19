@@ -219,7 +219,12 @@ h4, h5, h6 {
 .transparent-header.full-header.dark .primary-menu .menu-container {border-right: none;}
 
 /* Menu */
-#header .menu-link {font-weight:500;}
+#header .menu-link {]
+	font-weight:500;
+	text-decoration: none !important;
+}
+
+#header .menu-link:hover {color:var(--azul-claro);}
 
 /* Submenu */
 .menu-curso .sub-menu-container .menu-item > .menu-link {
@@ -287,7 +292,10 @@ h4, h5, h6 {
 	opacity:1;
 }
 
-#header.sticky-header .breadcrumb.header a {color:var(--azul-escuro) !important;}
+#header.sticky-header .breadcrumb.header a {
+	color:var(--azul-escuro) !important;
+	text-decoration: none!important;
+}
 
 /* Desktops*/
 @media (min-width: 992px) {

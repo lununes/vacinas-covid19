@@ -289,6 +289,19 @@ Destaques
 	font-weight: 700;
 }
 
+.destaque a {
+	color:#fff;
+	text-decoration: underline;
+}
+
+/*----------------------------- 
+
+Citações
+
+ -----------------------------*/
+
+blockquote {border-left:5px solid var(--azul-escuro)}
+
 /*----------------------------- 
 
 Flipcards 2.0
