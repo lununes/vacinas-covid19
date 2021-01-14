@@ -259,7 +259,7 @@ h4, h5, h6 {
     margin: 0 !important;
 	background-color: var(--preto-alpha) !important;
 	color:#fff !important;
-    padding: 3px 60px 0 0px !important;
+    padding: 3px 60px 3px 0 !important;
     font-size: 0.8rem;
     transform: translateY(-50%);
 	height: 30px;
@@ -281,6 +281,7 @@ h4, h5, h6 {
 	background-color: #fff !important;
 	border-radius: 0;
 	border-bottom: 1px solid var(--cinza-claro);
+	border-top: 1px solid var(--cinza-claro);
 	color: var(--azul-escuro) !important;
 	transition: opacity 1s ease-out;
 	opacity:1;
@@ -364,8 +365,9 @@ h4, h5, h6 {
 		top: 121% !important;
 		background-color: var(--preto-alpha) !important;
 		color:#fff !important;
+		font-size:0.7rem;
 	}
-
+	
 	#header:not(.sticky-header) .breadcrumb.header  {
 		transition: opacity 0.5s ease-out;
 		opacity:0;
@@ -383,6 +385,7 @@ h4, h5, h6 {
 		background-color: var(--azul-escuro-alpha) !important;
 		color: #fff !important;
 		border-bottom: none;
+		border-top:none;
 	}
 	
 	#header.sticky-header .breadcrumb.header a {color:#fff !important;}
@@ -400,7 +403,7 @@ h4, h5, h6 {
 .titulo {height:380px;}
 
 .titulo.slider-parallax {
-	background: rgba(0, 0, 0, 0) url('../img/slider/swiper/2.jpg') repeat scroll center center / cover; 
+	background: rgba(0, 0, 0, 0) url('../img/curso1/bg-titulo.jpg') repeat scroll center center / cover; 
 	margin-top: -102px;
 }
 
@@ -484,6 +487,8 @@ h4, h5, h6 {
 		color:var(--preto);
 		transform: translate(0, -15px);
 	}
+
+	.aulas a {text-decoration: none !important;}
 }
 
 /* Fim do Título de Abertura
@@ -523,6 +528,8 @@ h4, h5, h6 {
 
 .heading-block {margin-bottom: 25px;}
 
+.container.titulo-aula .heading-block {margin-bottom: 0;} /*Aqui vai valer apenas para os títulos das aulas, no início da página*/
+
 .heading-block::after {
     border-top: 2px solid var(--azul-claro);
     margin:20px 0;
@@ -561,8 +568,6 @@ h4, h5, h6 {
 /* Fim do Heading Block (Títulos h2 e h3 + Lead)
 ------------------------*/
 
-
-
 /* Sessões
 ------------------------*/
 .section {
@@ -592,7 +597,8 @@ pre code {white-space: pre-line;}
 /* Botão Primário */
 
 .button {
-    background-color: var(--azul-escuro);
+	background-color: var(--azul-escuro);
+	text-decoration: none !important;
 }
 
 .button:hover {
@@ -615,6 +621,14 @@ pre code {white-space: pre-line;}
     color: #FFF;
     border-color: transparent !important;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+/* Desktops*/
+@media (min-width: 992px) {
+	.button,
+	.button.button-large  {
+		font-size:0.8rem;
+	}
 }
 
 /* Rodapé (Barra de Logos)
