@@ -56,8 +56,7 @@
 	--subtitulos: 'PT Serif', serif;
 	--texto-corrido: 'Lato', sans-serif; 
 
-	/* Hierarquia dos títulos */
-
+	/* Hierarquia dos títulos para Mobile */
 	--h1-mobile: 1.88rem; /*34px*/
 	--h2-mobile: 1.66rem; /*30x*/
 	--h3-mobile: 1.55rem; /*28px*/
@@ -65,21 +64,40 @@
 	--h5-mobile: 1.11rem;  /*20px*/
 	--h6-mobile: 1rem;  /*1rem = 18px*/
 
-	--h1-desktop: 2.4rem; /*48px*/
-	--h2-desktop: 2rem; /*40px*/
-	--h3-desktop: 1.7rem; /*34px*/
-	--h4-desktop: 1.4rem; /*28px*/
-	--h5-desktop: 1.2rem; /*24px*/
+	/* Hierarquia dos títulos para Desktop */
+	--h1-desktop: 3rem; /*60px*/
+	--h2-desktop: 2.4rem; /*48px*/
+	--h3-desktop: 1.9rem; /*38px*/
+	--h4-desktop: 1.5rem; /*30px*/
+	--h5-desktop: 1.25rem; /*25px*/
 	--h6-desktop: 1rem;  /*1rem = 20px*/
+
+	--h2-desktop: 2.2rem; /*44px*/
+	--h3-desktop: 1.8rem; /*36px*/
+
+	--lead: 1.25rem; /*25px*/
+
+	--titulo-entrelinha-desktop: 1.2rem; /*120% tamanho da fonte*/
+	--texto-corrido-entrelinha-desktop:1.6rem /*160% tamanho da fonte*/
+
+	/* 
+	Como estava no desktop:
+	--h1-desktop: 2.4rem; 48px
+	--h2-desktop: 2rem; 40px
+	--h3-desktop: 1.7rem; 34px
+	--h4-desktop: 1.4rem; 28px
+	--h5-desktop: 1.25rem; 24px
+	--h6-desktop: 1rem;  1rem = 20px */
 
 	/* --h1-desktop: 3rem; /60px/
 	--h2-desktop: 2.25rem; /45px/
 	--h3-desktop: 1.75rem; /35px/
 	--h4-desktop: 1.5rem;/30px/
 	--h5-desktop: 1.25rem; /25p/
-	--h6-desktop: 1rem;  /20p/ */
+	--h6-desktop: 1rem;  /20p/ 
 
-	--lead:1.2rem; /*24px*/
+	--lead :1.25rem; /24px/
+	*/
 }
 
 /*--------------------------------------------------------------
@@ -141,10 +159,12 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
 	color: var(--azul-escuro);
 	font-weight: 600;
-	line-height: 1.25;
-	margin: 0 0 30px 0;
+	line-height: 1.2;
+	margin: 0 0 15px 0;
 	font-family: var(--titulos);
 }
+
+h2, h3 {font-weight: 700;}
 
 h1 {font-size: var(--h1-mobile);}
 
@@ -158,12 +178,35 @@ h5 {font-size: var(--h5-mobile);}
 
 h6 {font-size: var(--h6-mobile);}
 
+/* Heading Block (Títulos h2 e h3 + Antetítulo (opcional) Lead (opcional) + Separador (obrigatório)*/
 
-h4, h5, h6 {
-	font-weight: 700;
-	margin-top:60px;
-	margin-bottom: 20px; 
+.heading-block {margin-bottom: 25px;}
+
+.container.titulo-aula .heading-block {margin-bottom: 0;} /*Aqui vai valer apenas para os títulos das aulas, no início da página*/
+
+/* Antetítulo */
+.heading-block .before-heading {
+    font-size: var(--h6-desktop);
+    font-family: var(--subtitulos);
+    color: var(--azul-claro);
 }
+
+/* Cores e Tamanhos dos Títulos Heading Block*/
+.heading-block h2, 
+.heading-block h3 {
+	color: var(--azul-escuro);
+	text-transform: none;
+}
+
+.heading-block h2 { font-size: var(--h2-mobile);}
+.heading-block h3 { font-size: var(--h3-mobile);}
+
+/*Separador*/
+.heading-block::after {
+    border-top: 2px solid var(--azul-claro);
+    margin:20px 0;
+}
+/* Fim do Heading Block (Títulos h2 e h3 + Antetítulo (opcional) Lead (opcional) + Separador (obrigatório)*/
 
 .lead {
 	font-size: var(--lead) !important;
@@ -173,12 +216,25 @@ h4, h5, h6 {
 	margin: 0.5rem 0;
 }
 
+p {line-height: 1.75;}
+
+/* Fonte e Legenda das imagens */
+.fonte,
+.source {
+	font-size:0.7rem;
+}
+
+.legenda {
+	font-size:0.8rem;
+	font-weight:600;
+	margin-bottom:0;
+}
+.list-group-item { font-weight: 400; }
+
 /* Desktops*/
 @media (min-width: 992px) {
 
-	html {
-		font-size:20px; /*1rem = 20px*/
-	}
+	html {font-size:20px; /*1rem = 20px*/}
 
 	h1 {font-size: var(--h1-desktop);}
 
@@ -191,16 +247,150 @@ h4, h5, h6 {
 	h5 {font-size: var(--h5-desktop);}
 
 	h6 {font-size: var(--h6-desktop);}
+
+	/*Heading Blocks*/
+	.heading-block h2 { font-size: var(--h2-desktop);}
+
+	.heading-block h3 { font-size: var(--h3-desktop);}
+
+	#content p {line-height: 1.6;}
+}
+
+/* Fim da Tipografia
+------------------------*/
+
+
+/* Conteúdo
+------------------------*/
+
+.content-wrap {padding:20px 0;}
+
+#content .container {
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+/*Altera somente o primeiro container, com o nome da aula*/
+#content .container.titulo-aula {
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+/*.content-wrap {padding: 2rem 0;} */
+
+/* Fim do Conteúdo
+------------------------*/
+
+
+/* Menu de Tópicos
+------------------------*/
+
+#nav-menu-container {
+/*float: right;*/
+background: #fff;
+font-size: 0.7rem;
+line-height: 1.1rem;
+margin: 0;
+opacity: 0.9;
+padding:20px 20px 20px 20px;
+position: fixed;
+top: 20%;
+right: 0;
+width: 240px;
+z-index: 2000;
+}
+
+#nav-menu-container .nav-menu.nav-pills  .nav-link.active {background: transparent;}
+
+#nav-menu-container li {margin-bottom:0.5rem;}
+
+#nav-menu-container h6 {
+	margin-top: 0;
+	margin-bottom: 25px;
+	font-size:0.9rem;
+	font-weight: 500;
+}
+
+#nav-menu-container .nav-menu p {
+	line-height: 1.1;
+	margin-bottom: 0.8rem;
+}
+
+#nav-menu-container .nav-menu a {
+	color: var(--preto);
+	margin: 0 0 5px;
+	outline: none;
+	padding: 0;
+	text-decoration: none !important;
+}
+
+#nav-menu-container .nav-menu a:hover {
+	text-decoration: underline !important;
+}
+
+/* Progresso */
+#nav-menu-container .col-2 {
+		display: inline-flex;
+		align-self: stretch;
+		align-items: start;
+		justify-content: center;
+}
+
+#nav-menu-container .col-2::after {
+	content: "";
+	position: absolute;
+	border-left: 3px solid var(--cinza-medio);
+	z-index: 1;
+}
+
+/*Configura o ítem ativo e os passados*/
+#nav-menu-container .active .col-2::after,
+#nav-menu-container .concluido .col-2::after  {
+	border-left: 3px solid var(--azul-claro);
+}
+
+#nav-menu-container .concluido .col-2::after  {
+	border-left: 3px solid var(--azul-escuro);
 }
 
 
-#content p {line-height: 1.75;}
+#nav-menu-container .active a,
+#nav-menu-container .concluido a  {
+	color: var(--azul-claro);
+	font-weight: 700;
+}
 
-.list-group-item { font-weight: 400; }
+#nav-menu-container .concluido a { 
+	color: var(--azul-escuro);
+	font-weight: 400;
+}
 
-.source {font-size: 0.8em;}
+#nav-menu-container .col-2.full::after {
+	height: 100%;
+	left: calc(50% - 2px);
+}
 
-/* Fim da Tipografia
+#nav-menu-container .marcador {
+	background-color: #DADADA;
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding: 8px;
+	border-radius: 50%;
+	color: #fff;
+	max-height: 40px;
+	z-index: 2;
+}
+
+#nav-menu-container .active .marcador,
+#nav-menu-container .concluido .marcador  {
+	background-color: var(--azul-escuro);
+}
+
+#nav-menu-container .active .marcador {
+	background-color: var(--azul-claro);
+}
+
+/* Fim do Menu de Tópicos
 ------------------------*/
 
 /* Topo
@@ -264,7 +454,7 @@ h4, h5, h6 {
     margin: 0 !important;
 	background-color: var(--preto-alpha) !important;
 	color:#fff !important;
-    padding: 3px 60px 3px 0 !important;
+    padding: 3px 40px 3px 0 !important;
     font-size: 0.8rem;
     transform: translateY(-50%);
 	height: 30px;
@@ -425,7 +615,7 @@ h4, h5, h6 {
 	font-weight: 600;
 	letter-spacing: normal;
 	line-height: 1.2;
-	margin-bottom: 5px;
+	margin-bottom: 1rem !important;
 	text-transform: none;
 }
 
@@ -457,6 +647,16 @@ h4, h5, h6 {
 	}
 
 	/* .titulo .slider-caption.slider-caption-center {margin-top:9.4rem;} */
+
+	.titulo h1 {
+		line-height: 1.1;
+		margin-bottom:1rem;
+	}
+
+	.titulo h1 span {
+		font-size:var(--h2-desktop);
+		font-weight:400;
+	}
 
 	.titulo .lead {
 		font-size: var(--h4-desktop) !important;
@@ -500,80 +700,6 @@ h4, h5, h6 {
 }
 
 /* Fim do Título de Abertura
-------------------------*/
-
-/* Conteúdo
-------------------------*/
-
-.content-wrap {padding:20px 0;}
-
-#content .container {
-	padding-top:1rem;
-	padding-bottom:3rem;
-}
-
-/*Altera somente o primeiro container, com o nome da aula*/
-#content .container.titulo-aula {
-	padding-top:1rem;
-	padding-bottom:1rem;
-}
-
-/* Fonte e Legenda das imagens */
-.fonte {
-	font-size:0.7rem;
-}
-
-.legenda {
-	font-size:0.8rem;
-	font-weight:600;
-	margin-bottom:0;
-}
-
-/*.content-wrap {padding: 2rem 0;} */
-
-/* Heading Block (Títulos h2 e h3 + Lead)
-------------------------*/
-
-.heading-block {margin-bottom: 25px;}
-
-.container.titulo-aula .heading-block {margin-bottom: 0;} /*Aqui vai valer apenas para os títulos das aulas, no início da página*/
-
-.heading-block::after {
-    border-top: 2px solid var(--azul-claro);
-    margin:20px 0;
-}
-
-/* Antetítulo */
-.heading-block .before-heading {
-    font-size: var(--h6-desktop);
-    font-family: var(--subtitulos);
-    color: var(--azul-escuro);
-}
-
-/* Cores e Tamanhos dos Títulos Heading Block*/
-.heading-block h1, 
-.heading-block h2, 
-.heading-block h3, 
-.emphasis-title h1, 
-.emphasis-title h2 {
-	color: var(--azul-escuro);
-	text-transform: none;
-}
-
-.heading-block h2 { font-size: var(--h2-mobile);}
-
-.heading-block h3 { font-size: var(--h3-mobile);}
-
-
-@media (min-width: 992px) {
-
-	.heading-block h2 { font-size: var(--h2-desktop);}
-
-	.heading-block h3 { font-size: var(--h3-desktop);}
-
-}
-
-/* Fim do Heading Block (Títulos h2 e h3 + Lead)
 ------------------------*/
 
 /* Sessões
