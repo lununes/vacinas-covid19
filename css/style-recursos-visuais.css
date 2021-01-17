@@ -283,13 +283,6 @@ Destaques
 .page-title-parallax {padding:50px 0;}
 
 /*Fundos de destaques*/
-.destaque h2, 
-.destaque h3,
-.destaque h4 {
-	font-family: var(--titulos);
-	font-weight: 700;
-}
-
 .destaque a {
 	color:#fff;
 	text-decoration: underline;
