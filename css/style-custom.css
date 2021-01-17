@@ -55,7 +55,7 @@
 	--texto-corrido: 'Lato', sans-serif; 
 
 	/* Hierarquia dos títulos para Mobile */
-	--h1-mobile: 2.1rem; /*38px*/
+	--h1-mobile: 2.3rem; /*42px*/
 	--h2-mobile: 1.7rem; /*32x*/
 	--h3-mobile: 1.55rem; /*28px*/
 	--h4-mobile: 1.33rem; /*24px*/
@@ -862,6 +862,8 @@ p {line-height: 1.75;}
 
 /* .titulo .slider-caption h1 {margin-top:3.5rem;} */
 
+.titulo .slider-caption h1 span {font-size:2rem;}
+
 .titulo .slider-caption h2 {
 	font-family: var(--titulos);
 	font-size: var(--h2-desktop);
@@ -906,7 +908,7 @@ p {line-height: 1.75;}
 		margin-bottom:1rem;
 	}
 
-	.titulo h1 span {
+	.titulo .slider-caption h1 span {
 		font-size:var(--h2-desktop);
 		font-weight:400;
 	}
@@ -938,7 +940,7 @@ p {line-height: 1.75;}
 	}
 	
 	.aulas .button.active {
-		background:#fff;
+		background:var(--cinza-medio);
 		color:var(--preto);
 		transform: translate(0, -15px);
 		height:74px;
