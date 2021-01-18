@@ -14,6 +14,7 @@
     /* Cores principais */
 	--azul-escuro: #301b5e; /*Azul Escuro*/
 	--azul-claro: #0193DA; /*Azul Claro*/
+	--azul-medio: #065D87; /*Azul Médio*/
 
 	/* Cores neutras */
 	--preto: #333; /*Preto*/
@@ -105,6 +106,7 @@
 /*Para texto e ícones*/
 .azul-escuro {color: var(--azul-escuro) !important;}
 .azul-claro {color: var(--azul-claro) !important;}
+.azul-medio {color: var(--azul-medio) !important;}
 .cinza-claro {color: var(--cinza-claro) !important;}
 .cinza-medio {color: var(--cinza-medio) !important;}
 .cinza-escuro {color: var(--cinza-escuro) !important;}
@@ -117,6 +119,7 @@
 /*Para fundos*/
 .bg-azul-escuro {background-color: var(--azul-escuro) !important;}
 .bg-azul-claro {background-color: var(--azul-claro) !important;}
+.bg-azul-medio {background-color: var(--azul-medio) !important;}
 .bg-cinza-claro {background-color: var(--cinza-claro) !important;}
 .bg-cinza-medio {background-color: var(--cinza-medio) !important;}
 .bg-cinza-escuro {background-color: var(--cinza-escuro) !important;}
@@ -135,7 +138,7 @@ html {
 }
 
 body {
-	background-color:var(--cinza-medio)!important;
+	background-color:var(--cinza-claro)!important;
 	line-height: 1.75;
 	color: var(--preto);
 	font-family: var(--texto-corrido);
@@ -258,7 +261,7 @@ p {line-height: 1.75;}
 
 /* Conteúdo
 ------------------------*/
-#content {background-color:var(--cinza-medio);}
+#content {background-color:var(--cinza-claro);}
 
 .content-wrap {padding:20px 0;}
 
@@ -475,7 +478,7 @@ p {line-height: 1.75;}
 		font-size: 0.7rem;
 		line-height: 1.1rem;
 		margin: 0;
-		opacity: 0.9;
+		opacity: 1;
 		padding:15px 15px 15px 20px;
 		position: fixed;
 		top: 20%;
@@ -940,7 +943,7 @@ p {line-height: 1.75;}
 	}
 	
 	.aulas .button.active {
-		background:var(--cinza-medio);
+		background:var(--cinza-claro);
 		color:var(--preto);
 		transform: translate(0, -15px);
 		height:74px;

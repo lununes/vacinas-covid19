@@ -277,7 +277,17 @@ Destaques
 
 /*Boxes (Atenção, Saiba Mais, Material Complementar etc)*/
 
-.card-simples.bg-azul-claro a {color:var(--cinza-claro);}
+.boxes.media a {color:var(--cinza-claro) !important;}
+
+.boxes.media {border-radius:6px;}
+
+.boxes.media .media-body {border-radius:0 0 6px 6px !important;}
+
+.boxes.media .media-body p:last-child {margin-bottom:0 !important;}
+
+@media (min-width: 992px) {
+  .boxes.media .media-body {border-radius:0 6px 6px 0 !important;}
+}
 
 /*Destaque Parallax*/
 .page-title-parallax {padding:50px 0;}
