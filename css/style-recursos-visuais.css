@@ -281,6 +281,8 @@ Destaques
 
 .boxes.media {border-radius:6px;}
 
+.boxes.media img.icone {width:110px;}
+
 .boxes.media .media-body {border-radius:0 0 6px 6px !important;}
 
 .boxes.media .media-body p:last-child {margin-bottom:0 !important;}
