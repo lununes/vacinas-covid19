@@ -138,7 +138,7 @@ html {
 }
 
 body {
-	background-color:var(--cinza-medio)!important;
+	background-color:var(--cinza-claro)!important;
 	line-height: 1.75;
 	color: var(--preto);
 	font-family: var(--texto-corrido);
@@ -261,7 +261,7 @@ p {line-height: 1.75;}
 
 /* Conteúdo
 ------------------------*/
-#content {background-color:var(--cinza-medio);}
+#content {background-color:var(--cinza-claro);}
 
 .content-wrap {padding:20px 0;}
 
@@ -478,7 +478,7 @@ p {line-height: 1.75;}
 		font-size: 0.7rem;
 		line-height: 1.1rem;
 		margin: 0;
-		opacity: 0.9;
+		opacity: 1;
 		padding:15px 15px 15px 20px;
 		position: fixed;
 		top: 20%;
@@ -943,7 +943,7 @@ p {line-height: 1.75;}
 	}
 	
 	.aulas .button.active {
-		background:var(--cinza-medio);
+		background:var(--cinza-claro);
 		color:var(--preto);
 		transform: translate(0, -15px);
 		height:74px;
