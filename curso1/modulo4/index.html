@@ -52,9 +52,12 @@
 
 						<!-- Logo Fiocruz-->
 						<div id="logo">
-                            <a href="index.html" class="standard-logo" data-dark-logo="../../img/logo-cv-white.svg" data-sticky-logo="../../img/logo-cv-black.svg"><img src="../../img/logo-cv-white.svg" alt="Logo do Campus Virtual Fiocruz"></a>
-                            
-							<a href="index.html" class="retina-logo" data-sticky-logo="../../img/logo-cv-black.svg" data-mobile-logo="../../img/logo-cv-black.svg"><img src="../../img/logo-cv-white.svg" alt="Logo do Campus Virtual Fiocruz"></a>
+							<a href="index.html" class="standard-logo d-md-none d-lg-block" data-dark-logo="../../../img/logo-cv-white.svg" data-sticky-logo="../../../img/logo-cv-black.svg"><img src="../../../img/logo-cv-white.svg" alt="Logo do Campus Virtual Fiocruz"></a>
+							
+							<!-- Para tablet não retina -->
+							<a href="index.html" class="standard-logo d-md-block d-lg-none" data-dark-logo="../../../img/logo-cv-white.svg" data-sticky-logo="../../../img/logo-cv-black.svg"><img src="../../../img/logo-cv-black.svg" alt="Logo do Campus Virtual Fiocruz"></a>
+							
+							<a href="index.html" class="retina-logo" data-sticky-logo="../../../img/logo-cv-black.svg" data-mobile-logo="../../../img/logo-cv-black.svg"><img src="../../../img/logo-cv-white.svg" alt="Logo do Campus Virtual Fiocruz"></a>
 						</div>
 						<!--Fim do Logo Fiocruz -->
 
@@ -201,9 +204,9 @@
 								</li>
 
 								<!-- FAQ -->
-								<li class="menu-item mega-menu">
+								<!-- <li class="menu-item mega-menu">
 									<a class="menu-link" href="FAQ.html" target="_blank"><div>FAQ</div></a>
-								</li>
+								</li> -->
 							</ul>
 						</nav>
 						<!-- Fim do Menu de Navegação-->
@@ -224,27 +227,20 @@
         <!-- Fim do Header -->
         
         <!-- Título de Abertura -->
-        <section id="slider" class="titulo curso1 slider-element slider-parallax include-header slider-parallax-visible">
-			<div class="slider-inner">
-				<div class="vertical-middle slider-element-fade">
-					<div class="container text-center">
-
-                        <div class="slider-caption slider-caption-center">
-                            <p class="before-heading text-white my-0 d-none" data-animate="fadeInUp">Curso 1</p>
-                            <h1 class="text-white" data-animate="fadeInUp">Vacinação Covid-19:<br/><span class="text-white" style="font-weight: 400;">Protocolos e Procedimentos Técnicos</span></h1>
-							<h2 data-animate="fadeInUp" data-delay="200" class="lead text-white mt-0 mb-3">Módulo 4</h2>
-
-                            <!-- Lista de Aulas -->
-                            <div data-animate="fadeInUp" data-delay="200" class="aulas d-none d-lg-flex justify-content-center mt-lg-4">
-                                <ul class="list-group list-group-horizontal">
-                                    <li><a href="index.html" class="button active">Sobre este Módulo</a></li>
-                                    <li><a href="aula1/index.html" class="button">Aula 1</a></li>
-                                    <li><a href="aula2/index.html" class="button">Aula 2</a></li>
-                                    <li><a href="aula3/index.html" class="button">Aula 3</a></li>
-                                    <li><a href="aula4/index.html" class="button">Aula 4</a></li>
-							</div>
-							<!-- Fim da Lista de Aulas -->
-                        </div>
+        <section id="page-title" class="titulo page-title-parallax page-title-dark skrollable skrollable-between">
+			<div class="container clearfix">
+				<div class="slider-caption slider-caption-center">
+					<p class="before-heading text-white my-0 d-none">Curso 1</p>
+					<h1 class="text-white mt-5 mt-lg-0">Vacinação Covid-19:<br/><span class="text-white" style="font-weight: 400;">Protocolos e Procedimentos Técnicos</span></h1>
+					<h2 class="lead text-white mt-0 mb-3 mt-lg-3 mb-lg-0">Módulo 4</h2>
+					
+					<div class="aulas d-none d-lg-flex justify-content-center mt-lg-4">
+						<ul class="list-group list-group-horizontal">
+							<li><a href="../../modulo4/index.html" class="button active">Sobre este Módulo</a></li>
+							<li><a href="../../modulo4/aula1/index.html" class="button">Aula 1</a></li>
+							<li><a href="../../modulo4/aula2/index.html" class="button">Aula 2</a></li>
+							<li><a href="../../modulo4/aula3/index.html" class="button">Aula 3</a></li>
+							<li><a href="../../modulo4/aula4/index.html" class="button">Aula 4</a></li>
 					</div>
 				</div>
 			</div>
