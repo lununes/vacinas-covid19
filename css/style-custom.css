@@ -325,8 +325,8 @@ p {line-height: 1.75;}
 #bt-topicos {
 	display: inline-block;
 	position: absolute;
-	width: 40px;
-	height: 60px;
+	width: 52px;
+	height: 47px;
 	background-color: #fff;
 	font-size: 1.5rem;
 	line-height: 36px;
@@ -336,10 +336,24 @@ p {line-height: 1.75;}
 	right: 10px;
 	cursor: pointer;
 	border-radius: 10px;
-	border-top-right-radius: 0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
 	transition: all 0.25s ease;
-	transform:rotate(90deg);
+	/* -ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform:rotate(90deg); */
 	padding-top:10px;
+}
+
+#bt-topicos.icon-line-chevron-left::before {
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform:rotate(90deg);
+	display:block;
 }
 
 #bt-topicos.shadow {box-shadow: -3px 1px 2px rgba(0, 0, 0, 0.05) !important;}
@@ -352,6 +366,22 @@ p {line-height: 1.75;}
 	-webkit-transform: translateY(-70vh);
 	transform: translateY(-75vh);
 	transition: all 0.8s ease;
+}
+
+#toggle-topicos:checked~#nav-menu-container #bt-topicos.icon-line-chevron-left::before {
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	transform:rotate(270deg);
+}
+
+#toggle-topicos:checked~#nav-menu-container #bt-topicos.shadow {
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.05) !important;
 }
 
 #nav-menu-container li {margin-bottom:0.5rem;}
@@ -510,12 +540,18 @@ p {line-height: 1.75;}
 		top: -15px;
 		left: -40px;
 		right: 30px;
-		cursor: pointer;
-		border-radius: 2px;
+		border-radius: 4px;
+		border-top-right-radius:0;
+		border-bottom-left-radius:4px;
+		border-bottom-right-radius:4px;
 		transition: all 0.25s ease;
-		transform:rotate(0deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		transform:rotate(90deg);
 	}
-	
+
 	#bt-topicos.shadow {box-shadow: -3px 1px 2px rgba(0, 0, 0, 0.05) !important;}
 	
 	#bt-topicos:hover {
@@ -534,10 +570,22 @@ p {line-height: 1.75;}
 		}
 	
 	/*Troca a cor do botão de tópicos*/
-	#toggle-topicos:checked~#nav-menu-container #bt-topicos {
+	#toggle-topicos:checked~#nav-menu-container #bt-topicos.shadow {
 		background:var(--azul-claro);
 		color:#fff;
 		transition: all 0.25s ease;
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	#toggle-topicos:checked~#nav-menu-container #bt-topicos.icon-line-chevron-left::before {
+		-ms-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-webkit-transform: rotate(270deg);
+		transform:rotate(270deg);
 	}
 		
 	#nav-menu-container .nav-menu.nav-pills  .nav-link.active {background: transparent;}
