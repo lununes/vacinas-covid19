@@ -143,6 +143,7 @@ body {
 	color: var(--preto);
 	font-family: var(--texto-corrido);
 	font-weight: 400 !important;
+	word-break:normal;
 }
 
 a {
@@ -934,6 +935,7 @@ p {line-height: 1.75;}
 	font-size:var(--h1-mobile);
 	text-transform:none;
 	letter-spacing: 0;
+	word-break: inherit;
 }
 
 .titulo .slider-caption h1 span,
