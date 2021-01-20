@@ -1147,7 +1147,6 @@ pre code {white-space: pre-line;}
 
 #footer {
 	position: relative;
-	top:335px;
     background-color: var(--azul-escuro);
     /* border-top: 5px solid rgba(0,0,0,0.2); */
 }
@@ -1155,4 +1154,9 @@ pre code {white-space: pre-line;}
 #footer h6 {
 	color:#fff;
 	font-weight: 500;
+}
+
+/* Desktops*/
+@media (min-width: 992px) {
+	#footer {top:335px;}
 }
