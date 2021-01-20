@@ -224,7 +224,8 @@ p {line-height: 1.75;}
 	font-size:0.7rem;
 }
 
-.legenda {
+.legenda,
+.reference-title {
 	font-size:0.8rem;
 	font-weight:600;
 	margin-bottom:0;
