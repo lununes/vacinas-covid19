@@ -859,9 +859,9 @@ p {line-height: 1.75;}
 
 	/* .menu-curso .sub-menu-container {width: 240px;} */
 
-	.menu-curso .sub-menu-container {width: 400px;}
+	.menu-curso .sub-menu-container {width: 350px;}
 
-	.sub-menu-container {left:-290px}
+	.sub-menu-container {left:-260px}
 
 	.menu-curso .sub-menu-container .menu-link div > i.icon-angle-down {right:-10px;}
 
