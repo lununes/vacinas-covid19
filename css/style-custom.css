@@ -143,6 +143,7 @@ body {
 	color: var(--preto);
 	font-family: var(--texto-corrido);
 	font-weight: 400 !important;
+	word-break:normal;
 }
 
 a {
@@ -223,7 +224,8 @@ p {line-height: 1.75;}
 	font-size:0.7rem;
 }
 
-.legenda {
+.legenda,
+.reference-title {
 	font-size:0.8rem;
 	font-weight:600;
 	margin-bottom:0;
@@ -859,9 +861,9 @@ p {line-height: 1.75;}
 
 	/* .menu-curso .sub-menu-container {width: 240px;} */
 
-	.menu-curso .sub-menu-container {width: 400px;}
+	.menu-curso .sub-menu-container {width: 350px;}
 
-	.sub-menu-container {left:-290px}
+	.sub-menu-container {left:-260px}
 
 	.menu-curso .sub-menu-container .menu-link div > i.icon-angle-down {right:-10px;}
 
@@ -934,6 +936,7 @@ p {line-height: 1.75;}
 	font-size:var(--h1-mobile);
 	text-transform:none;
 	letter-spacing: 0;
+	word-break: inherit;
 }
 
 .titulo .slider-caption h1 span,
