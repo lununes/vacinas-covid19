@@ -68,7 +68,7 @@
 	--h2-desktop: 2.2rem; /*44px*/
 	--h3-desktop: 1.8rem; /*36px*/
 	--h4-desktop: 1.5rem; /*30px*/
-	--h5-desktop: 1.25rem; /*25px*/
+	--h5-desktop: 1.15rem; /*23px*/
 	--h6-desktop: 1rem;  /*1rem = 20px*/
 
 	--lead: 1.25rem; /*25px*/
@@ -598,7 +598,7 @@ p {line-height: 1.75;}
 		margin-top: 0;
 		margin-bottom: 15px;
 		padding-bottom:8px;
-		font-size:0.8rem;
+		font-size:0.7rem;
 		font-weight: 500;
 		border-bottom:1px solid var(--azul-claro);
 	}
@@ -923,6 +923,7 @@ p {line-height: 1.75;}
 	background-size: cover; 
 	/* padding: 120px 0px;  */
 	background-position: 0px -200.316px;
+	z-index:0;
 }
 
 
@@ -1146,7 +1147,6 @@ pre code {white-space: pre-line;}
 
 #footer {
 	position: relative;
-	top:335px;
     background-color: var(--azul-escuro);
     /* border-top: 5px solid rgba(0,0,0,0.2); */
 }
@@ -1154,4 +1154,9 @@ pre code {white-space: pre-line;}
 #footer h6 {
 	color:#fff;
 	font-weight: 500;
+}
+
+/* Desktops*/
+@media (min-width: 992px) {
+	#footer {top:335px;}
 }
