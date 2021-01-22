@@ -387,7 +387,9 @@ Flipcards 2.0
 	background-color: var(--laranja);
 	border-radius: 10px;
 	-webkit-box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.3);
-	box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.3);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   }
 
 /*Aqui colocamos um efeito fundo degradê para o card da frente*/
