@@ -10,7 +10,7 @@ Abas
 
 .abas .nav-link {
   text-decoration: none !important;
-  padding:0.5rem;
+  padding:0.4rem;
 }
 
 .abas .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
@@ -30,6 +30,12 @@ Abas
 }
 
 .abas .tab-content {border-bottom:1px solid #e9ecef;}
+
+@media (min-width: 992px) {
+  .abas .nav-link {
+    padding:0.5rem;
+  }
+}
 
 /* Accordion
 ------------------------*/
@@ -533,7 +539,8 @@ background-image: url(../img/curso1/bg-flipcard.jpg);
 	padding-top:0;
 	text-align: center;
 	display: inline-block;
-	box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 38px;
 }
 
 /* ----------------------------------------------------------------
@@ -766,4 +773,62 @@ transform: translateX(0);
   .carousel-cards .carousel-control-next {right: -60px;}
 
   .carousel-cards .carousel-control-prev {left: -60px;}
+}
+
+/* --------------------------------
+
+Tabela
+
+---------------------------------*/
+
+.table {
+  background-color: #fff;
+}
+
+.table-responsive.table-bordered {
+  border: none;
+}
+
+.table-responsive table thead th {
+  border: none;
+}
+
+.table-responsive th {
+  background-color: var(--azul-escuro);
+  color: #fff;
+  border: 1px solid var(--azul-escuro);
+}
+
+.table-responsive th a {
+  color: #fff;
+}
+
+.table-responsive td,
+.table-responsive tr {
+  border: 1px solid var(--azul-escuro););
+}
+
+.table ul li {
+  margin-bottom: 10px;
+}
+
+/* .table td,
+.table th {
+  vertical-align: middle;
+}
+
+.table thead th {
+  vertical-align: middle;
+} */
+
+@media (max-width: 767px) {
+
+  .table {
+    font-size: 10px;
+  }
+
+  .table thead th {
+    padding: 0;
+  }
+
 }
