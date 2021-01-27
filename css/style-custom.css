@@ -710,7 +710,7 @@ p {line-height: 1.75;}
 .transparent-header.full-header.dark .primary-menu .menu-container {border-right: none;}
 
 /* Menu */
-#header .menu-link {]
+#header .menu-link {
 	font-weight:500;
 	text-decoration: none !important;
 }
@@ -879,7 +879,7 @@ p {line-height: 1.75;}
 	#header:not(.sticky-header) .breadcrumb.header  {
 		transition: opacity 0.5s ease-out;
 		opacity:0;
-		background-color: var(--preto-alpha) !important;!important;
+		background-color: var(--preto-alpha) !important;
 		position: absolute !important;
 		top: 121% !important;
 		z-index: 1;
