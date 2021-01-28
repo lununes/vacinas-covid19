@@ -281,9 +281,13 @@ Destaques
 	color:var(--azul-escuro);
 	font-size:1.25rem;
 	font-weight: 700;
-	padding:30px;
+	/* padding:30px; */
   text-align:center;
   font-style: italic;
+}
+
+@media (min-width:992px) {
+  .olho-de-texto {padding:30px;}
 }
 
 /*Boxes (Atenção, Saiba Mais, Material Complementar etc)*/
@@ -303,7 +307,7 @@ Destaques
 }
 
 /*Destaque Parallax*/
-.page-title-parallax {padding:50px 0;}
+.page-title-parallax {padding:10px 0;}
 
 /*Fundos de destaques*/
 .destaque a {
@@ -824,7 +828,7 @@ Tabela
 @media (max-width: 767px) {
 
   .table {
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .table thead th {

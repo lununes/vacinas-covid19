@@ -221,7 +221,7 @@ p {line-height: 1.75;}
 /* Fonte e Legenda das imagens */
 .fonte,
 .source {
-	font-size:0.7rem;
+	font-size:0.9rem;
 }
 
 .legenda,
@@ -255,6 +255,11 @@ p {line-height: 1.75;}
 	.heading-block h3 { font-size: var(--h3-desktop);}
 
 	#content p {line-height: 1.6;}
+
+	.fonte,
+	.source {
+	font-size:0.7rem;
+}
 }
 
 /* Fim da Tipografia
