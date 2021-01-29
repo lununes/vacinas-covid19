@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Campus Virtual Fiocruz" />
+	<meta name="robots" content="noindex" />
+	<meta name="keywords" content="Vacina, Covid-19, Ciência, Fiocruz, Curso">
+	<meta name="description" content="Curso sobre a vacina disponibilizada pela Fiocruz contra a Covid-19">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Favicons -->
+	<link href="https://portal.fiocruz.br/sites/portal.fiocruz.br/themes/portalnovo/images/favicon.ico" rel="icon">
+	<link href="https://portal.fiocruz.br/sites/portal.fiocruz.br/themes/portalnovo/images/indice.jpg"
+		rel="apple-touch-icon">
+
+	<!-- Google Font -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:ital,wght@0,400;0,700;1,400;1,70&display=swap"
+		rel="stylesheet" type="text/css" />
+
+	<!--Font Awesome-->
+	<script src="https://kit.fontawesome.com/8bfaea11f7.js" crossorigin="anonymous"></script>
+
+	<!-- CSS Estrutural -->
+	<link rel="stylesheet" href="../../../css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+	<link rel="stylesheet" href="../../../css/swiper.css" type="text/css" />
+	<link rel="stylesheet" href="../../../css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="../../../css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="../../../css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="../../../css/magnific-popup.css" type="text/css" />
+
+	<!-- CSS customizado para o curso e dos recursos visuais -->
+	<link rel="stylesheet" href="../../../css/style-custom.css" type="text/css" />
+	<link rel="stylesheet" href="../../../css/style-recursos-visuais.css">
+
+	<title>Aula 2.1 - Atenção integral à saúde da PSR</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="header-size-custom full-header transparent-header" data-sticky-class="not-dark"
+			data-mobile-sticky="true">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo Fiocruz-->
+						<div id="logo">
+							<a href="index.html" class="standard-logo d-md-none d-lg-block"
+								data-dark-logo="../../../img/logo-cv-white.svg"
+								data-sticky-logo="../../../img/logo-cv-black.svg"><img
+									src="../../../img/logo-cv-white.svg" alt="Logo do Campus Virtual Fiocruz"></a>
+
+							<!-- Para tablet não retina -->
+							<a href="index.html" class="standard-logo d-md-block d-lg-none"
+								data-dark-logo="../../../img/logo-cv-white.svg"
+								data-sticky-logo="../../../img/logo-cv-black.svg"><img
+									src="../../../img/logo-cv-black.svg" alt="Logo do Campus Virtual Fiocruz"></a>
+
+							<a href="index.html" class="retina-logo" data-sticky-logo="../../../img/logo-cv-black.svg"
+								data-mobile-logo="../../../img/logo-cv-black.svg"><img
+									src="../../../img/logo-cv-white.svg" alt="Logo do Campus Virtual Fiocruz"></a>
+						</div>
+						<!--Fim do Logo Fiocruz -->
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100">
+								<path
+									d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+								</path>
+								<path d="m 30,50 h 40"></path>
+								<path
+									d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+								</path>
+							</svg>
+						</div>
+
+						<!-- Menu de Navegação
+						============================================= -->
+						<nav class="primary-menu with-arrows menu-curso">
+							<ul class="menu-container">
+								<!-- Cursos -->
+								<!-- <li class="menu-item">
+									<a class="menu-link"><div>Cursos<i class="icon-angle-down"></i></div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="../../../curso1/index.html"><div>Curso 1 - Vacinação Covid&#8209;19: Protocolos e Procedimentos Técnicos</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="../../../curso2/index.html"><div>Curso 2</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="../../../curso3/index.html"><div>Curso 3</div></a>
+										</li>
+									</ul>
+								<button class="sub-menu-trigger icon-chevron-right"></button></li> -->
+
+								<!-- Módulos -->
+								<li class="menu-item">
+									<a class="menu-link">
+										<div>Módulos</div>
+									</a>
+									<ul class="sub-menu-container">
+										<!-- Label Curso -->
+										<!-- <div class="badge badge-secondary clearfix">Curso 1<br/> Vacinação Covid&#8209;19: Protocolos e Procedimentos Técnicos</div> -->
+
+										<!-- Módulo 1 -->
+										<li class="menu-item">
+											<a class="menu-link" href="../../modulo1/index.html">
+												<div><strong>Módulo 1</strong><br /> Introdução às vacinas e as vacinas
+													Covid&#8209;19</div>
+											</a>
+											<ul class="sub-menu-container">
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo1/aula1/index.html">
+														<div>Aula 1 - Introdução às Vacinas e Vacinação: conceitos,
+															importância e histórico</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo1/aula2/index.html">
+														<div>Aula 2 - Os desafios da vacinação</div>
+													</a>
+												</li>
+
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo1/aula3/index.html">
+														<div>Aula 3 - Cobertura vacinal: panorama, desafios e
+															estratégias</div>
+													</a>
+												</li>
+
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo1/aula4/index.html">
+														<div>Aula 4 - Desenvolvimento e Produção de vacinas</div>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<!-- Módulo 2 -->
+										<li class="menu-item">
+											<a class="menu-link" href="../../modulo2/index.html">
+												<div><strong>Módulo 2</strong><br /> Vacinas Covid&#8209;19: produção,
+													transporte, conservação e armazenamento</div>
+											</a>
+											<ul class="sub-menu-container">
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo2/aula1/index.html">
+														<div>Aula 1 - Vacinas Covid&#8209;19 </div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo2/aula2/index.html">
+														<div>Aula 2 - Produção, armazenamento e transporte</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo2/aula3/index.html">
+														<div>Aula 3 - Resíduos dos serviços de saúde</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo2/aula4/index.html">
+														<div>Aula 4 - Evidências científicas das vacinas
+															Covid&#8209;19: resultados dos estudos clínicos - eficácia,
+															segurança</div>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<!-- Módulo 3 -->
+										<li class="menu-item">
+											<a class="menu-link" href="../../modulo3/index.html">
+												<div><strong>Módulo 3</strong><br /> Sala de Vacina Covid&#8209;19:
+													organização e procedimentos</div>
+											</a>
+											<ul class="sub-menu-container">
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo3/aula1/index.html">
+														<div>Aula 1 - Planejamento e organização do processo de
+															vacinação</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo3/aula2/index.html">
+														<div>Aula 2 - Sistemas de informação</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo3/aula3/index.html">
+														<div>Aula 3 - Monitoramento e controle do processo de
+															conservação da vacina</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo3/aula4/index.html">
+														<div>Aula 4 - Procedimentos para vacinação</div>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<!-- Módulo 4 -->
+										<li class="menu-item">
+											<a class="menu-link" href="../../modulo4/index.html">
+												<div><strong>Módulo 4</strong><br />Sala de Vacina Covid&#8209;19:
+													organização e procedimentos para populações vulnerabilizadas</div>
+											</a>
+											<ul class="sub-menu-container">
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo4/aula1/index.html">
+														<div>Aula 1 - Vacinação no contexto da população indígena</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo4/aula2/index.html">
+														<div>Aula 2 - Vacinação no contexto da população de rua</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo4/aula3/index.html">
+														<div>Aula 3 - Vacinação no contexto da população privada de
+															liberdade</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo4/aula4/index.html">
+														<div>Aula 4 - Vacinação no contexto dos residentes em
+															Instituições de Longa Permanência</div>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<!-- Módulo 5 -->
+										<li class="menu-item">
+											<a class="menu-link" href="../../modulo5/index.html">
+												<div><strong>Módulo 5</strong><br />Sala de Vacina Covid&#8209;19:
+													organização e procedimentos para populações vulnerabilizadas</div>
+											</a>
+											<ul class="sub-menu-container">
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo5/aula1/index.html">
+														<div>Aula 1 - Fundamentos da Farmacovigilância de Vacinas</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo5/aula2/index.html">
+														<div>Aula 2 - Farmacovigilância de vacinas</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="../../modulo5/aula3/index.html">
+														<div>Aula 3 - Vigilânia de Eventos Adversos pós-vacinação -
+															vacinas Covid&#8209;19</div>
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<button class="sub-menu-trigger icon-chevron-right"></button>
+								</li>
+
+								<!-- Bibliografia -->
+								<li class="menu-item">
+									<a class="menu-link" href='#' data-toggle="modal" data-target="#modal-bibliografia">
+										<div>Bibliografia</div>
+									</a>
+								</li>
+
+								<!-- Créditos -->
+								<li class="menu-item">
+									<a class="menu-link" href='#' data-toggle="modal" data-target="#modal-creditos">
+										<div>Créditos</div>
+									</a>
+								</li>
+
+								<!-- FAQ -->
+								<!-- <li class="menu-item mega-menu">
+									<a class="menu-link" href="FAQ.html" target="_blank"><div>FAQ</div></a>
+								</li> -->
+							</ul>
+						</nav>
+						<!-- Fim do Menu de Navegação-->
+
+					</div>
+				</div>
+
+				<!-- Breadcrumb -->
+				<div class="container-fluid">
+					<div class="breadcrumb header row">
+						<div class="col-12">
+							<p><a href='../../index.html' target='_blank'>Curso 1</a> / <a href='../index.html'
+									target='_blank'>Módulo 4</a> / <a href='index.html' target='_blank'>Aula 2</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header>
+		<!-- Fim do Header -->
+
+		<!-- Título de Abertura -->
+		<section id="page-title" class="titulo page-title-parallax page-title-dark skrollable skrollable-between">
+			<div class="container clearfix">
+				<div class="slider-caption slider-caption-center">
+					<p class="before-heading text-white my-0 d-none">Curso 1</p>
+					<h1 class="text-white mt-5 mt-lg-0">Vacinação Covid&#8209;19:<br /><span class="text-white"
+							style="font-weight: 400;">Protocolos e Procedimentos Técnicos</span></h1>
+					<h2 class="lead text-white mt-0 mb-3 mt-lg-3 mb-lg-0">Módulo 4</h2>
+
+					<div class="aulas d-none d-lg-flex justify-content-center mt-lg-4">
+						<ul class="list-group list-group-horizontal">
+							<li><a href="../../modulo4/index.html" class="button">Sobre este Módulo</a></li>
+							<li><a href="../../modulo4/aula1/index.html" class="button">Aula 1</a></li>
+							<li><a href="../../modulo4/aula2/index.html" class="button active">Aula 2</a></li>
+							<li><a href="../../modulo4/aula3/index.html" class="button">Aula 3</a></li>
+							<li><a href="../../modulo4/aula4/index.html" class="button">Aula 4</a></li>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Fim do Título de Abertura -->
+
+		<!-- Conteúdo
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<!-- Menu dos tópicos -->
+				<input type="checkbox" id="toggle-topicos" class="more" aria-hidden="true">
+				<nav id="nav-menu-container" class="shadow d-lg-none">
+					<div class="row justify-content-center justify-content-lg-start">
+						<div class="col-12 col-lg-2 p-0 m-0">
+							<label for="toggle-topicos" id="bt-topicos" class="icon-line-chevron-left shadow"
+								aria-hidden="true">
+						</div>
+						<div class="col-10 col-lg-9 p-0 m-0">
+							<h6>Vacinação no Contexto da População em Situação de Rua</h6>
+							<div class="row nav-menu nav-pills">
+								<div class="col-12">
+									<!-- Introdução -->
+									<div class="row align-items-center concluido">
+										<div class="col-2 text-center full">
+											<div class="marcador"></div>
+										</div>
+										<div class="col-10 col-lg-9 p-0">
+											<p class="nav-item"><a class="nav-link" href="index.html">Introdução</a></p>
+										</div>
+									</div>
+									<!-- Tópico 1 -->
+									<div class="row align-items-center active">
+										<div class="col-2 text-center full">
+											<div class="marcador"></div>
+										</div>
+										<div class="col-10 col-lg-9 p-0">
+											<p class="nav-item"><a class="nav-link" href="topico1.html">1. Atenção
+													integral à saúde da PSR</a></p>
+										</div>
+									</div>
+									<!-- Tópico 2 -->
+									<div class="row align-items-center">
+										<div class="col-2 text-center full">
+											<div class="marcador"></div>
+										</div>
+										<div class="col-10 col-lg-9 p-0">
+											<p class="nav-item"><a class="nav-link" href="topico2.html">2. Emergência
+													Sanitária da Covid&#8209;19 e Pessoas em Situação de Rua</a></p>
+										</div>
+									</div>
+									<!-- Tópico 3 -->
+									<div class="row align-items-center">
+										<div class="col-2 text-center end">
+											<div class="marcador"></div>
+										</div>
+										<div class="col-10 col-lg-9 p-0">
+											<p class="nav-item"><a class="nav-link" href="topico3.html">3. Você chegou
+													ao final da aula</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<!-- Fim do Menu dos tópicos -->
+
+				<!-- Bloco 1 - Início do Tópico -->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-11 col-md-10 col-lg-8">
+
+							<div class="heading-block">
+								<span class="before-heading">Tópico 1</span>
+								<h2 class="mb-3">Atenção integral à saúde da PSR</h2>
+							</div>
+
+							<!-- Texto com Imagem à direita -->
+							<div class="row justify-content-center">
+								<div class="col-12 col-md-7 order-1 order-md-1">
+
+									<p>Se por um lado, <a
+											href="http://189.28.128.100/dab/docs/publicacoes/geral/manual_cuidado_populalcao_rua.pdf"
+											target="_blank">“a
+											vida na rua expõe homens, mulheres e crianças a riscos que
+											fazem com que essa população mereça, sob diversos aspectos, abordagem
+											específica
+											das equipes de saúde”</a>, por outro, a complexidade das vulnerabilidades às
+										quais
+										estão expostas essas pessoas demandam do Estado planejamento e implementação
+										intersetorial e integrado de políticas públicas.</p>
+
+								</div>
+
+								<div class="col-12 col-md-5 order-2 order-md-2">
+									<img class="img-fluid rounded mx-auto d-block mb-3"
+										src="../../../img/curso1/modulo4/aula2/topico1/img1.jpg"
+										alt="Capa do artigo publicado na Agência Brasil"
+										title="Fonte: Rovena Rosa/Agência Brasil">
+									<p class="fonte text-center">Fonte: <a
+											href='https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2020-04/governo-fara-cadastro-de-entidades-para-acolher-populacao-de-rua#'
+											target='_blank'>Rovena Rosa/Agência Brasil</a></p>
+								</div>
+							</div>
+							<!-- Fim de texto e imagem à direita -->
+
+							<p>A garantia do acesso à saúde e atendimento às pessoas em situação de rua acaba por se
+								constituir, de uma forma geral, como um grande desafio para as políticas públicas,
+								exigindo ações articuladas para a conquista de seus objetivos. Vitimadas por problemas
+								sociais estruturais, muitas delas têm sua situação agravada pela contínua permanência em
+								condições insalubres, sujeitas à violência. Embora haja avanços na implementação da
+								<a href="http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d7053.htm#:~:text=Institui%20a%20Pol%C3%ADtica%20Nacional%20para,que%20lhe%20confere%20o%20art."
+									target="_blank">Política Nacional para a População em Situação de Rua (PNPSR)</a> na
+								última década, a
+								exemplo da consolidação do Sistema Único da Assistência Social (SUAS) e a implementação
+								das equipes de Consultório na Rua (eCR), ainda são inúmeras as invisibilidades,
+								iniquidades e barreiras na garantia de direitos às pessoas em situação de rua.
+							</p>
+
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Bloco 1-->
+
+				<!-- Destaque -->
+				<div class="container-fluid bg-cinza-medio">
+					<div class="container">
+						<div class="row justify-content-center m-0 py-3">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="justify-content-center d-flex flex-column">
+									<p><strong>Desafio para PSR
+										</strong></p>
+									<p>Um desafio ainda presente para a ação pública à população em situação de
+										rua (PSR) é a ausência da contagem oficial da população de rua em nível
+										nacional pelos órgãos oficiais, ocasionando dificuldades no planejamento de
+										políticas públicas. Em uma importante tentativa de mitigar essa ausência, o
+										Ipea em 2020 realizou um estudo que aponta uma estimativa para março de 2020
+										de um total de 221.869 pessoas em situação de rua no Brasil, representando
+										um aumento com relação à estimativa de março de 2012 de 140% em todo o país
+										e 165% de aumento nas metrópoles. Estes dados reforçam o fenômeno como um
+										problema social em contextos de crises econômicas e sociais, agravadas nos
+										últimos anos, com a ampliação da pobreza extrema, aumento da desigualdade
+										social e altos índices de desemprego.</p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Destaque -->
+
+				<!-- Bloco 2 -->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-11 col-md-10 col-lg-8">
+
+							<p>No Brasil, as primeiras ofertas de serviços de saúde voltadas para a PSR foram:</p>
+
+							<!-- Lista Simples -->
+							<div class="row justify-content-center mt-3">
+								<div class="obj-lista col-12 col-md-10 text-left">
+									<ul class="list-group">
+
+										<li class="list-group-item"><i
+												class="icon-line-check-circle azul-claro mr-3"></i>Consultório de Rua do
+											Centro de Estudos e Terapia do Abuso de Drogas da Universidade Federal da
+											Bahia (CETAD/UFBA), com ênfase em questões referentes ao cuidado ao álcool e
+											outras drogas entre 1999 e 2006;
+										</li>
+
+										<li class="list-group-item"><i
+												class="icon-line-check-circle azul-claro mr-3"></i>Equipes de Saúde da
+											Família para População Sem Domicílio, iniciadas em Belo Horizonte e São
+											Paulo no ano de 2002, e em 2010 nos municípios de Porto Alegre, Rio de
+											Janeiro e Curitiba. </li>
+
+									</ul>
+								</div>
+
+							</div>
+							<!-- Fim de Lista Simples -->
+
+							<p>Com base nessas iniciativas, por meio da <a
+									href="http://189.28.128.100/dab/docs/publicacoes/geral/pnab.pdf"
+									target="_blank">Política Nacional de Atenção Básica (PNAB)</a>, são
+								criadas as equipes de Consultório na Rua (eCR), para implantação em todo o país. </p>
+
+							<!-- Box de Saiba Mais -->
+							<div class="row justify-content-center my-5">
+								<div class="col">
+									<div class="boxes media bg-azul-medio flex-column flex-md-row">
+										<img class="icone align-self-center px-3 py-lg-0 py-3"
+											src="../../../img/ic-saiba-mais.svg"
+											alt="Imagem de um círculo com sinal de mais" />
+										<div class="media-body p-3 text-white bg-azul-claro">
+											<h5 class="mt-0 text-white">Consultório na Rua (eCR)</h5>
+
+											<p>São equipes multiprofissionais que oferecem atenção integral à PSR
+												diretamente nas ruas e, também, na Unidade Básica de Saúde – UBS onde
+												está lotada, lidando com a ampla gama de problemas e necessidades de
+												saúde da PSR. Essas equipes desenvolvem ações de modo compartilhado e
+												integrado com as equipes dos Centros de Apoio Psicossocial – CAPS, dos
+												serviços de urgência e emergência, de outros pontos da rede de atenção à
+												saúde e do território, em consonância com as necessidades dos usuários.
+											</p>
+
+											<p class="fonte">Fontes: <a
+													href="http://189.28.128.100/dab/docs/publicacoes/geral/pnab.pdf">Política
+													Nacional de Atenção Básica (PNAB)</a> e Machado (2017)
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Fim do Box de Saiba Mais-->
+
+							<p>As eCR são também um dos componentes da Atenção Básica (AB) na Rede de Atenção
+								Psicossocial (RAPS) e seu rol de atividades é o mesmo das demais equipes de AB. Elas são
+								orientadas pela <a href="http://189.28.128.100/dab/docs/publicacoes/geral/pnab.pdf"
+									target="_blank">PNAB</a> e pela <a
+									href="http://bvsms.saude.gov.br/bvs/saudelegis/gm/2012/prt0122_25_01_2012.html"
+									target="_blank">Portaria nº 122, de 25 de janeiro de 2011</a>.
+							</p>
+
+							<p>Ressalta-se que, pela prevalência de casos, há também ênfase na busca ativa de usuários
+								de álcool e outras drogas, lógica da Redução de Danos (RD), como orientação ética para a
+								AB, de um modo geral. Contudo, é importante não entender a RD a partir de uma leitura
+								reducionista referente somente às questões relacionadas ao álcool e outras drogas.
+							</p>
+
+							<p>Para que a atenção à saúde para pessoas em situação de rua tenha a real materialização do
+								acesso e garantia de direitos, é necessária a adoção de uma agenda baseada na
+								valorização da clínica e organização do processo de trabalho, não separadas dos
+								princípios do SUS, dos atributos da Atenção Primária em Saúde e da vigilância popular em
+								saúde de base territorial.
+							</p>
+
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Bloco 2 -->
+
+				<!-- Parallax -->
+				<div class="container-fluid px-0">
+					<section class="page-title-parallax page-title-dark skrollable skrollable-between text-white"
+						style="background-image: url('../../../img/services/home-testi-bg.jpg'); background-size: cover; background-position: 0px -121.61px;"
+						data-bottom-top="background-position:0px 0px;"
+						data-top-bottom="background-position:0px -300px;">
+						<div class="container clearfix text-center">
+							<!-- Olho de texto -->
+							<div class="row justify-content-center">
+								<div class="col-11 col-md-10 col-lg-8">
+									<div class="olho-de-texto">
+										<p class="text-center text-white">A atenção à saúde para pessoas em situação de
+											rua necessita de ações construídas e executadas considerando uma abordagem
+											específica para esse público e sempre atrelada aos registros nos sistemas de
+											saúde, monitoramento e avaliação das políticas públicas de saúde.</p>
+									</div>
+								</div>
+							</div>
+							<!--Fim de Olho de texto -->
+						</div>
+					</section>
+				</div>
+				<!-- Fim do Parallax -->
+
+				<!-- Bloco 3 -->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-11 col-md-10 col-lg-8">
+
+							<p>Além das vulnerabilidades diversas e condições gerais de saúde das pessoas em situação de
+								rua, soma-se a essa problemática, a contínua invisibilidade no cotidiano e na ação
+								estatal, também expressa muitas vezes, na fragilidade dos dados relacionados à PSR.
+							</p>
+
+							<p>Neste sentido, o registro das ações em saúde nos diversos sistemas do SUS cumpre um papel
+								fundamental e estratégico não só para a continuidade do cuidado e da resolutividade das
+								ações, mas também, para o planejamento e a implementação de políticas públicas
+								integradas.</p>
+
+							<h4>Papel estratégico do SUS</h4>
+
+							<p>A partir dos princípios da integralidade, da universalidade e da equidade, o SUS prevê a
+								Atenção Primária em Saúde como sua principal porta de entrada, definida como um conjunto
+								de ações de saúde individuais, familiares e coletivas. Esta é desenvolvida por meio de
+								práticas de cuidado integrado e de gestão qualificada. Dentre as suas diretrizes,
+								descritas na <a href="http://189.28.128.100/dab/docs/publicacoes/geral/pnab.pdf"
+									target="_blank">PNAB</a>, destaca-se com maior ênfase a territorialização, a
+								resolutividade e a
+								coordenação do cuidado.</p>
+
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Bloco 3 -->
+
+				<!-- Destaque -->
+				<div class="container-fluid bg-cinza-medio">
+					<div class="container">
+						<div class="row justify-content-center m-0 py-3">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="justify-content-center d-flex flex-column">
+									<p><strong>Pressupostos importantes que auxiliam o profissional de saúde no
+											atendimento integral à PSR:</strong></p>
+
+									<!-- Lista Simples -->
+									<div class="row justify-content-center mt-3">
+										<div class="obj-lista col-12 col-md-10 text-left">
+											<ul class="list-group">
+
+												<li class="list-group-item"><i
+														class="icon-line-check-circle azul-claro mr-3"></i>Concepção de
+													saúde não centrada somente na assistência aos doentes, mas,
+													sobretudo, na promoção de saúde e no resgate da qualidade de vida,
+													com intervenção nos fatores que a colocam em risco.
+												</li>
+
+												<li class="list-group-item"><i
+														class="icon-line-check-circle azul-claro mr-3"></i>Incorporação
+													das ações programáticas, incluindo acesso às redes sociais.
+												</li>
+
+												<li class="list-group-item"><i
+														class="icon-line-check-circle azul-claro mr-3"></i>Desenvolvimento
+													de ações intersetoriais.
+												</li>
+
+												<li class="list-group-item"><i
+														class="icon-line-check-circle azul-claro mr-3"></i>Consciência
+													dos aspectos que condicionam e determinam um dado estado de saúde e
+													dos recursos existentes para sua prevenção, promoção e recuperação.
+												</li>
+
+												<li class="list-group-item"><i
+														class="icon-line-check-circle azul-claro mr-3"></i>Para a
+													organização desse modelo, é fundamental que sejam pensadas as
+													“linhas do cuidado” (da criança, do adolescente, do adulto, do idoso
+													etc.).
+												</li>
+
+												<li class="list-group-item"><i
+														class="icon-line-check-circle azul-claro mr-3"></i>O trabalho em
+													equipe é um de seus fundamentos mais importantes.</li>
+
+											</ul>
+										</div>
+
+									</div>
+									<!-- Fim de Lista Simples -->
+
+									<p>Esses itens são importantes não somente para este grupo populacional, mas nele,
+										devido ao alto grau de vulnerabilidade e iniquidade, se não atentarmos para
+										esses pontos, intensifica-se o risco de barreiras de acesso e as ações pouco
+										resolutivas ganham contornos ainda maiores.</p>
+
+									<p class="fonte">Fonte: <a
+											href="http://189.28.128.100/dab/docs/publicacoes/geral/manual_cuidado_populalcao_rua.pdf">Ministério
+											da Saúde</a></p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Destaque -->
+
+				<!-- Bloco 4 -->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-11 col-md-10 col-lg-8">
+
+							<p>Uma das ações mais importantes, nesse contexto, é o acolhimento.</p>
+
+							<h4>Identificação da PSR no território</h4>
+
+							<p>Utilizar-se de diagnósticos ou mapeamentos do território para identificar onde estão as
+								pessoas em situação de rua, quem são e quais serviços públicos e ONGs do território
+								estas pessoas costumam estabelecer vínculos e relações, são condições primordiais para
+								toda ação que vise a atenção em saúde da PSR. Logo, este passo é fundamental também para
+								a especificidade de toda campanha de vacinação voltada para PSR.</p>
+
+							<!-- Box de Saiba Mais -->
+							<div class="row justify-content-center my-5">
+								<div class="col">
+									<div class="boxes media bg-azul-medio flex-column flex-md-row">
+										<img class="icone align-self-center px-3 py-lg-0 py-3"
+											src="../../../img/ic-saiba-mais.svg"
+											alt="Imagem de um círculo com sinal de mais" />
+										<div class="media-body p-3 text-white bg-azul-claro">
+											<h5 class="mt-0 text-white">Acolhimento</h5>
+
+											<p>Acolhimento é muito mais do que receber o usuário de forma acolhedora.
+												Acolher é compreender a sua demanda para além da queixa principal
+												apresentada, é perceber esse cidadão no seu contexto social e inseri-lo
+												em uma rede de atenção à saúde em que a atenção básica é a coordenadora
+												do cuidado.
+											</p>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Fim do Box de Saiba Mais-->
+
+							<p>Deste modo, o acolhimento é fundamental para a abordagem inicial do usuário, com efeitos
+								importantes junto à PSR: observação e escuta qualificada na abordagem inicial do
+								usuário; respeito aos diferentes modos de viver dos indivíduos, o que amplia a
+								possibilidade da construção de vínculos de confiança junto à PSR, possibilitando em
+								processos relacionais no cuidado integral à saúde.</p>
+
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Bloco 4 -->
+
+				<!-- Destaque -->
+				<div class="container-fluid bg-cinza-medio">
+					<div class="container">
+						<div class="row justify-content-center m-0 py-3">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="justify-content-center d-flex flex-column">
+
+									<p>Pessoas em situação de rua, muitas vezes, deixam de buscar a rede de atenção à
+										saúde, devido, dentre outros motivos, às possíveis experiências de exclusão
+										nesses espaços. Não é raro, esse grupo populacional ser recebido nos serviços de
+										saúde com incômodo ou rejeição, tanto por parte dos profissionais de saúde como
+										dos usuários presentes. Essas marcas somam-se a um contínuo processo histórico
+										de exclusão social. Assim, se fazem necessários tanto o acolhimento como a
+										identificação das pessoas em situação de rua, dos serviços e ofertas para este
+										grupo no território, para busca ativa e integração de ações intersetoriais.</p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Destaque -->
+
+				<!-- Bloco 5 -->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-11 col-md-10 col-lg-8">
+
+							<p>O Manual sobre o cuidado junto à População em Situação de Rua lista alguns dos riscos a
+								que a PSR está exposta. Estes pontos devem ser observados pelos profissionais durante o
+								processo de vacinação deste grupo. Veja os riscos:</p>
+
+
+							<!-- Accordion -->
+							<div id="accordion" class="accordion">
+								<div class="accordion-itens mb-0">
+									<!-- Ítem 1 -->
+									<div class="card-header collapsed" data-toggle="collapse" href="#accordion-item1">
+										<a class="card-title">Violências</a>
+									</div>
+									<div id="accordion-item1" class="card-body collapse">
+										<p>Viver na rua e, portanto, sem abrigo ou proteção adequada, deixa os
+											indivíduos mais vulneráveis às agressões de natureza física ou moral. Faz-se
+											necessário constante estado de vigilância e preparação para ‘fugir’ ou
+											‘reagir’.
+										</p>
+
+										<p>É comum para a equipe de saúde, ao abordar alguém à noite em uma calçada de
+											qualquer grande cidade, ser a primeira pessoa com quem ela conversará
+											naquele dia.</p>
+									</div>
+
+									<!-- Ítem 2 -->
+									<div class="card-header collapsed" data-toggle="collapse" href="#accordion-item2">
+										<a class="card-title">Vergonha</a>
+									</div>
+									<div id="accordion-item2" class="card-body collapse">
+										<p>Alguns moradores de rua relatam vergonha de buscar atendimento na Unidade
+											Básica de Saúde por conta de sua condição de higiene ou vestimentas
+											malcuidadas. <br>
+											Colher informações clínicas de quem vive nas ruas tem desafios específicos.
+											Ao ser perguntada há quanto tempo tem uma lesão de pele, uma pessoa pode
+											responder que não sabe, porque há muito tempo não se olha no espelho.
+										</p>
+
+										<p>Pode confundir febre e calafrios com as baixas temperaturas do vento da
+											noite; aparentar emagrecimento porque suas roupas são doadas e acima do seu
+											tamanho.
+										</p>
+
+										<p>Quando se tenta construir a linha de tempo do relato clínico, muitas vezes
+											nos deparamos com enormes vazios, como se nada naquele período tivesse
+											ocorrido na vida do entrevistado.
+										</p>
+
+										<p>É imprescindível que o profissional de saúde reconheça a necessidade da
+											escuta qualificada para essa população e busque apoiar, sem imposições, a
+											construção de uma história clínica, diagnóstico e projeto terapêutico
+											adequados ao indivíduo.</p>
+									</div>
+
+									<!-- Ítem 3 -->
+									<div class="card-header collapsed" data-toggle="collapse" href="#accordion-item3">
+										<a class="card-title">Anamnese e semiologia</a>
+									</div>
+									<div id="accordion-item3" class="card-body collapse">
+										<p>Colher informações clínicas de quem vive nas ruas tem desafios específicos.
+											Ao ser perguntada há quanto tempo tem uma lesão de pele, uma pessoa pode
+											responder que não sabe, porque há muito tempo não se olha no espelho. <br>
+											Pode confundir febre e calafrios com as baixas temperaturas do vento da
+											noite; aparentar emagrecimento porque suas roupas são doadas e acima do seu
+											tamanho. <br>
+											Quando se tenta construir a linha de tempo do relato clínico, muitas vezes
+											nos deparamos com enormes vazios, como se nada naquele período tivesse
+											ocorrido na vida do entrevistado. É imprescindível que o profissional de
+											saúde reconheça a necessidade da escuta qualificada para essa população e
+											busque apoiar, sem imposições, a construção de uma história clínica,
+											diagnóstico e projeto terapêutico adequados ao indivíduo.
+										</p>
+									</div>
+
+									<!-- Ítem 4 -->
+									<div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion"
+										href="#accordion-item4">
+										<a class="card-title">Autocuidado</a>
+									</div>
+									<div id="accordion-item4" class="card-body collapse">
+										<p>A dificuldade recorrente de acesso ao sistema de saúde para buscar ajuda e a
+											luta diária pela sobrevivência fazem com que muitas pessoas em situação de
+											rua, mesmo visivelmente adoecidas, neguem estar com qualquer problema de
+											saúde.
+										</p>
+
+										<p>Tal fenômeno não costuma se dar por dissimulação, mas pelo silenciamento de
+											sinais e sintomas que, pouco a pouco, foram se incorporando àquilo que o
+											indivíduo passou a considerar como condição de normalidade para si.
+										</p>
+
+										<p>Nesse momento, se o profissional de saúde perguntar a um morador de rua com
+											tosse, febre e desnutrição como ele vai de saúde, ele responderá: “Vou bem”.
+										</p>
+
+										<p>Caberá então como tarefa adicional às equipes de atenção à saúde dessa
+											população apoiar o despertar do olhar do cidadão para si mesmo como alguém
+											que pode encontrar uma nova “normalidade” de direito e de saúde, mais
+											compatível com a vida e a dignidade humanas.</p>
+									</div>
+
+									<!-- Ítem 5 -->
+									<div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion"
+										href="#accordion-item5">
+										<a class="card-title">Alimentação incerta e em baixas condições de higiene</a>
+									</div>
+									<div id="accordion-item5" class="card-body collapse" data-parent="#accordion">
+										<p>Nem sempre há meios de lavar as mãos antes das refeições.
+										</p>
+
+										<p>O uso de restos ou dietas exclusivamente à base de alimentos doados faz com
+											que o consumo de nutrientes necessários seja irregular, levando a um estado
+											nutricional inadequado.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Fim do Accordion -->
+
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Bloco 5 -->
+
+				<!-- Navegação -->
+				<div class="container">
+					<div class="row justify-content-center text-center">
+						<div class="col-12 col-md-6">
+							<p><a href="index.html"
+									class="button button-rounded button-reveal button-large button-border"><i
+										class="icon-line-arrow-left"></i><span>Tópico Anterior</span></a></p>
+						</div>
+
+						<div class="col-12 col-md-6">
+							<p><a href="topico2.html"
+									class="button button-rounded button-reveal button-large button-border text-right"><i
+										class="icon-line-arrow-right"></i><span>Próximo Tópico</span></a></p>
+						</div>
+					</div>
+				</div>
+				<!-- Fim da Navegação -->
+			</div>
+			<!-- Fim do content-wrap -->
+		</section>
+		<!-- Fim do conteúdo -->
+
+		<!-- Rodapé - Barra de Logos
+		============================================= -->
+		<footer id="footer">
+			<div class="container">
+				<!-- Include dos logos -->
+				<div w3-include-html="../barra-de-logos-peq.html"></div>
+			</div>
+		</footer><!-- Fim do Rodapé - Barra de Logos -->
+
+		<!--==========================
+      	Modais - Bibliografia, Créditos e Material Complementar
+    	============================-->
+
+		<!-- Include: Modal Bibliografia-->
+		<div w3-include-html="../../bibliografia.html"></div>
+
+		<!-- Include: Modal Créditos-->
+		<div w3-include-html="../../creditos.html"></div>
+
+	</div>
+	<!-- Fim do Wrapper -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="../../../js/jquery.js"></script>
+	<!-- <script src="../../../js/plugins.min.js"></script> -->
+	<script src="../../../js/plugins.bootstrap.js"></script>
+	<script src="../../../js/plugins.easing.js"></script>
+
+	<script src="../../../js/plugins.accordions.js"></script>
+	<script src="../../../js/plugins.animations.js"></script>
+	<script src="../../../js/plugins.carousel.js"></script>
+	<script src="../../../js/plugins.flexslider.js"></script>
+	<script src="../../../js/plugins.hoveranimation.js"></script>
+	<script src="../../../js/plugins.html5video.js"></script>
+	<script src="../../../js/plugins.lightbox.js"></script>
+	<script src="../../../js/plugins.linkscroll.js"></script>
+	<script src="../../../js/plugins.parallax.js"></script>
+	<script src="../../../js/plugins.swiper.js"></script>
+	<script src="../../../js/plugins.toggles.js"></script>
+	<script src="../../../js/plugins.youtube.js"></script>
+
+	<script src="../../../js/functions.js"></script>
+
+	<!-- Scripts
+	============================================= -->
+
+	<!-- JS Custom -->
+	<script src="../../../js/custom.js"></script>
+
+	<!-- JS para os Includes-->
+	<script src="../../../js/include.js"></script>
+
+	<!-- Para fazer includes de HTML dentro do HTML -->
+	<script>
+		includeHTML();
+	</script>
+
+</body>
+
+</html>
