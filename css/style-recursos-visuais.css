@@ -309,11 +309,14 @@ Destaques
 /*Destaque Parallax*/
 .page-title-parallax {padding:10px 0;}
 
+.page-title-parallax a {color:var(--azul-clarissimo);}
+
 /*Fundos de destaques*/
 .destaque a {
 	color:#fff;
 	text-decoration: underline;
 }
+.destaque.bg-azul-escuro a {color:var(--azul-clarissimo);}
 
 .destaque.bg-cinza-medio a {color:var(--azul-claro);}
 
