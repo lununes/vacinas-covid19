@@ -315,6 +315,8 @@ Destaques
 	text-decoration: underline;
 }
 
+.destaque.bg-cinza-medio a {color:var(--azul-claro);}
+
 /*----------------------------- 
 
 Citações
