@@ -502,13 +502,13 @@
 										<div class="code-snippet">
 											<pre>
 												<code>
-												&lt;!-- Heading Block (Título h2 ou h3 + Lead (se houver)) --&gt;
+												&lt;!-- Heading Block (Título h2 + Lead (se houver)) --&gt;
 													&lt;div class="heading-block"&gt;
 														&lt;span class="before-heading&gt;Antetítulo opcional&lt;/span&gt;
 														&lt;h2&gt;Olá, sou um H2&lt;/h2&gt;
 														&lt;p class="lead text-left"&gt;Este módulo pretende apresentar a especificidades da organização e dos procedimentos da sala de vacinação para COVID-19; apresentar os procedimentos de armazenamento da vacina X para COVID-19; e orientar para implantação de uma sala de vacina para COVID-19.&lt;/p&gt;
 													&lt;/div&gt;
-												&lt;!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) --&gt;
+												&lt;!-- Fim do Heading Block (Título h2 + Lead (se houver)) --&gt;
 												</code>
 											</pre>
 										</div>
@@ -581,11 +581,7 @@
 								<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
 								<br />
 
-								<!-- Heading Block (Título h2 ou h3 + Lead (se houver)) -->
-								<div class="heading-block">
-									<h3 class="text-left">Este é um título de tópico (h3)</h3>
-								</div>
-								<!-- Fim do Heading Block (Título h2 ou h3 + Lead (se houver)) -->
+								<h3 class="text-left">Este é um título de tópico (h3)</h3>
 
 								<p>Em geral os recurso são configurados todos em 1 arquivo CSS, chamado de
 									style-visual-resources.css. Contudo, eventualmente poderemos precisar adaptar alguns
@@ -1449,14 +1445,27 @@
 
 					<!-- Parallax -->
 					<div class="container-fluid px-0">
-						<section class="page-title-parallax page-title-dark skrollable skrollable-between text-white" style="background-image: url('../img/services/home-testi-bg.jpg'); background-size: cover; background-position: 0px -121.61px;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
+						<section class="page-title-parallax page-title-dark skrollable skrollable-between text-white" style="background-image: url('../img/curso1/parallax.jpg'); background-size: cover; background-position: 0px -121.61px;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
 							<div class="container clearfix text-center">
 								<div class="row justify-content-center">
 									<div class="col-12 col-md-10 col-lg-8">
-										<h3 class="text-white">Insira o texto</h3>
-										<p class="text-center text-white">Exemplo de texto: ao receber as vacinas, observe a Nota de Fornecimento e o material recebido. Se houver alguma divergência, comunique o responsável pela distribuição para as devidas correções.</p>
+										<h3 class="text-left text-white">Insira o texto</h3>
+										<p class="text-left text-white">Exemplo de texto: ao receber as vacinas, observe a Nota de Fornecimento e o material recebido. Se houver alguma divergência, comunique o responsável pela distribuição para as devidas correções.</p>
+
+										<p class="text-left">Quando tenho links, <a href='#' target='_blank'>é assim que fico</a>.</p>
+
+										<!-- Lista Simples -->
+										<div class="row justify-content-center text-left">
+											<div class="obj-lista col-11 col-md-10">
+												<ul class="list-group">
+													<li class="list-group-item"><i class="icon-line-disc azul-clarissimo mr-2"></i> Quando tenho ícones, como numa lista, fico assim.</li>
+													<li class="list-group-item"><i class="icon-line-disc azul-clarissimo mr-2"></i> É preciso mudar a cor do ícone através da classe presente na li: originalmente é <span class="azul-claro">azul-claro</span>. Trocar para <span class="azul-clarissimo">azul-clarissimo</span> para maior contraste com o fundo.</li>
+												</ul>
+											</div>
+										</div>
+										<!-- Fim de Lista Simples -->
 									</div>
-									</div>
+								</div>
 							</div>
 						</section>
 					</div>
@@ -1480,11 +1489,53 @@
 							<div class="row justify-content-center m-0 py-3">
 								<div class="col-12 col-md-10 col-lg-8">
 									<div class="justify-content-center d-flex flex-column">
-										<h3 class="text-white">Destaque de texto com fundo</h3>
-										<p><strong>Este é um outro exemplo de destaque de um texto. Estou alinhado à
-												esquerda, mas você pode me centralizar, se for necessário.</strong></p>
+										<h3 class="text-white">Destaque de texto com fundo azul escuro</h3>
+										<p><strong>Este é um outro exemplo de destaque de um texto. Estou alinhado à esquerda, mas você pode me centralizar, se for necessário.</strong></p>
 
-										<p><strong>A cor deste fundo é dada por uma classe.</strong></p>
+										<p>A cor deste fundo é dada por uma classe: <strong>bg-azul-escuro.</strong></p>
+
+										<p>Quando tenho links, <a href='#' target='_blank'>é assim que fico</a>.</p>
+
+										<!-- Lista Simples -->
+										<div class="row justify-content-center">
+											<div class="obj-lista col-11 col-md-10">
+												<ul class="list-group">
+													<li class="list-group-item"><i class="icon-line-disc azul-clarissimo mr-2"></i> Quando tenho ícones, como numa lista, fico assim.</li>
+													<li class="list-group-item"><i class="icon-line-disc azul-clarissimo mr-2"></i> É preciso mudar a cor do ícone através da classe presente na li: originalmente é <span class="azul-claro">azul-claro</span>. Trocar para <span class="azul-clarissimo">azul-clarissimo</span> para maior contraste com o fundo.</li>
+												</ul>
+											</div>
+										</div>
+										<!-- Fim de Lista Simples -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Fim do Destaque -->
+
+					<!-- Destaque -->
+					<div class="container-fluid destaque bg-azul-claro text-white">
+						<div class="container">
+							<div class="row justify-content-center m-0 py-3">
+								<div class="col-12 col-md-10 col-lg-8">
+									<div class="justify-content-center d-flex flex-column">
+										<h3 class="text-white">Destaque de texto com fundo azul claro</h3>
+										<p><strong>Este é um outro exemplo de destaque de um texto. Estou alinhado à esquerda, mas você pode me centralizar, se for necessário.</strong></p>
+
+										<p>A cor deste fundo é dada por uma classe: <strong>bg-azul-claro.</strong></p>
+
+										<p>Quando tenho links, <a href='#' target='_blank'>é assim que fico</a>.</p>
+
+										<!-- Lista Simples -->
+										<div class="row justify-content-center">
+											<div class="obj-lista col-11 col-md-10">
+												<ul class="list-group">
+													<li class="list-group-item"><i class="icon-line-disc text-white mr-2"></i> Quando tenho ícones, como numa lista, fico assim.</li>
+													<li class="list-group-item"><i class="icon-line-disc text-white mr-2"></i> É preciso mudar a cor do ícone através da classe presente na li: originalmente é azul-claro. Trocar para <span class="text-white">branco</span> para maior contraste com o fundo.</li>
+												</ul>
+											</div>
+										</div>
+										<!-- Fim de Lista Simples -->
 									</div>
 								</div>
 							</div>
@@ -1498,9 +1549,21 @@
 							<div class="row justify-content-center m-0 py-3">
 								<div class="col-12 col-md-10 col-lg-8">
 									<div class="justify-content-center d-flex flex-column">
-										<h3>Este é um destaque com um fundo mais discreto</h3>
-										<p><strong>Para utilizá-lo, basta usar a classe bg-cinza-medio na div com a
-												classe .container-fluid.</strong></p>
+										<h3>Este é um destaque com um fundo neutro</h3>
+
+										<p>A cor deste fundo é dada por uma classe: <strong>bg-cinza-medio.</strong></p>
+
+										<p>Quando tenho links, <a href='#' target='_blank'>é assim que fico</a>.</p>
+
+										<!-- Lista Simples -->
+										<div class="row justify-content-center">
+											<div class="obj-lista col-11 col-md-10">
+												<ul class="list-group">
+													<li class="list-group-item"><i class="icon-line-disc azul-claro mr-2"></i> Quando tenho ícones, como numa lista, fico assim.</li>
+													<li class="list-group-item"><i class="icon-line-disc azul-claro mr-2"></i> A cor do ícone é a padrão: <span class="azul-claro">azul claro</span></li>
+												</ul>
+											</div>
+										</div>
 
 									</div>
 								</div>
@@ -1817,6 +1880,10 @@
 
 								<p>Pode ser uma lista simples (não-ordenada) ou lista ordenada.</p>
 
+								<p>Originalmente, para listas presentes no texto corrido estamos utilizando para tablets e desktops (largura igual ou maior que 768px) uma colunagem de 10 (col-md-10). Porém, <strong>dependendo da necessidade</strong>, será possível ajustar este tamanho.</p>
+
+								<p>Um exemplo é quando tempos uma lista dentro de um modal. É possível utilizar 12 colunas ao invés de 10.</p>
+
 								<h4>Lista Simples</h4>
 
 								<!-- Lista Simples -->
@@ -1840,7 +1907,6 @@
 												atual. </li>
 										</ul>
 									</div>
-
 								</div>
 								<!-- Fim de Lista Simples -->
 
