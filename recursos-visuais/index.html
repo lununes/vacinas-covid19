@@ -2455,8 +2455,8 @@
 
 								<!--Início tabela horizontal-->
 								<div class="row mt-3 mb-5">
-									<div class="col-12">
-									  <div class="table-responsive" data-aos="fade-up">
+									<div class="col-12 px-0">
+									  <div class="table-responsive">
 										<table class="table table-bordered">
 										  <thead>
 											<tr>
@@ -2503,9 +2503,124 @@
 									  </div>
 					  
 									</div>
-								  </div>
-								  <!--fim da row-->
-								  <!--Fim da Tabela horizontal-->
+								</div>
+								<!--fim da row-->
+								<!--Fim da Tabela horizontal-->
+
+								<h4>Variações da tabela para otimização em mobile</h4>
+
+								<p>Originalmente, tabelas em telas pequenas, como as dos dispositivos móveis, tendem a ter um scroll para o lado.</p>
+
+								<p>A fim de melhorar a experiência de tabelas no mobile, há algumas adaptações que, dependendo do tipo de conteúdo, podemos fazer.</p>
+
+								<br/>
+								<h5>Tabela como linhas no mobile</h5>
+
+								<p>Para utilizar esse recurso, aplique a classe <strong>.no-more-tables</strong> e utilize nas tds um atributo <strong>data-title</strong>.</p>
+
+								<!--Início tabela horizontal com classe no-more-tables -->
+								<div class="row mt-3 mb-5">
+									<div class="col-12 px-0">
+									<div class="table-responsive no-more-tables">
+										<table class="table table-bordered">
+										<thead>
+											<tr>
+											<th class="align-middle text-center" width="15%">Desenvolvedor</th>
+											<th class="align-middle text-center" width="15%">Tipo</th>
+											<th class="align-middle text-center" width="15%">Fase</th>
+											<th class="align-middle text-center" width="55%">Status</th>
+											</tr>
+										</thead>
+					
+										<tbody>
+											<tr class="text-left">
+											<td data-title="Desenvolvedor" class="align-middle text-center">Pfizer-BioNTech</td>
+											<td data-title="Tipo" class="align-middle text-center">mRNA</td>
+											<td data-title="Fase" class="align-middle text-center">2/3</td>
+											<td data-title="Status" class="align-middle">Uso pleno ou emergencial em numerosos países; aprovação de uso emergencial concedida pela OMS em 31 de dezembro de 2020.</td>
+											</tr>
+					
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">Moderna</td>
+												<td data-title="Tipo" class="align-middle text-center">mRNA</td>
+												<td data-title="Fase" class="align-middle text-center">3</td>
+												<td data-title="Status" class="align-middle">Uso pleno ou de emergência nos EUA, Canadá, União Europeia, Reino Unido e Israel. </td>
+											</tr>
+					
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">Gamaleya</td>
+												<td data-title="Tipo" class="align-middle text-center">Adenovírus</td>
+												<td data-title="Fase" class="align-middle text-center">3</td>
+												<td data-title="Status" class="align-middle">Uso inicial na Rússia.<br/>Uso de emergência na Bielo-Rússia, Argentina.</td>
+											</tr>
+					
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">CanSino</td>
+												<td data-title="Tipo" class="align-middle text-center">Adenovírus</td>
+												<td data-title="Fase" class="align-middle text-center">3</td>
+												<td data-title="Status" class="align-middle">Uso limitado na China.</td>
+											</tr>
+					
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">Johnson & Johnson</td>
+												<td data-title="Tipo" class="align-middle text-center">Adenovírus</td>
+												<td data-title="Fase" class="align-middle text-center">3</td>
+												<td data-title="Status" class="align-middle">Ainda não aprovada para uso.</td>
+											</tr>
+					
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">Oxford-AstraZeneca</td>
+												<td data-title="Tipo" class="align-middle text-center">Adenovírus</td>
+												<td data-title="Fase" class="align-middle text-center">2/3</td>
+												<td data-title="Status" class="align-middle">Uso emergencial em vários países, incluindo Brasil, Reino Unido, Índia, Argentina, República Dominicana e El Salvador. </td>
+											</tr>
+
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">Instituto Vector</td>
+												<td data-title="Tipo" class="align-middle text-center">Proteína</td>
+												<td data-title="Fase" class="align-middle text-center">3</td>
+												<td data-title="Status" class="align-middle">Uso inicial na Rússia.</td>
+											</tr>
+
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">Novavax</td>
+												<td data-title="Tipo" class="align-middle text-center">Proteína</td>
+												<td data-title="Fase" class="align-middle text-center">3</td>
+												<td data-title="Status" class="align-middle">Ainda não aprovada para uso.</td>
+											</tr>
+
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">Sinovac</td>
+												<td data-title="Tipo" class="align-middle text-center">Inativado</td>
+												<td data-title="Fase" class="align-middle text-center">3</td>
+												<td data-title="Status" class="align-middle">Uso limitado na China.</td>
+											</tr>
+
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">Sinopharm-Pequim</td>
+												<td data-title="Tipo" class="align-middle text-center">Inativado</td>
+												<td data-title="Fase" class="align-middle text-center">3</td>
+												<td data-title="Status" class="align-middle">Aprovado nos Emirados Árabes Unidos, Bahrein.<br>Uso limitado na China. </td>
+											</tr>
+
+											<tr>
+												<td data-title="Desenvolvedor" class="align-middle text-center">Sinopharm-Wuhan</td>
+												<td data-title="Tipo" class="align-middle text-center">Inativado</td>
+												<td data-title="Fase" class="align-middle text-center">3</td>
+												<td data-title="Status" class="align-middle">Uso limitado na China e Emirados Árabes Unidos.</td>
+											</tr>
+					
+					
+										</tbody>
+										</table>
+									</div>
+
+									<p class="fonte text-center">Fonte: <a href="https://vac-lshtm.shinyapps.io/ncov_vaccine_landscape/" target="_blank">COVID-19 Vaccine Tracker</a> - atualizado em 15/01/2021</p>
+					
+									</div>
+								</div>
+								<!--fim da row-->
+								<!--Fim da Tabela horizontal com classe no-more-tables-->
 
 							</div>
 						</div>
@@ -2528,7 +2643,7 @@
 								<p>A seguir mostramos 2 opções para inclusão de vídeos no html: ou por embed (vídeo de Youtube ou Vimeo) e um vídeo local.</p>
 								<br/>
 
-								<h4>Vídeo (embed de plataformas como Youtube, Vimeo, Educare etc)</h4>
+								<h4>Vídeo (embed de plataformas como Youtube, Vimeo etc)</h4>
 
 								<!--Video (embed Youtube ou Vimeo) -->
 								<div class="row justify-content-center mt-5">
@@ -2544,7 +2659,19 @@
 								<!--Fim do video -->
 
 								<br/>
+								<h4>Vídeo (embed do educare)</h4>
 
+								<!--Video (embed Educare) -->
+								<div class="row justify-content-center my-5">
+									<div class="col-12 p-0">
+										<div class="embed-responsive embed-responsive-16by9">
+											<video controls="" name="media"><source src="https://educare.fiocruz.br/file-storage/rQ8ER_Sl" type="video/mp4"></video>
+										</div>
+									</div>
+								</div>
+									<!--Fim do video -->
+
+								<br/>
 								<h4>Vídeo (arquivo local)</h4>
 
 								 <!-- Video (a partir de um arquivo local) -->
