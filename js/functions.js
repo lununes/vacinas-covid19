@@ -846,7 +846,25 @@ var SEMICOLON = SEMICOLON || {};
 		logo: function(){
 			let sLogo = defaultLogo.find('img'),
 				rLogo = retinaLogo.find('img');
-			if( ( $header.hasClass('dark') || $body.hasClass('dark') ) && !$headerWrap.hasClass('not-dark') ) {
+			// if( ( $header.hasClass('dark') || $body.hasClass('dark') ) && !$headerWrap.hasClass('not-dark') ) {
+			// 	if( defaultDarkLogo && ( sLogo.attr('src') != defaultDarkLogo ) ){
+			// 		sLogo.attr('src', defaultDarkLogo);
+			// 	}
+
+			// 	if( retinaDarkLogo && ( rLogo.attr('src') != retinaDarkLogo ) ){
+			// 		rLogo.attr('src', retinaDarkLogo);
+			// 	}
+			// } else {
+			// 	if( defaultLogoImg && ( sLogo.attr('src') != defaultLogoImg ) ){
+			// 		sLogo.attr('src', defaultLogoImg);
+			// 	}
+
+			// 	if( retinaLogoImg && ( rLogo.attr('src') != retinaLogoImg ) ){
+			// 		rLogo.attr('src', retinaLogoImg);
+			// 	}
+			// }
+
+			if( $header.hasClass('transparent-header') && ( $body.hasClass('device-lg') || $body.hasClass('device-xl') ) && !$headerWrap.hasClass('not-dark')  ) {
 				if( defaultDarkLogo && ( sLogo.attr('src') != defaultDarkLogo ) ){
 					sLogo.attr('src', defaultDarkLogo);
 				}
@@ -855,6 +873,7 @@ var SEMICOLON = SEMICOLON || {};
 					rLogo.attr('src', retinaDarkLogo);
 				}
 			} else {
+
 				if( defaultLogoImg && ( sLogo.attr('src') != defaultLogoImg ) ){
 					sLogo.attr('src', defaultLogoImg);
 				}

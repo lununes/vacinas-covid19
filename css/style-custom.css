@@ -720,6 +720,20 @@ p {line-height: 1.75;}
 /*Tamanho do logo para mobile*/
 #logo img {height: 40px;}
 
+
+/*Se for um logo em img adaptado para Retina (@x2), que no nosso caso não temos (usamos svg). 
+Então, preciso sobrescrever o que estava aplicado no style.css*/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+
+	#logo a.standard-logo { display: block; }
+}
+
 /* Retirar a borda lateral do topo */
 .full-header .primary-menu .menu-container,
 .transparent-header.full-header.dark .primary-menu .menu-container {border-right: none;}
