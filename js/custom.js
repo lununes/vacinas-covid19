@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-
+  
     // No desktop, quando scrolla, exibe o menu de tópicos a partir de certa altura
     if(window.outerWidth > 768){
       $(window).scroll(function() {

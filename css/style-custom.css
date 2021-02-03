@@ -309,6 +309,11 @@ p {line-height: 1.75;}
 	}
 }
 
+/*Retira o botão back to top em dispositivos pequenos (smartphones e tablets)*/
+@media (max-width: 768px) {
+	#gotoTop {display:none !important;}
+}
+
 /* Fim do Botão de voltar ao topo (visivel no desktop)
 ------------------------*/
 
@@ -515,6 +520,16 @@ p {line-height: 1.75;}
 	/* transform: translateY(-90vh); */
 	transform: translateY(-90vh);
 	transition: all 0.8s ease;
+	}
+}
+
+/* Tablets*/
+@media (min-width: 768px) {
+
+	#bt-topicos {
+		width: 80px;
+		height: 60px;
+		top:-75px;
 	}
 }
 
