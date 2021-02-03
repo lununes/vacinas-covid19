@@ -301,6 +301,14 @@ p {line-height: 1.75;}
     background-color: var(--azul-claro);
 }
 
+/*Se o dispositivo não for touch, não exibe o botão de voltar em telas reduzidas (ex: quando se reduz a janela do navegador no desktop*/
+
+@media (max-width: 768px) {
+	body:not(.device-touch) #gotoTop {
+		display:none !important;
+	}
+}
+
 /* Fim do Botão de voltar ao topo (visivel no desktop)
 ------------------------*/
 

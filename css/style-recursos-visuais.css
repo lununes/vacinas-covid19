@@ -861,7 +861,7 @@ Tabela em mobile (colunas viram linhas, em blocos de informação)
   }
 
   /* Zebra striping */
-tr:nth-of-type(odd) { 
+  .no-more-tables tr:nth-of-type(odd) { 
   background: var(--cinza-medio); 
 }
  
