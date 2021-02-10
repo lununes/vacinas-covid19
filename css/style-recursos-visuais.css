@@ -883,6 +883,10 @@ Tabela em mobile (colunas viram linhas, em blocos de informação)
     padding-left: 50%; 
     white-space: normal;
     text-align:left;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .no-more-tables tr:nth-of-type(odd) td {border-bottom: 1px solid #fff; }
@@ -892,12 +896,18 @@ Tabela em mobile (colunas viram linhas, em blocos de informação)
     position: absolute;
     /* Top/left values mimic padding */
     /* top: 6px; */
-    left: 5px;
+    /* left: 5px; */
+    left: 20px;
     width: 30%; 
     padding-right: 10px; 
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    white-space: normal;
     text-align:center;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
   }
  
   /*Pega o atributo passado via data-nome-do-atributo*/
