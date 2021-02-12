@@ -925,14 +925,25 @@ iframe.atividades {
 }
 
 /*Módulo 1*/
-#mod1-atividade1 {min-height: 300px;}
-#mod1-atividade2 {min-height: 600px;}
+
+/* Aula 1 */
+#mod1-aula1-atividade1 {min-height: 300px;}
+#mod1-aula1-atividade2 {min-height: 600px;}
+
+/* Aula 3 */
+#mod1-aula3-atividade1 {min-height: 690px;}
+#mod1-aula3-atividade2 {min-height: 800px;}
 
 @media (min-width:768px) {
-  #mod1-atividade2 {min-height: 400px;}
+  /* Aula 1 */
+  #mod1-aula1-atividade2 {min-height: 400px;}
 }
 
 @media (min-width:992px) {
-  #mod1-atividade2 {min-height: 350px;}
+  /* Aula 1 */
+  #mod1-aula1-atividade2 {min-height: 350px;}
+
+  /* Aula 3 */
+  #mod1-aula3-atividade2 {min-height: 500px;}
 }
 
