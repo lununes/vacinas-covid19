@@ -947,6 +947,13 @@ iframe.atividades {
   #mod1-aula3-atividade2 {min-height: 500px;}
 }
 
+
+/*Módulo 2*/
+@media (min-width:768px) {
+  /* Aula 3 */
+  #mod2-aula3-atividade1 {min-height: 310px;}
+}
+
 /*Módulo 3*/
 
 /*Aula 1*/
