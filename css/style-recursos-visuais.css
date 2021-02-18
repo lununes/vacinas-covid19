@@ -916,6 +916,14 @@ Tabela em mobile (colunas viram linhas, em blocos de informação)
   }
 }
 
+/*Embed dos PDFS */
+
+iframe.iframe-pdf {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+}
+
 /*Atividades hp5 (no final de cada aula)*/
 
 iframe.atividades {
@@ -949,9 +957,12 @@ iframe.atividades {
 
 
 /*Módulo 2*/
+
+#mod2-aula3-atividade1 {min-height: 730px;}
+
 @media (min-width:768px) {
   /* Aula 3 */
-  #mod2-aula3-atividade1 {min-height: 310px;}
+  #mod2-aula3-atividade1 {min-height: 460px;}
 }
 
 /*Módulo 3*/
