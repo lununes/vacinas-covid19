@@ -1205,3 +1205,11 @@ pre code {white-space: pre-line;}
 @media (min-width: 992px) {
 	#footer {top:335px;}
 }
+
+/* Bibliografia
+------------------------*/
+
+#modal-bibliografia li a {
+	word-wrap: break-word;
+}
+
