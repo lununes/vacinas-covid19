@@ -940,43 +940,73 @@ iframe.atividades {
 
 /*Módulo 1*/
 
-/* Aula 1 */
+/* Mod 1 Aula 1 */
 
 #mod1-aula1-atividade1 {min-height: 550px;}
 #mod1-aula1-atividade2 {min-height: 800px;}
 
 @media (min-width:768px) {
-  /* Aula 1 */
+  /* Mod 1 Aula 1 */
   #mod1-aula1-atividade1 {min-height: 350px;}
   #mod1-aula1-atividade2 {min-height: 440px;}
 }
 
 @media (min-width:992px) {
-  /* Aula 1 */
+  /* Mod 1 Aula 1 */
   #mod1-aula1-atividade1 {min-height: 300px;}
   #mod1-aula1-atividade2 {min-height: 415px;}
 }
 
-/* Aula 3 */
+/* Mod 1 Aula 2 */
+
+#mod1-aula2-atividade1 {min-height: 1370px;}
+
+@media (min-width:768px) {
+  /* Mod 1 Aula 2 */
+  #mod1-aula2-atividade1 {min-height: 730px;}
+}
+
+@media (min-width:992px) {
+  /* Mod 1 Aula 2 */
+  #mod1-aula2-atividade1 {min-height: 630px;}
+}
+
+/* Mod 1 Aula 3 */
 #mod1-aula3-atividade1 {min-height: 870px;}
 #mod1-aula3-atividade2 {min-height: 1020px;}
 
 @media (min-width:768px) {
-  /* Aula 3 */
+  /* Mod 1 Aula 3 */
   #mod1-aula3-atividade1 {min-height: 465px;}
   #mod1-aula3-atividade2 {min-height: 600px;}
 }
 
 @media (min-width:992px) {
-  /* Aula 3 */
+  /* Mod 1 Aula 3 */
   #mod1-aula3-atividade1 {min-height: 425px;}
   #mod1-aula3-atividade2 {min-height: 545px;}
 }
 
+/* Mod 1 Aula 4 */
+#mod1-aula4-atividade1 {min-height: 600px;}
+
+@media (max-width:320px) {
+  #mod1-aula4-atividade1 {min-height: 1060px;}
+}
+
+@media (min-width:768px) {
+  #mod1-aula4-atividade1 {min-height: 430px;}
+}
+
+@media (min-width:992px) {
+  #mod1-aula4-atividade1 {min-height: 395px;}
+}
+
+
 
 /*Módulo 2*/
 
-/* Aula 3 */
+/* Mod 2 Aula 3 */
 #mod2-aula3-atividade1 {min-height: 990px;}
 
 @media (max-width:320px) {
@@ -993,34 +1023,34 @@ iframe.atividades {
 
 /*Módulo 3*/
 
-/*Aula 1*/
+/*Mod 3 Aula 1*/
 #mod3-aula1-atividade1 {min-height: 645px;}
 
 @media (max-width:320px) {
-  /* Aula 1 */
+  /* Mod 3 Aula 1 */
   #mod3-aula1-atividade1 {min-height: 720px;}
 }
 
 @media (min-width:768px) {
-  /* Aula 1 */
+  /* Mod 3 Aula 1 */
   #mod3-aula1-atividade1 {min-height: 360px;}
 }
 
 @media (min-width:992px) {
-  /* Aula 1 */
+  /* Mod 3 Aula 1 */
   #mod3-aula1-atividade1 {min-height: 340px;}
 }
 
-/*Aula 3*/
+/*Mod 3 Aula 3*/
 #mod3-aula3-atividade1 {min-height: 820px;}
 
 @media (max-width:320px) {
-  /* Aula 3 */
+  /* Mod 3 Aula 3 */
   #mod3-aula3-atividade1 {min-height: 990px;}
 }
 
 @media (min-width:768px) {
-  /*Aula 3*/
+  /*Mod 3 Aula 3*/
   #mod3-aula3-atividade1 {min-height: 445px;}
 }
 
