@@ -1189,3 +1189,51 @@ iframe.atividades {
   #mod4-aula5-atividade1 {min-height: 480px;}
 }
 
+
+/*Módulo 5*/
+
+/*Mod 5 Aula 1*/
+#mod5-aula1-atividade1 {min-height: 720px;}
+
+@media (max-width:320px) {
+  #mod5-aula1-atividade1 {min-height: 1090px;}
+}
+
+@media (min-width:768px) {
+  #mod5-aula1-atividade1 {min-height: 540px;}
+}
+
+@media (min-width:992px) {
+  #mod5-aula1-atividade1 {min-height: 480px;}
+}
+
+/*Mod 5 Aula 2*/
+#mod5-aula2-atividade1 {min-height: 1180px;}
+
+@media (max-width:320px) {
+  #mod5-aula2-atividade1 {min-height: 1900px;}
+}
+
+@media (min-width:768px) {
+  #mod5-aula2-atividade1 {min-height: 730px;}
+}
+
+@media (min-width:992px) {
+  #mod5-aula2-atividade1 {min-height: 620px;}
+}
+
+/*Mod 5 Aula 3*/
+#mod5-aula3-atividade1 {min-height: 730px;}
+
+@media (max-width:320px) {
+  #mod5-aula3-atividade1 {min-height: 1630px;}
+}
+
+@media (min-width:768px) {
+  #mod5-aula3-atividade1 {min-height: 700px;}
+}
+
+@media (min-width:992px) {
+  #mod5-aula3-atividade1 {min-height: 590px;}
+}
+
