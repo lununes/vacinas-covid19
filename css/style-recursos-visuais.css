@@ -961,6 +961,10 @@ iframe.atividades {
 
 #mod1-aula2-atividade1 {min-height: 1370px;}
 
+@media (max-width:320px) {
+  #mod1-aula2-atividade1 {min-height: 1700px;}
+}
+
 @media (min-width:768px) {
   /* Mod 1 Aula 2 */
   #mod1-aula2-atividade1 {min-height: 730px;}
@@ -1003,8 +1007,37 @@ iframe.atividades {
 }
 
 
-
 /*Módulo 2*/
+
+/* Mod 2 Aula 1 */
+#mod2-aula1-atividade1 {min-height: 1240px;}
+
+@media (max-width:320px) {
+  #mod2-aula1-atividade1 {min-height: 1200px;}
+}
+
+@media (min-width:768px) {
+  #mod2-aula1-atividade1 {min-height: 550px;}
+}
+
+@media (min-width:992px) {
+  #mod2-aula1-atividade1 {min-height: 500px;}
+}
+
+/* Mod 2 Aula 2 */
+#mod2-aula2-atividade1 {min-height: 700px;}
+
+@media (max-width:320px) {
+  #mod2-aula2-atividade1 {min-height: 750px;}
+}
+
+@media (min-width:768px) {
+  #mod2-aula2-atividade1 {min-height: 430px;}
+}
+
+@media (min-width:992px) {
+  #mod2-aula2-atividade1 {min-height: 395px;}
+}
 
 /* Mod 2 Aula 3 */
 #mod2-aula3-atividade1 {min-height: 990px;}
@@ -1019,6 +1052,21 @@ iframe.atividades {
 
 @media (min-width:992px) {
   #mod2-aula3-atividade1 {min-height: 500px;}
+}
+
+/* Mod 2 Aula 4 */
+#mod2-aula4-atividade1 {min-height: 780px;}
+
+@media (max-width:320px) {
+  #mod2-aula4-atividade1 {min-height: 870px;}
+}
+
+@media (min-width:768px) {
+  #mod2-aula4-atividade1 {min-height: 530px;}
+}
+
+@media (min-width:992px) {
+  #mod2-aula4-atividade1 {min-height: 450px;}
 }
 
 /*Módulo 3*/
