@@ -829,7 +829,7 @@ only screen and (min-resolution: 2dppx) {
 }
 
 .primary-menu-open #header.sticky-header .breadcrumb.header {
-	top: 105% !important;
+	top: 104% !important;
 }
 
 #header.sticky-header .breadcrumb.header a {
