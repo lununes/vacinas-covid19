@@ -348,11 +348,23 @@
 							<!--Tabs-->
 							<div class="abas mt-4">
 								<ul id="abas1" class="nav nav-tabs boot-tabs">
-									<li class="nav-item"><a class="nav-link active" href="#aba1"
-											data-toggle="tab">Fiocruz</a></li>
+									<li class="nav-item"><a class="nav-link active" href="#aba1" data-toggle="tab">Fiocruz</a></li>
+
 									<!-- A partir do 2º ítem, podemos escolher quem aparece -->
-									<li class="nav-item"><a class="nav-link" href="#aba2"
-											data-toggle="tab">Instituto Butantan</a></li>
+									<li class="nav-item d-none d-md-block"><a class="nav-link" href="#aba2"
+										data-toggle="tab">Instituto Butantan</a></li>
+									<li class="nav-item d-none d-md-block"><a class="nav-link" href="#aba3"
+										data-toggle="tab">Pfizer</a></li>
+
+									<!-- Ítens em Dropdown - aparecem no mobile -->
+									<li class="nav-item dropdown d-block d-md-none">
+										<a class="nav-link dropdown-toggle" href="#" id="tabdrop1"
+											data-toggle="dropdown">Ver mais</a>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="tapdrop1">
+											<a class="dropdown-item" href="#aba2" tabindex="-1" data-toggle="tab">Instituto Butantan</a>
+											<a class="dropdown-item" href="#aba3" tabindex="-1" data-toggle="tab">Pfizer</a>
+										</ul>
+									</li>
 								</ul>
 								<div id="tabcontent1" class="tab-content">
 									<!-- Aba 1 -->
@@ -450,6 +462,31 @@
 										<p>Todo medicamento deve ser mantido fora do alcance das crianças.</p>
 
 										<p class="fonte">Fonte: <a href='https://vacinacovid.butantan.gov.br/bulas' target='_blank'>Dizeres de texto de bula – profissional da saúde - Instituto Butantan</a></p>
+										
+									</div>
+
+									<!-- Aba 3 -->
+									<div class="tab-pane fade" id="aba3">
+										<h6>Comirnaty (vacina Covid&#8209;19) - informações técnicas aos profissionais de saúde</h6>
+										<br/>
+										
+										<p class="mb-0"><strong>Estabilidade do Produto Terminado</strong></p>
+										<p>Prazo de validade provisório de 6 meses quando armazenado a pelo menos -60°C e protegido da luz.</p>
+										<p>Produto estável por até 5 dias entre 2 °C e 8 °C, e por até 2 horas a temperatura de até 30°C, antes de ser diluída e utilizada.</p>
+										<p>Após diluição, uso imediato.</p>
+										
+										<br/>
+										<p class="mb-0"><strong>Indicação Terapêutica e Posologia</strong></p>
+										<p>Imunização ativa para prevenir a COVID-19 causada pelo vírus SARS-CoV-2 em indivíduos com idade igual ou superior a 16 anos;</p>
+										<p>Uma dose de 0,3 mL intramuscular (IM) seguida por uma segunda dose de 0,3 mL 21 dias depois;</p>
+
+										<br/>
+										<p class="mb-0"><strong>Excipientes</strong></p>
+										<p>Sacarose, cloreto de sódio, cloreto de potássio, fosfato de sódio dibásico di-hidratado, fosfato de potássio monobásico, água para injetáveis.</p>
+
+										<p>Comirnaty não deve ser administrada a indivíduos com hipersensibilidade ao princípio ativo ou a qualquer um dos excipientes da vacina.</p>
+
+										<p class="fonte">Fonte: <a href='https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2021/o-que-muda-com-o-registro-de-uma-vacina/apresentacao-comirnaty-final-1.pdf' target='_blank'>Anvisa</a></p>
 										
 									</div>
 
