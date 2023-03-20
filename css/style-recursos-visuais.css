@@ -29,7 +29,13 @@ Abas
     background-color: var(--azul-claro);
 }
 
-.abas .tab-content {border-bottom:1px solid #e9ecef;}
+.abas .tab-content {
+  background: var(--cinza-medio) !important;
+  padding: 1.5rem;
+  border:1px solid #e9ecef;
+}
+
+.abas .boot-tabs {margin-bottom: 0 !important;}
 
 @media (min-width: 992px) {
   .abas .nav-link {
